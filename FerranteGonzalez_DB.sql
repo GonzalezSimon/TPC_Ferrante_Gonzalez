@@ -60,7 +60,7 @@ create table ClienteXServicio(
 )
 go
 
-create table Ticket(
+create table Tickets(
 	IDTicket bigint not null primary key identity(1,1),
 	NombreGrupoSoporte varchar(30) not null,
 	Descripcion varchar(250) not null,
