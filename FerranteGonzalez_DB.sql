@@ -58,6 +58,18 @@ create table ClienteXServicio(
 
 	Primary key(IDServicio, IDUsuario)
 )
+go
+
+create table Ticket(
+	IDTicket bigint not null primary key identity(1,1),
+	NombreGrupoSoporte varchar(30) not null,
+	Descripcion varchar(250) not null,
+	FechaApertura date not null,
+	FechaCierre date,
+	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
+	EstadoTicket char(1) not null check (EstadoTicket = 'A' or EstadoTicket = 'R' or EstadoTicket = 'C' or EstadoTicket = 'P'),
+	EstadoBitTicket bit not null
+)
 
 alter table ClienteXServicio
 add constraint CHK_FechaClienteXServicio
