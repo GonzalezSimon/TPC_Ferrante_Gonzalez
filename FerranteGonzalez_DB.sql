@@ -7,15 +7,15 @@ go
 use FerranteGonzalez_DB
 go
 
-create table Pais(
+create table Paises(
 	IDPais int not null primary key identity(1,1),
 	Nombre varchar(50) unique not null
 	)
 go
-create table Localidad(
+create table Localidades(
 	IDLocalidad bigint not null primary key identity(1,1),
 	Nombre varchar(50) not null,
-	IDPais int not null foreign key references Pais(IDPais)
+	IDPais int not null foreign key references Paises(IDPais)
 	)
 go
 create table TipoUsuario(
@@ -23,12 +23,15 @@ create table TipoUsuario(
 	TipoUsuario char(1) not null check(TipoUsuario = 'A' or TipoUsuario = 'S' or TipoUsuario = 'C')
 )
 go
-create table Usuario(
+create table Usuarios(
 	IDUsuario bigint not null primary key identity(1,1),
 	Usuario varchar(50) not null unique,
 	UPassword varchar(50) not null,
-	ApeNom varchar(100) not null,
-	IDLocalidad bigint not null foreign key references Localidad(IDLocalidad),
+	Apellido varchar(50) not null,
+	Nombre varchar(50) not null,
+	Telefono varchar(20),
+	Mail varchar(100) not null,
+	IDLocalidad bigint not null foreign key references Localidades(IDLocalidad),
 	IDTipoUsuario int not null foreign key references TipoUsuario(IDTipoUsuario),
 	FechaCreacion date not null,
 	EstadoUsuario bit not null
@@ -39,7 +42,7 @@ create table TipoServicio(
 	TipoServicio varchar(20) not null
 )
 go
-create table Servicio(
+create table Servicios(
 	IDServicio bigint not null primary key identity(1,1),
 	IDTipoServicio int not null foreign key references TipoServicio(IDTipoServicio),
 	Slots int check(Slots >= 0),
@@ -47,9 +50,11 @@ create table Servicio(
 	EstadoServicio bit not null
 )
 go
-create table ClienteXServicio(
-	IDServicio bigint not null foreign key references Servicio(IDServicio),
-	IDUsuario bigint not null foreign key references Usuario(IDUsuario),
+create table ServicioContratado(
+	IDServicio bigint not null foreign key references Servicios(IDServicio),
+	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
+	IDDelegado1 bigint foreign key references Usuarios(IDUsuario),
+	IDDelegado2 bigint foreign key references Usuarios(IDUsuario),
 	FechaInicio date,
 	FechaFin date,
 	GrupoSoporte varchar(30) not null,
@@ -57,7 +62,20 @@ create table ClienteXServicio(
 
 	Primary key(IDServicio, IDUsuario)
 )
+go
 
-alter table ClienteXServicio
-add constraint CHK_FechaClienteXServicio
+create table Tickets(
+	IDTicket bigint not null primary key identity(1,1),
+	NombreGrupoSoporte varchar(30) not null,
+	Descripcion varchar(250) not null,
+	FechaApertura date not null,
+	FechaCierre date,
+	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
+	EstadoTicket char(1) not null check (EstadoTicket = 'A' or EstadoTicket = 'R' or EstadoTicket = 'C' or EstadoTicket = 'P'),
+	Solucion varchar(100) not null,
+	EstadoBitTicket bit not null
+)
+
+alter table ServicioContratado
+add constraint CHK_ServicioContratado
 check(FechaInicio < FechaFin)
