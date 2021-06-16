@@ -29,6 +29,8 @@ create table Usuarios(
 	UPassword varchar(50) not null,
 	Apellido varchar(50) not null,
 	Nombre varchar(50) not null,
+	Telefono varchar(20),
+	Mail varchar(100) not null,
 	IDLocalidad bigint not null foreign key references Localidades(IDLocalidad),
 	IDTipoUsuario int not null foreign key references TipoUsuario(IDTipoUsuario),
 	FechaCreacion date not null,
@@ -48,9 +50,11 @@ create table Servicios(
 	EstadoServicio bit not null
 )
 go
-create table ClienteXServicio(
+create table ServicioContratado(
 	IDServicio bigint not null foreign key references Servicios(IDServicio),
 	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
+	IDDelegado1 bigint foreign key references Usuarios(IDUsuario),
+	IDDelegado2 bigint foreign key references Usuarios(IDUsuario),
 	FechaInicio date,
 	FechaFin date,
 	GrupoSoporte varchar(30) not null,
@@ -68,9 +72,10 @@ create table Tickets(
 	FechaCierre date,
 	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
 	EstadoTicket char(1) not null check (EstadoTicket = 'A' or EstadoTicket = 'R' or EstadoTicket = 'C' or EstadoTicket = 'P'),
+	Solucion varchar(100) not null,
 	EstadoBitTicket bit not null
 )
 
-alter table ClienteXServicio
-add constraint CHK_FechaClienteXServicio
+alter table ServicioContratado
+add constraint CHK_ServicioContratado
 check(FechaInicio < FechaFin)
