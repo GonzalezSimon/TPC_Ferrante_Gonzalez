@@ -13,7 +13,7 @@ namespace Dominio
         public string Password { get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }
-        public localidad Localidad { get; set; }
+        public Localidad Localidad { get; set; }
         public TipoUsuario Tipo { get; set; }
         public string URLimagen { get; set; }
         public bool Estado { get; set; }
