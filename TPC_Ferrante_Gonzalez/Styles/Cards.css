@@ -1,7 +1,11 @@
-﻿#hexagon {
-    width: 100px;
-    height: 57.735px;
-    background: red;
+﻿body {
+    background: rgb(0,31,34);
+    background: linear-gradient(90deg, rgba(0,31,34,1) 7%, rgba(2,0,36,1) 15%, rgba(1,142,133,1) 50%, rgba(35,100,115,1) 81%, rgba(0,0,0,1) 100%);
+}
+#hexagon {
+    width: 200px;
+    height: auto;
+    background: gray;
     position: relative;
 }
 
@@ -14,7 +18,7 @@
         height: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 28.8675px solid red;
+        border-bottom: 28.8675px solid gray;
     }
 
     #hexagon::after {
@@ -26,5 +30,5 @@
         height: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 28.8675px solid red;
+        border-top: 28.8675px solid gray;
     }
