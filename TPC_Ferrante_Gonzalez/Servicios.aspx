@@ -8,7 +8,7 @@
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner" <!--javascript=".carousel('cycle')"-->>
+        <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="Imgs/Valheim4.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
@@ -50,14 +50,9 @@
     <div>
 
         <div class="marginCard">
-
-
             <table>
                 <tr>
                     <td>
-
-
-
                         <div class="card" style="width: 18rem; margin: 0rem 2rem;">
                             <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.1920x1080_1-1.png" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -74,8 +69,6 @@
                                 <a href="#" class="card-link">Another link</a>
                             </div>
                         </div>
-
-
                     </td>
 
                     <td>
@@ -95,17 +88,10 @@
                                 <a href="#" class="card-link">Another link</a>
                             </div>
                         </div>
-
-
                     </td>
-
                 </tr>
-
-
-
             </table>
         </div>
-
 
     </div>
     <script src="JavaScript/functions.js" type="text/javascript"></script>
