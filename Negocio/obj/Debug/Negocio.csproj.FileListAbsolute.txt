@@ -1,0 +1,9 @@
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\bin\Debug\Negocio.dll
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\bin\Debug\Negocio.pdb
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\bin\Debug\Dominio.dll
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\bin\Debug\Dominio.pdb
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\obj\Debug\Negocio.dll
+F:\Git\TPC_Ferrante_Gonzalez\Negocio\obj\Debug\Negocio.pdb

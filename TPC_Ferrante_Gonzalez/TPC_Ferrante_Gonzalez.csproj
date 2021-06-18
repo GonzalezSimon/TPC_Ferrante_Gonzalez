@@ -120,7 +120,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Imgs\7daystoday.jpg" />
+    <Content Include="Imgs\ARKSurvival.jpg" />
+    <Content Include="Imgs\CSGO.jpg" />
     <Content Include="Imgs\Guía-Valheim-todo-lo-que-debes-saber-e1614335184644.jpg" />
+    <Content Include="Imgs\Valheim2.jpg" />
+    <Content Include="Imgs\Valheim3.jpg" />
     <Content Include="JavaScript\functions.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
