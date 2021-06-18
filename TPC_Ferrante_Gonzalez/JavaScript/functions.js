@@ -1,0 +1,5 @@
+﻿var movement;
+
+function moveCarrusel() {
+
+}
