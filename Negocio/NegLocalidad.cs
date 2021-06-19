@@ -26,12 +26,9 @@ namespace Negocio
 
                     aux.Id = (int)datos.Lector["ID"];
                     aux.Nombre = (string)datos.Lector["Descripcion"];
-                    aux.Estado = (bool)datos.Lector["Estado"];
+                    aux.IdPais = (int)datos.Lector["ID"];
 
-                    if (aux.Estado != false)
-                    {
                         lista.Add(aux);
-                    }
                 }
 
                 return lista;
@@ -53,10 +50,10 @@ namespace Negocio
             try
             {
                 string valores = "values('"
-                    + nuevo.Nombre + "')";
+                    + nuevo.Nombre + "'," 
+                    + nuevo.IdPais +")";
 
-                datos.setearConsulta("insert into Localidades (Descripcion) "
-                    + valores);
+                datos.setearConsulta("insert into Localidades (Nombre, IDPais)" + valores);
 
                 datos.ejectutarAccion();
 
@@ -77,7 +74,10 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                    "update Localidades set Descripcion = '" + modificar.Nombre + "' where ID = " + modificar.Id);
+                    "update Localidades set Nombre = @Nombre, IDPais = @IDPais");
+
+                datos.agregarParametro("@Nombre", modificar.Nombre);
+                datos.agregarParametro("@IDPais", modificar.IdPais);
 
                 datos.ejectutarAccion();
 

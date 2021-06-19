@@ -1,26 +1,32 @@
-use master
-go
 
-create database FerranteGonzalez_DB
-go
+
+--use master
+
+--go
+
+--create database FerranteGonzalez_DB
+--go
 
 use FerranteGonzalez_DB
 go
 
 create table Paises(
 	IDPais int not null primary key identity(1,1),
-	Nombre varchar(50) unique not null
+	Nombre varchar(50) unique not null,
+	Estado BIT not null,
 	)
 go
 create table Localidades(
 	IDLocalidad bigint not null primary key identity(1,1),
 	Nombre varchar(50) not null,
-	IDPais int not null foreign key references Paises(IDPais)
+	IDPais int not null foreign key references Paises(IDPais),
+	Estado BIT not null,
 	)
 go
 create table TipoUsuario(
 	IDTipoUsuario int not null primary key identity(1,1),
-	TipoUsuario char(1) not null check(TipoUsuario = 'A' or TipoUsuario = 'S' or TipoUsuario = 'C')
+	TipoUsuario char(1) not null check(TipoUsuario = 'A' or TipoUsuario = 'S' or TipoUsuario = 'C'),
+	Estado bit not null
 )
 go
 create table Usuarios(
@@ -39,15 +45,18 @@ create table Usuarios(
 go
 create table TipoServicio(
 	IDTipoServicio int not null primary key identity(1,1),
-	TipoServicio varchar(20) not null
+	TipoServicio varchar(20) not null,
+	Estado bit not null
 )
 go
 create table Servicios(
 	IDServicio bigint not null primary key identity(1,1),
 	IDTipoServicio int not null foreign key references TipoServicio(IDTipoServicio),
-	Slots int check(Slots >= 0),
+	Precio money not null,
 	Descripcion varchar(250),
-	EstadoServicio bit not null
+	Slots int check(Slots >= 0),
+	EstadoServicio bit not null,
+
 )
 go
 create table ServicioContratado(
@@ -67,13 +76,13 @@ go
 create table Tickets(
 	IDTicket bigint not null primary key identity(1,1),
 	NombreGrupoSoporte varchar(30) not null,
-	Descripcion varchar(250) not null,
+	Descripcion varchar(1000) not null,
 	FechaApertura date not null,
 	FechaCierre date,
 	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
 	EstadoTicket char(1) not null check (EstadoTicket = 'A' or EstadoTicket = 'R' or EstadoTicket = 'C' or EstadoTicket = 'P'),
 	Solucion varchar(100) not null,
-	EstadoBitTicket bit not null
+	Estado bit not null
 )
 
 alter table ServicioContratado

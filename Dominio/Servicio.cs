@@ -13,6 +13,8 @@ namespace Dominio
 
         public double Precio { get; set; }
 
+        public string Descripcion { get; set; }
+
         public int Slots { get; set; }
 
         public bool Estado { get; set; }

@@ -23,26 +23,17 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     ServicioContratado aux = new ServicioContratado();
-                    //aux.Id = (int)datos.Lector["IDServicio"];
-                    //aux.Servicio= new Servicio( datos.Lector["Codigo"]);
-                    //aux.Nombre = (string)datos.Lector["Nombre"];
-                    //aux.Descripcion = (string)datos.Lector["Descripcion"];
-
-                    //aux.Marca = new Marca((string)datos.Lector["Marca"]);
-                    //aux.Marca.ID = ((int)datos.Lector["IDMarca"]);
-
-                    //aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
-                    //aux.Categoria.ID = ((int)datos.Lector["IDCategoria"]);
-
-                    //aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                    //aux.Precio = float.Parse(datos.Lector["Precio"].ToString());
-                    //aux.Stock = float.Parse(datos.Lector["Stock"].ToString());
-                    //aux.Estado = (bool)datos.Lector["Estado"];
-
-                    if (aux.Estado != false)
-                    {
-                        lista.Add(aux);
-                    }
+                    aux.Id = (int)datos.Lector["ID"];
+                    aux.Servicio.Id = (int)datos.Lector["IDServicio"];
+                    aux.Usuario.Id = (int)datos.Lector["IDUsuario"];
+                    aux.Delegado1.Id = (int)datos.Lector["IDDelegado1"];
+                    aux.Delegado2.Id = (int)datos.Lector["IDDelegado2"];
+                    aux.FechaCompra = (DateTime)datos.Lector["FechaInicio"];
+                    aux.FechaCancelacion = (DateTime)datos.Lector["FechaFin"];
+                    aux.GrupoSoporte = (string)datos.Lector["GrupoSoporte"];
+                    aux.Estado = (bool)datos.Lector["Estado"];
+                    
+                    lista.Add(aux);
                 }
 
                 return lista;
@@ -64,13 +55,17 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values('"+ nuevo.Servicio.Id + "','" + nuevo.Usuario.Id + "', '" + nuevo.Delegado1.Id + "', '"+ nuevo.Delegado2.Id + "', "
-                    + nuevo.FechaCompra + ", "
-                    + nuevo.FechaCancelacion + ", '"
-                    + nuevo.GrupoSoporte 
-                    + "', 1 )";
+                datos.setearConsulta("insert into ServicioContratado (IDServicio, IDUSuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, Estado)" +
+                 " VALUES (@IDServicio, @IDUsuario, @IDDelegado1, @IDDelegado2, @FechaInicio, @FechaFin, @GrupoSoporte, @Estado)");
 
-                datos.setearConsulta("insert into Articulos(Codigo, Nombre, Descripcion,IDMarca,IDCategoria,ImagenUrl,Precio,Stock,Estado)" + valores);
+                datos.agregarParametro("@IDServicio", nuevo.Servicio.Id);
+                datos.agregarParametro("@IDUsuario", nuevo.Usuario.Id);
+                datos.agregarParametro("@IDDelegado1", nuevo.Delegado1.Id);
+                datos.agregarParametro("@IDDelegado2", nuevo.Delegado2);
+                datos.agregarParametro("@FechaInicio", nuevo.FechaCompra);
+                datos.agregarParametro("@FechaFin", nuevo.FechaCancelacion);
+                datos.agregarParametro("@GrupoSoporte", nuevo.GrupoSoporte);
+                datos.agregarParametro("@Estado", nuevo.Estado);
 
 
                 datos.ejectutarAccion();
@@ -91,21 +86,20 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                datos.setearConsulta(
+                "update ServicioContratado set IDServicio, IDUSuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, Estado WHERE id =" + modificar.Id);
+
+                datos.agregarParametro("@IDServicio", modificar.Servicio.Id);
+                datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
+                datos.agregarParametro("@IDDelegado1", modificar.Delegado1.Id);
+                datos.agregarParametro("@IDDelegado2", modificar.Delegado2);
+                datos.agregarParametro("@FechaInicio", modificar.FechaCompra);
+                datos.agregarParametro("@FechaFin", modificar.FechaCancelacion);
+                datos.agregarParametro("@GrupoSoporte", modificar.GrupoSoporte);
+                datos.agregarParametro("@Estado", modificar.Estado);
 
 
-                //datos.setearConsulta("update Articulos set codigo = '" + modificar.Codigo + "', nombre = '" + modificar.Nombre + "', Descripcion = '" + modificar.Descripcion +
-                //    "', IdMarca = " + modificar.Marca.ID + ", IdCategoria = " + modificar.Categoria.ID + ", ImagenUrl = '" + modificar.UrlImagen + "', Precio = " + modificar.Precio + ", Stock = " + modificar.Stock + ", Estado = 1 WhERE id = " + modificar.ID + ";");
-
-                //datos.setearConsulta("update Articulos set codigo = @codigo, nombre = @nombre, Descripcion = @descripcion, IdMarca = @IDMarca, IdCategoria = @IDCategoria, ImagenUrl = @imagenUrl, Precio = @precio, Stock = @stock, Estado = 1 WhERE Id = " + modificar.ID + "");
-
-                //datos.agregarParametro("@codigo", modificar.Codigo);
-                //datos.agregarParametro("@nombre", modificar.Nombre);
-                //datos.agregarParametro("@descripcion", modificar.Descripcion);
-                //datos.agregarParametro("@IDMarca", modificar.Marca.ID);
-                //datos.agregarParametro("@IDCategoria", modificar.Categoria.ID);
-                //datos.agregarParametro("@imagenUrl", modificar.UrlImagen);
-                //datos.agregarParametro("@precio", modificar.Precio);
-                //datos.agregarParametro("@stock", modificar.Stock);
+                datos.ejectutarAccion();
 
 
                 datos.ejectutarAccion();
@@ -128,14 +122,14 @@ namespace Negocio
             {
                 ServicioContratado aux = new ServicioContratado();
 
-                //aux.ID = ID;
-                //aux.Estado = false;
+                aux.Id = ID;
+                aux.Estado = false;
 
-                //datos.setearConsulta(
-                //    "update Articulos set Estado = 0 where ID = " + aux.ID + ""
-                //    );
+                datos.setearConsulta(
+                    "update ServicioContratado set Estado = 0 where ID = " + aux.Id + ""
+                    );
 
-                //datos.ejectutarAccion();
+                datos.ejectutarAccion();
 
             }
             catch (Exception ex)
