@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from Servicioes");
+                datos.setearConsulta("select ID, Nombre, Estado from Servicios");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -82,7 +82,7 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                "update Servicioes set IDTipoServicio = @IDTipoServicio, Precio = @Precio, Descripcion = @Descripcion, Slots = @Slots, Estado = @Estado WHERE id =" + modificar.Id);
+                "update Servicios set IDTipoServicio = @IDTipoServicio, Precio = @Precio, Descripcion = @Descripcion, Slots = @Slots, Estado = @Estado WHERE id =" + modificar.Id);
 
                 datos.agregarParametro("@IDTipoServicio", modificar.Tipo.Id);
                 datos.agregarParametro("@Precio", modificar.Precio);
@@ -108,7 +108,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                Localidad aux = new Localidad();
+                Servicio aux = new Servicio();
 
                 aux.Id = ID;
                 aux.Estado = false;

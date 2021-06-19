@@ -39,6 +39,7 @@ create table Usuarios(
 	Mail varchar(100) not null,
 	IDLocalidad bigint not null foreign key references Localidades(IDLocalidad),
 	IDTipoUsuario int not null foreign key references TipoUsuario(IDTipoUsuario),
+	URLUsuario varchar(300) not null,
 	FechaCreacion date not null,
 	EstadoUsuario bit not null
 )

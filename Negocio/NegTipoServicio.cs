@@ -52,11 +52,13 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values('"
-                    + nuevo.Nombre + "')";
+                datos.setearConsulta("insert into Servicios (IDTipoServicio, Nombre, Estado)" +
+                " VALUES (@IDTipoServicio, @Nombre, @Estado)");
 
-                datos.setearConsulta("insert into TipoServicios (Nombre) "
-                    + valores);
+                datos.agregarParametro("@IDTipoServicio", nuevo.Id);
+                datos.agregarParametro("@Nombre", nuevo.Nombre);
+                datos.agregarParametro("@Estado", nuevo.Estado);
+
 
                 datos.ejectutarAccion();
 
@@ -77,7 +79,12 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                    "update TipoServicios set Nombre = '" + modificar.Nombre + "' where ID = " + modificar.Id);
+                    "update TipoServicios set Nombre = @Nombre, Estado = @Estado where id = "+modificar.Id);
+
+                datos.agregarParametro("@IDTipoServicio", modificar.Id);
+                datos.agregarParametro("@Nombre", modificar.Nombre);
+                datos.agregarParametro("@Estado", modificar.Estado);
+
 
                 datos.ejectutarAccion();
 

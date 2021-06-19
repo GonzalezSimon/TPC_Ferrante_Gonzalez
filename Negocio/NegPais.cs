@@ -93,7 +93,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                Localidad aux = new Localidad();
+                Pais aux = new Pais();
 
                 aux.Id = ID;
                 aux.Estado = false;

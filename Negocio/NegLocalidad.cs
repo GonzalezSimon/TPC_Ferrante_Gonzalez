@@ -17,7 +17,7 @@ namespace Negocio
                        
             try
             {
-                datos.setearConsulta("select ID, Descripcion, Estado from Localidad");
+                datos.setearConsulta("select ID, Nombre, Estado from Localidades");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
