@@ -251,6 +251,7 @@
     <Content Include="Servicios.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Styles\Cards.css" />
+    <Content Include="Styles\Sidebar.css" />
     <Content Include="Usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />

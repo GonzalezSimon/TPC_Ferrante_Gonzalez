@@ -1,0 +1,14 @@
+﻿.opcoines {
+    color: red;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.di-flex.contenedor-sidebar {
+    min-height: 100vh;
+    width: 18rem;
+}

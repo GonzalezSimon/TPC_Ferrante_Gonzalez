@@ -20,7 +20,7 @@ namespace Negocio
 
                 try
                 {
-                    datos.setearConsulta("select ID, Nombre, Estado from Usuario");
+                    datos.setearConsulta("select ID, Nombre, Estado from Usuarios");
                     datos.ejecutarLectura();
 
                     while (datos.Lector.Read())
@@ -97,7 +97,7 @@ namespace Negocio
                 try
                 {
                     datos.setearConsulta(
-                    "update Usuario set Usuario = @Usuario, UPassword = @UPassword, Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Mail = @Mail, Telefono = @Telefono, IDLocalidad = @IDLocalidad, IDTipoUsuario = @IDTipoUsuario, URLUsuario = @URLUsuario, FechaCreacion = @FechaCreacion, EstadoUsuario = @EstadoUsuario WHERE id =" + modificar.Id);
+                    "update Usuarios set Usuario = @Usuario, UPassword = @UPassword, Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Mail = @Mail, Telefono = @Telefono, IDLocalidad = @IDLocalidad, IDTipoUsuario = @IDTipoUsuario, URLUsuario = @URLUsuario, FechaCreacion = @FechaCreacion, EstadoUsuario = @EstadoUsuario WHERE id =" + modificar.Id);
 
                     datos.agregarParametro("@Usuario", modificar.UserName);
                     datos.agregarParametro("@UPassword", modificar.Password);
@@ -136,7 +136,7 @@ namespace Negocio
                     aux.Estado = false;
 
                     datos.setearConsulta(
-                        "update Usuario set Estado = 0 where ID = " + aux.Id);
+                        "update Usuarios set Estado = 0 where ID = " + aux.Id);
 
                     datos.ejectutarAccion();
 
