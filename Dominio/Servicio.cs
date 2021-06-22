@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Servicio
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public TipoServicio Tipo { get; set; }
 
         public double Precio { get; set; }

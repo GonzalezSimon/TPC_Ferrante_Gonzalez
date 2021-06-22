@@ -9,7 +9,7 @@ namespace Dominio
     public class ServicioContratado
     {
         public int Id { get; set; }
-        public ServicioContratado Servicio { get; set; }
+        public Servicio Servicio { get; set; }
         public Usuario Usuario { get; set; }
         public Usuario Delegado1 { get; set; }
         public Usuario Delegado2 { get; set; }

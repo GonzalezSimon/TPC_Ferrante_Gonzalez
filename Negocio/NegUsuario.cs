@@ -9,10 +9,7 @@ namespace Negocio
 {
     public class NegUsuario
     {
-        public class NegocioServicio
-        {
-
-            public List<Usuario> listar(bool combobox = false)
+            public List<Usuario> listar(string consulta = "")
             {
                 List<Usuario> lista = new List<Usuario>();
 
@@ -20,26 +17,46 @@ namespace Negocio
 
                 try
                 {
-                    datos.setearConsulta("select ID, Nombre, Estado from Usuarios");
+                datos.setearConsulta(
+                    "select U.IDUsuario IDUsuario, Usuario, UPassword, Apellido, u.Nombre Nombre, Telefono, Mail, U.IDLocalidad IDLocalidad," +
+                    " L.Nombre NombreL, L.Estado EstadoL, P.Nombre NombreP, P.IDPais IDPais, P.Estado EstadoP, U.IDTipoUsuario IDTipoUsuario," +
+                    " TU.Estado EstadoT, TU.TipoUsuario TipoUsuario, URLUsuario, FechaCreacion, EstadoUsuario from Usuarios U, TipoUsuario TU," +
+                    " Localidades L, Paises P where U.IDLocalidad = L.IDLocalidad and P.IDPais = L.IDPais and TU.IDTipoUsuario = U.IDTipoUsuario " + consulta);
                     datos.ejecutarLectura();
 
-                    while (datos.Lector.Read())
+
+                while (datos.Lector.Read())
                     {
                         Usuario aux = new Usuario();
 
-                        aux.Id = (int)datos.Lector["ID"];
+                        aux.Id = (long)datos.Lector["IDUsuario"];
                         aux.UserName = (string)datos.Lector["Usuario"];
                         aux.Password = (string)datos.Lector["UPassword"];
                         aux.Apellido = (string)datos.Lector["Apellido"];
                         aux.Nombre = (string)datos.Lector["Nombre"];
                         aux.Telefono = (string)datos.Lector["Telefono"];
                         aux.Mail = (string)datos.Lector["Mail"];
-                        aux.Localidad.Id = (int)datos.Lector["IDLocalidad"];
+                        
+                        //Carga de Localidad
+                        aux.Localidad.Id = (long)datos.Lector["IDLocalidad"];
+                        aux.Localidad.Nombre = (string)datos.Lector["NombreL"];
+                        aux.Localidad.Estado = (bool)datos.Lector["EstadoL"];
+                       
+                        //Carga de Pais
+                        aux.Localidad.Pais.Id = (int)datos.Lector["IDPais"];
+                        aux.Localidad.Pais.Nombre = (string)datos.Lector["NombreP"];
+                        aux.Localidad.Pais.Estado = (bool)datos.Lector["EstadoP"];
+
+                        //Carga de tipo
+                        aux.Tipo.Estado = (bool)datos.Lector["EstadoT"];
+                        aux.Tipo.Nombre = (string)datos.Lector["TipoUsuario"];
                         aux.Tipo.Id = (int)datos.Lector["IDTipoUsuario"];
-                        aux.URLimagen = (string)datos.Lector["URLImagen"];
+
+                        aux.URLimagen = (string)datos.Lector["URLUsuario"];
                         aux.FechaCreacion = (DateTime)datos.Lector["FechaCreacion"];
                         aux.Estado = (bool)datos.Lector["EstadoUsuario"];
-
+                        
+                    if(aux.Estado==true)
                         lista.Add(aux);
                     }
 
@@ -97,7 +114,7 @@ namespace Negocio
                 try
                 {
                     datos.setearConsulta(
-                    "update Usuarios set Usuario = @Usuario, UPassword = @UPassword, Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Mail = @Mail, Telefono = @Telefono, IDLocalidad = @IDLocalidad, IDTipoUsuario = @IDTipoUsuario, URLUsuario = @URLUsuario, FechaCreacion = @FechaCreacion, EstadoUsuario = @EstadoUsuario WHERE id =" + modificar.Id);
+                    "update Usuarios set Usuario = @Usuario, UPassword = @UPassword, Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Mail = @Mail, Telefono = @Telefono, IDLocalidad = @IDLocalidad, IDTipoUsuario = @IDTipoUsuario, URLUsuario = @URLUsuario, FechaCreacion = @FechaCreacion, EstadoUsuario = @EstadoUsuario WHERE IDUsuario =" + modificar.Id);
 
                     datos.agregarParametro("@Usuario", modificar.UserName);
                     datos.agregarParametro("@UPassword", modificar.Password);
@@ -136,7 +153,7 @@ namespace Negocio
                     aux.Estado = false;
 
                     datos.setearConsulta(
-                        "update Usuarios set Estado = 0 where ID = " + aux.Id);
+                        "update Usuarios set EstadoUsuario = 0 where IDUsuario = " + aux.Id);
 
                     datos.ejectutarAccion();
 
@@ -152,5 +169,4 @@ namespace Negocio
             }
         }
     }
-}
 

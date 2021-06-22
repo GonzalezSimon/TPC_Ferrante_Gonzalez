@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Data;
 
 namespace Dominio
 {
     public class Usuario
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string Apellido { get; set; }
@@ -21,5 +23,10 @@ namespace Dominio
         public DateTime FechaCreacion { get; set; }
         public bool Estado { get; set; }
 
+        public Usuario()
+        {
+            Localidad = new Localidad();
+            Tipo = new TipoUsuario();
+        }
     }
 }

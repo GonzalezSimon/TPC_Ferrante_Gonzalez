@@ -27,7 +27,7 @@ namespace Negocio
                     aux.Id = (int)datos.Lector["ID"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
 
-                        lista.Add(aux);
+                    if(aux.Estado == true) lista.Add(aux);
                 }
 
                 return lista;
@@ -49,7 +49,7 @@ namespace Negocio
             try
             {
                 string valores = "values('"
-                    + nuevo.Nombre + "')";
+                    + nuevo.Nombre + ",1')";//estado 1 by default
 
                 datos.setearConsulta("insert into Paises (Nombre) "
                     + valores);

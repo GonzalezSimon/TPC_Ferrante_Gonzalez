@@ -17,16 +17,20 @@ namespace Negocio
                        
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from Localidades");
+                datos.setearConsulta("select IDLocalidad, Nombre, Estado, p.IDPais, p.Nombre, P.Estado  from Localidades inner join Paises as P on P.IDPais = IDPais");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Localidad aux = new Localidad();
 
-                    aux.Id = (int)datos.Lector["ID"];
+                    aux.Id = (int)datos.Lector["IDLocalidad"];
                     aux.Nombre = (string)datos.Lector["Descripcion"];
-                    aux.IdPais = (int)datos.Lector["ID"];
+                    aux.Estado = (bool)datos.Lector["Estado"];
+                    //carga pais
+                    aux.Pais.Id = (int)datos.Lector["p.IDPais"];
+                    aux.Pais.Nombre = (string)datos.Lector["p.Nombre"];
+                    aux.Pais.Estado = (bool)datos.Lector["p.Estado"];
 
                         lista.Add(aux);
                 }
@@ -51,9 +55,9 @@ namespace Negocio
             {
                 string valores = "values('"
                     + nuevo.Nombre + "'," 
-                    + nuevo.IdPais +")";
+                    + nuevo.Pais.Id +", 1)";//1 para estado true by default
 
-                datos.setearConsulta("insert into Localidades (Nombre, IDPais)" + valores);
+                datos.setearConsulta("insert into Localidades (Nombre, IDPais, Estado)" + valores);
 
                 datos.ejectutarAccion();
 
@@ -77,7 +81,7 @@ namespace Negocio
                     "update Localidades set Nombre = @Nombre, IDPais = @IDPais");
 
                 datos.agregarParametro("@Nombre", modificar.Nombre);
-                datos.agregarParametro("@IDPais", modificar.IdPais);
+                datos.agregarParametro("@IDPais", modificar.Pais.Id);
 
                 datos.ejectutarAccion();
 

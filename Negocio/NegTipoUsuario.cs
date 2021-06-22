@@ -17,15 +17,15 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from TipoUsuarios");
+                datos.setearConsulta("select IDTipoUsuario, TipoUsuario, Estado from TipoUsuario");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     TipoUsuario aux = new TipoUsuario();
 
-                    aux.Id = (int)datos.Lector["ID"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Id = (int)datos.Lector["IDTipoUsuario"];
+                    aux.Nombre = (string)datos.Lector["TipoUsuario"];
                     aux.Estado = (bool)datos.Lector["Estado"];
 
                     if (aux.Estado != false)
@@ -52,7 +52,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("insert into TipoUsuario (IDTipoUsuario, Nombre, Estado)" +
+                datos.setearConsulta("insert into TipoUsuario (IDTipoUsuario, TipoUsuario, Estado)" +
                 " VALUES (@IDTipoUsuario, @Nombre, @Estado)");
 
                 datos.agregarParametro("@IDTipoUsuario", nuevo.Id);
@@ -76,7 +76,7 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                    "update TipoUsuario set Nombre = @Nombre, Estado = @Estado where id = " + modificar.Id);
+                    "update TipoUsuario set TipoUsuario = @Nombre, Estado = @Estado where id = " + modificar.Id);
 
                 datos.agregarParametro("@IDTipoServicio", modificar.Id);
                 datos.agregarParametro("@Nombre", modificar.Nombre);
@@ -107,7 +107,7 @@ namespace Negocio
                 aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update TipoUsuarios set Estado = 0 where ID = " + aux.Id);
+                    "update TipoUsuario set Estado = 0 where ID = " + aux.Id);
 
                 datos.ejectutarAccion();
 

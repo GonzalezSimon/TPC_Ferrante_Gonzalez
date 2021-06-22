@@ -17,19 +17,46 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select Id, GrupoSoporte, IDUsuario, FechaInicio, FechaFin, Descripcion, Estado from Tickets");
+                datos.setearConsulta("select IDTicket, NombreGrupoSoporte, Descripcion, Solucion, IDUsuario, FechaApertura, FechaCierre, Descripcion, EstadoTicket, Estado" +
+                    ", u.IDUsuario, u.Usuario, u.UPasswrd, U.Apellido, U.Nombre, U.Telefono, U.Mail" +
+                    ", L.IDLocalidad, L.Nombre, L.Estado" +
+                    ", P.IDPais, P.Nombre, P.Estado" +
+                    " from Tickets as T" +
+                    "inner join Usuarios as U on U.IDUsuario = T.IDUsuario" +
+                    "inner join Localidad as L on L.IDLocalidad = U.IDLocalidad" +
+                    "inner join Paises as P on P.IDPais = L.IDPais");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Ticket aux = new Ticket();
 
-                    aux.Id = (int)datos.Lector["ID"];
-                    aux.GrupoSoporte = (string)datos.Lector["GrupoSoporte"];
-                    aux.Usuario.Id = (int)datos.Lector["IDUsuario"];
+                    aux.Id = (long)datos.Lector["IDTicket"];
+                    aux.GrupoSoporte = (string)datos.Lector["NombreGrupoSoporte"];
+                    aux.Descripcion = (string)datos.Lector["Descripción"];
+                    //carga usuario
+                    aux.Usuario.Id = (int)datos.Lector["u.IDUsuario"];
+                    aux.Usuario.UserName = (string)datos.Lector["u.Usuario"];
+                    aux.Usuario.Password = (string)datos.Lector["u.UPasswrd"];
+                    aux.Usuario.Apellido = (string)datos.Lector["u.Apellido"];
+                    aux.Usuario.Nombre = (string)datos.Lector["u.Nombre"];
+                    aux.Usuario.Telefono = (string)datos.Lector["u.Telefono"];
+                    aux.Usuario.Mail = (string)datos.Lector["u.Mail"];
+                    //carga usuario.localidad
+                    aux.Usuario.Localidad.Id = (long)datos.Lector["L.IDLocalidad"];
+                    aux.Usuario.Localidad.Nombre = (string)datos.Lector["L.Nombre"];
+                    aux.Usuario.Localidad.Estado = (bool)datos.Lector["L.Estado"];
+                    //carga usuario.localida.pais
+                    aux.Usuario.Localidad.Pais.Id = (int)datos.Lector["P.IDPais"];
+                    aux.Usuario.Localidad.Pais.Nombre = (string)datos.Lector["p.Nombre"];
+                    aux.Usuario.Localidad.Pais.Estado = (bool)datos.Lector["p.Estado"];
+
+
                     aux.FechaApertura = (DateTime)datos.Lector["FechaInicio"];
                     aux.FechaCierre = (DateTime)datos.Lector["FechaFin"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Solucion = (string)datos.Lector["Solucion"];
+                    aux.EstadoTicket = (string)datos.Lector["EstadoTicket"];
                     aux.Estado = (bool)datos.Lector["Estado"];
 
                     lista.Add(aux);
@@ -54,16 +81,18 @@ namespace Negocio
             try
             {
 
-                datos.setearConsulta("insert into Ticket (IDTicket, GrupoSoporte, IDUsuario, FechaFin, FechaInicio, Descripcion, Estado)" +
-                " VALUES (@IDTicket, @GrupoSoporte, @IDUsuario, @FechaInicio, @FechaFin, @Descripcion, @Estado)");
+                datos.setearConsulta("insert into Ticket (IDTicket, NombreGrupoSoporte, Descripcion, IDUsuario, FechaApertura, FechaCierre, EstadoTicket, Solucion, Estado)" +
+                " VALUES (@IDTicket, @GrupoSoporte, @Descripcion, @FechaInicio, @FechaFin, @IDUsuario, @EstadoTicket, @Solucion, @Estado)");
 
                 datos.agregarParametro("@IDTicketo", nuevo.Id);
                 datos.agregarParametro("@GrupoSoporte", nuevo.GrupoSoporte);
-                datos.agregarParametro("@IDUsuario", nuevo.Usuario.Id);
+                datos.agregarParametro("@Descripcion", nuevo.Descripcion);
                 datos.agregarParametro("@FechaInicio", nuevo.FechaApertura);
                 datos.agregarParametro("@FechaFin", nuevo.FechaCierre);
-                datos.agregarParametro("@Descripcion", nuevo.Descripcion);
-                datos.agregarParametro("@Estado", nuevo.Estado);
+                datos.agregarParametro("@IDUsuario", nuevo.Usuario.Id);
+                datos.agregarParametro("@EstadoTicket", nuevo.EstadoTicket);
+                datos.agregarParametro("@Solucion", nuevo.Solucion);
+                datos.agregarParametro("@EstadoTicket", nuevo.Estado);
 
                 datos.ejectutarAccion();
 
@@ -84,15 +113,19 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                "update Ticket set IDTicketo = @IDTicketo, GrupoSoporte = @GrupoSoporte, IDUsuario = @IDUsuario, FechaInicio = @FechaInicio, FechaFin = @FechaFin , Descripcion = @Descripcion, Estado = @Estado WHERE id =" + modificar.Id);
+                "update Ticket set IDTicketo = @IDTicketo, NombreGrupoSoporte = @GrupoSoporte, IDUsuario = @IDUsuario," +
+                " FechaApertura = @FechaInicio, FechaCierre = @FechaFin , Descripcion = @Descripcion, EstadoTicket = @EstadoTicket," +
+                " Solucion = @Solucion, Estado = @Estado WHERE id =" + modificar.Id);
 
                 datos.agregarParametro("@IDTicketo", modificar.Id);
                 datos.agregarParametro("@GrupoSoporte", modificar.GrupoSoporte);
-                datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
+                datos.agregarParametro("@Descripcion", modificar.Descripcion);
                 datos.agregarParametro("@FechaInicio", modificar.FechaApertura);
                 datos.agregarParametro("@FechaFin", modificar.FechaCierre);
-                datos.agregarParametro("@Descripcion", modificar.Descripcion);
-                datos.agregarParametro("@Estado", modificar.Estado);
+                datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
+                datos.agregarParametro("@EstadoTicket", modificar.EstadoTicket);
+                datos.agregarParametro("@Solucion", modificar.Solucion);
+                datos.agregarParametro("@EstadoTicket", modificar.Estado);
 
                 datos.ejectutarAccion();
 

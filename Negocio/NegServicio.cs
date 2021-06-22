@@ -18,21 +18,26 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from Servicios");
+                datos.setearConsulta("select IDServicio, ts.IDTipoServicio, ts.Nombre, ts.Estado, Precio, Descripcion, Slots, EstadoServicio from Servicios as s" +
+                    "inner join TipoServicio as ts on ts.IDTipoServicio = s.IDTipoServicio");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Servicio aux = new Servicio();
 
-                    aux.Id = (int)datos.Lector["ID"];
+                    aux.Id = (long)datos.Lector["IDServicio"];
+                    //carga de TipoServicio
                     aux.Tipo.Id = (int)datos.Lector["IDTipoServicio"];
+                    aux.Tipo.Nombre = (string)datos.Lector["ts.Nombre"];
+                    aux.Tipo.Estado = (bool)datos.Lector["ts.Estado"];
+
                     aux.Precio = (double)datos.Lector["Precio"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Slots = (int)datos.Lector["Slots"];
-                    aux.Estado = (bool)datos.Lector["Estado"];
+                    aux.Estado = (bool)datos.Lector["EstadoServicio"];
 
-                    lista.Add(aux);
+                    if(aux.Estado == true) lista.Add(aux);
                 }
 
                 return lista;
@@ -114,7 +119,7 @@ namespace Negocio
                 aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update Servicios set Estado = 0 where ID = " + aux.Id);
+                    "update Servicios set EstadoServicio = 0 where ID = " + aux.Id);
 
                 datos.ejectutarAccion();
 

@@ -8,9 +8,14 @@ namespace Dominio
 {
     public class Localidad
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Nombre { get; set; }
-        public  int IdPais { get; set; }
+        public Pais Pais { get; set; }
         public bool Estado { get; set; }
+
+        public Localidad()
+        {
+            Pais = new Pais();
+        }
     }
 }

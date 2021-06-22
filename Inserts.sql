@@ -16,10 +16,10 @@ VALUES('A',1),('S',1),('C',1);
 
 --select * from TipoUsuario
 
-insert into Usuarios(Usuario, UPassword, Apellido, Nombre,Telefono, Mail, IDLocalidad, IDTipoUsuario, FechaCreacion,EstadoUsuario)
+insert into Usuarios(Usuario, UPassword, Apellido, Nombre,Telefono, Mail, IDLocalidad, IDTipoUsuario, URLUsuario, FechaCreacion,EstadoUsuario)
 VALUES
-('admin','admin', 'ROTA', 'HOST','+5491133413847', 'rotahost@gmail.com', 1, 1, GETDATE(), 1),
-('Test', 'Test','Testado', 'Jorge Bolanños','+5491154875498','test@test.test', 2, 3, GETDATE(), 1);
+('admin','admin', 'ROTA', 'HOST','+5491133413847', 'rotahost@gmail.com', 1, 1,'https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/07/29/15960315220897.png', GETDATE(), 1),
+('Test', 'Test','Testado', 'Jorge Bolanños','+5491154875498','test@test.test', 2, 3,'https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/07/29/15960315220897.png', GETDATE(), 1);
 
 --select * from Usuarios
 
@@ -65,3 +65,5 @@ VALUES(2,2, GETDATE() , GETDATE()+1, 'rFactorTest',1)
 select u.Nombre, s.Precio, sc.FechaFin from ServicioContratado as SC
 inner JOIN Servicios as s on s.IDServicio = sc.IDServicio
 inner join Usuarios as u on u.IDUsuario = sc.IDUsuario
+
+select u.IDUsuario, u.Usuario, u.UPassword, u.Apellido, u.Nombre, u.Telefono, u.Mail, u.IDLocalidad, u.IDTipoUsuario, u.URLUsuario, u.FechaCreacion, u.EstadoUsuario from Usuarios as U inner join TipoUsuario  as TU on tu.IDTipoUsuario = u.IDTipoUsuario inner join Localidades as L on l.IDLocalidad = u.IDLocalidad inner join Paises as P on p.IDPais = l.IDPais

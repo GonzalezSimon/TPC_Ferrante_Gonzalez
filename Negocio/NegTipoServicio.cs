@@ -17,14 +17,14 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select ID, Nombre, Estado from TiposServicios");
+                datos.setearConsulta("select IDTipoServicio, Nombre, Estado from TiposServicio");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     TipoServicio aux = new TipoServicio();
 
-                    aux.Id = (int)datos.Lector["ID"];
+                    aux.Id = (int)datos.Lector["IDTipoServicio"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Estado = (bool)datos.Lector["Estado"];
 
@@ -52,7 +52,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("insert into Servicios (IDTipoServicio, Nombre, Estado)" +
+                datos.setearConsulta("insert into TipoServicio (IDTipoServicio, Nombre, Estado)" +
                 " VALUES (@IDTipoServicio, @Nombre, @Estado)");
 
                 datos.agregarParametro("@IDTipoServicio", nuevo.Id);
@@ -79,7 +79,7 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                    "update TipoServicios set Nombre = @Nombre, Estado = @Estado where id = "+modificar.Id);
+                    "update TipoServicio set Nombre = @Nombre, Estado = @Estado where id = "+modificar.Id);
 
                 datos.agregarParametro("@IDTipoServicio", modificar.Id);
                 datos.agregarParametro("@Nombre", modificar.Nombre);
@@ -110,7 +110,7 @@ namespace Negocio
                 aux.Estado = false;
 
                 datos.setearConsulta(
-                    "update TipoServicios set Estado = 0 where ID = " + aux.Id);
+                    "update TipoServicio set Estado = 0 where ID = " + aux.Id);
 
                 datos.ejectutarAccion();
 
