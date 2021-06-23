@@ -1,6 +1,5 @@
 ﻿body {
-    background: rgb(0,31,34);
-    background: linear-gradient(90deg, rgba(0,31,34,1) 7%, rgba(2,0,36,1) 15%, rgba(1,142,133,1) 50%, rgba(35,100,115,1) 81%, rgba(0,0,0,1) 100%);
+  
 }
 #hexagon {
     width: 200px;

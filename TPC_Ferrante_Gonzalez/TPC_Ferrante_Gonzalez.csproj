@@ -121,12 +121,15 @@
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Imgs\7daystoday.jpg" />
+    <Content Include="Imgs\animacion.png" />
     <Content Include="Imgs\ARKSurvival.jpg" />
     <Content Include="Imgs\CSGO.jpg" />
     <Content Include="Imgs\Guía-Valheim-todo-lo-que-debes-saber-e1614335184644.jpg" />
+    <Content Include="Imgs\LogoLogin.png" />
     <Content Include="Imgs\Valheim2.jpg" />
     <Content Include="Imgs\Valheim3.jpg" />
     <Content Include="JavaScript\functions.js" />
+    <Content Include="LogIn.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -251,6 +254,8 @@
     <Content Include="Servicios.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Styles\Cards.css" />
+    <Content Include="Styles\LogIn.css" />
+    <Content Include="Styles\MainTheme.css" />
     <Content Include="Styles\Sidebar.css" />
     <Content Include="Usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -291,6 +296,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios.aspx.cs">
