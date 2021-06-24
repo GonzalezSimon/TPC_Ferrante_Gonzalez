@@ -32,7 +32,7 @@ namespace Negocio
                     aux.Tipo.Nombre = (string)datos.Lector["ts.Nombre"];
                     aux.Tipo.Estado = (bool)datos.Lector["ts.Estado"];
 
-                    aux.Precio = (double)datos.Lector["Precio"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Slots = (int)datos.Lector["Slots"];
                     aux.Estado = (bool)datos.Lector["EstadoServicio"];

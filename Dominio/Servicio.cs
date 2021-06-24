@@ -11,12 +11,17 @@ namespace Dominio
         public long Id { get; set; }
         public TipoServicio Tipo { get; set; }
 
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
 
         public string Descripcion { get; set; }
 
         public int Slots { get; set; }
 
         public bool Estado { get; set; }
+
+        public Servicio()
+        {
+            Tipo = new TipoServicio();
+        }
     }
 }
