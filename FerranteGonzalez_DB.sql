@@ -82,7 +82,7 @@ create table Tickets(
 	FechaCierre date,
 	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
 	EstadoTicket char(1) not null check (EstadoTicket = 'A' or EstadoTicket = 'R' or EstadoTicket = 'C' or EstadoTicket = 'P'),
-	Solucion varchar(100) not null,
+	Solucion varchar(100),
 	Estado bit not null
 )
 

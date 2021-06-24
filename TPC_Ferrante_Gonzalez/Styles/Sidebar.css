@@ -8,13 +8,12 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.bg-primary.sidebar-usuarios{
-    background-color:dimgray;
-}
-.di-flex.contenedor-sidebar {
-    min-height: 100vh;
+.bg-primary.sidebar-usuarios {
+    background-color: #222222 !important;
+    min-height: 50vh;
     width: 18rem;
-    background-color:dimgray;
+}
+.d-flex.contenedor-sidebar {
 }
 .imglogo {
     max-width: 150px;
@@ -22,4 +21,23 @@
     max-height: 150px;
     min-height: 120px;
     border-radius: 60%;
+}
+
+.table.tickets {
+    display: block;
+    width: 100%;
+    min-width: max-content;
+    overflow-x:scroll;
+    margin-right: 0;
+    -webkit-overflow-scrolling: touch;
+    min-height: 50vh;
+    padding-left:3rem;
+}
+
+.text-ticket {
+    max-width: 200vh;
+    min-width: 100vh;
+    overflow: auto;
+    resize: both;
+    margin:0!important;
 }

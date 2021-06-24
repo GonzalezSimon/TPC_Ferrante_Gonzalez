@@ -67,3 +67,18 @@ inner JOIN Servicios as s on s.IDServicio = sc.IDServicio
 inner join Usuarios as u on u.IDUsuario = sc.IDUsuario
 
 select u.IDUsuario, u.Usuario, u.UPassword, u.Apellido, u.Nombre, u.Telefono, u.Mail, u.IDLocalidad, u.IDTipoUsuario, u.URLUsuario, u.FechaCreacion, u.EstadoUsuario from Usuarios as U inner join TipoUsuario  as TU on tu.IDTipoUsuario = u.IDTipoUsuario inner join Localidades as L on l.IDLocalidad = u.IDLocalidad inner join Paises as P on p.IDPais = l.IDPais
+
+
+insert into Tickets(NombreGrupoSoporte, Descripcion, FechaApertura, FechaCierre, IDUsuario, EstadoTicket, Solucion, Estado)
+VALUES('RF01', 'Cambiar circuito buenosaires', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF02', 'Cambiar circuito santafe', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF03', 'Cambiar circuito posadas', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF04', 'Cambiar circuito monza', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF05', 'Cambiar circuito nur', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF06', 'Cambiar circuito milozi', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF07', 'Cambiar circuito monza', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF08', 'Cambiar circuito nur', GETDATE(), null, 2, 'A', 'prueba', 1),
+('RF09', 'Cambiar circuito milozi', GETDATE(), null, 2, 'A', 'prueba', 1)
+
+--select * from tickets
+select IDTicket, NombreGrupoSoporte, Descripcion, Solucion, FechaApertura, FechaCierre, EstadoTicket, t.Estado, T.IDUsuario IDUsuario, u.Usuario, u.UPassword, U.Apellido, U.Nombre, U.Telefono, U.Mail, L.IDLocalidad, L.Nombre, L.Estado, P.IDPais, P.Nombre, P.Estado from Tickets T, Usuarios U, Localidades L, Paises P where U.IDUsuario = T.IDUsuario and L.IDLocalidad = U.IDLocalidad and P.IDPais = L.IDPais 

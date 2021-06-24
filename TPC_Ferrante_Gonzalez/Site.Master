@@ -84,6 +84,9 @@
                         <a class="nav-link" href="Usuarios.aspx">Usuarios</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="Tickets.aspx">Ticket</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>

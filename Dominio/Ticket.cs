@@ -18,5 +18,9 @@ namespace Dominio
         public string EstadoTicket { get; set; }
         public bool Estado { get; set; }
 
+        public Ticket()
+        {
+            Usuario = new Usuario();
+        }
     }
 }
