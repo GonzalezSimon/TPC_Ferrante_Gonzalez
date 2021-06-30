@@ -45,7 +45,7 @@
 
             <div class="card" style="text-align:center;">
 
-                <asp:Label ID="lblSolucion" runat="server" Text="Solucionar Ticket: <% %>" CssClass="custom-control-label col-sm-2"></asp:Label>
+                <asp:Label ID="lblSolucion" runat="server" Text="Solucionar Ticket: " CssClass="custom-control-label col-sm-2"></asp:Label>
 
             <div class="col-sm-10">
                 <asp:TextBox ID="txtSolucion" runat="server" TextMode="MultiLine" CssClass="form-control text-ticket"></asp:TextBox>

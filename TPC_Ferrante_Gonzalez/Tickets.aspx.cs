@@ -71,7 +71,7 @@ namespace TPC_Ferrante_Gonzalez
 
             ticketSeleccionado = (Ticket)Session["ticketSeleccionado"];
 
-            ticketSeleccionado.Solucion = txtSolucion.Text;
+            txtSolucion.Text = ticketSeleccionado.Solucion;
 
                 tickets = (NegocioTicket)Session["tickets"];
                 ticketSeleccionado = ListaTickets.Find(x => x.Id.ToString() == ticketSeleccionado.Id.ToString());
@@ -83,6 +83,8 @@ namespace TPC_Ferrante_Gonzalez
 
             Session.Add("tickets", ListaTickets);
             Session.Add("TicketSol", ticketSeleccionado);
+
+            Response.Redirect("Tickets.aspx");
 
 
         }
