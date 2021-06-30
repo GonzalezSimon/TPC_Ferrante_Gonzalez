@@ -14,7 +14,7 @@ namespace TPC_Ferrante_Gonzalez
         public NegUsuario loggeado = new NegUsuario();
         public Usuario usuario;
 
-        public List<ServicioContratado> list;
+        public List<ServicioContratado> list = new List<ServicioContratado>();
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = new Usuario();
@@ -30,10 +30,10 @@ namespace TPC_Ferrante_Gonzalez
 
                 Session.Add("listadoServiciosContratados", list);
             }
-            catch(Exception ex)
+            catch(Exception /*ex*/)
             {
-                Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                /*Session.Add("Error", ex.ToString());
+                Response.Redirect("Error.aspx");*/
             }
 
 

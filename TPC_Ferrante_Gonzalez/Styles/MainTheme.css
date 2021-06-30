@@ -38,7 +38,7 @@
     opacity: .3;
     position: absolute;
     overflow: hidden;
-    bottom: -15vh;
+    bottom: -150px;
     animation: rombos 3s linear infinite;
 }
 

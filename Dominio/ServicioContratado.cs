@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class ServicioContratado
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public Servicio Servicio { get; set; }
         public Usuario Usuario { get; set; }
         public Usuario Delegado1 { get; set; }
@@ -17,5 +17,13 @@ namespace Dominio
         public DateTime FechaCancelacion { get; set; }
         public string GrupoSoporte { get; set; }
         public bool  Estado { get; set; }
+
+        public ServicioContratado()
+        {
+            Servicio = new Servicio();
+            Usuario = new Usuario();
+            Delegado1 = new Usuario();
+            Delegado2 = new Usuario();
+        }
     }
 }

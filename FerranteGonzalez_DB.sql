@@ -4,8 +4,8 @@
 
 --go
 
---create database FerranteGonzalez_DB
---go
+create database FerranteGonzalez_DB
+go
 
 use FerranteGonzalez_DB
 go
