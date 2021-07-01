@@ -48,19 +48,17 @@ namespace TPC_Ferrante_Gonzalez
 
             ticketSeleccionado = new Ticket();
 
-            ticketSeleccionado = (Ticket)Session["ticketSeleccionado"];
+            ticketSeleccionado = (Ticket)Session["TicketSol"];
 
             //txtSolucion.Text = ticketSeleccionado.Solucion;
 
-                tickets = (NegocioTicket)Session["tickets"];
-                ticketSeleccionado = ListaTickets.Find(x => x.Id.ToString() == ticketSeleccionado.Id.ToString());
+            //cketSeleccionado = ListaTickets.Find(x => x.Id.ToString() == ticketSeleccionado.Id.ToString());
+            ticketSeleccionado.Solucion = txtSolucion.Text;
+            ticketSeleccionado.FechaCierre = DateTime.Now;
 
-                tickets.modificar(ticketSeleccionado);
+            tickets.modificar(ticketSeleccionado);
 
-            string LAZARO = "anda";
-
-
-
+         
             Session.Add("tickets", ListaTickets);
             Session.Add("TicketSol", ticketSeleccionado);
 
@@ -89,15 +87,6 @@ namespace TPC_Ferrante_Gonzalez
 
             Session.Add("TicketSol", ticketSeleccionado);
         }
-
-        protected void btnSolucionar33_Command(object sender, CommandEventArgs e)
-        {
-            int asd = 1;
-        }
-
-        protected void btnSolucionar33_Click(object sender, EventArgs e)
-        {
-            int NUEVOEVENTO = 1;
-        }
     }
+
 }

@@ -53,7 +53,7 @@
                 <asp:RequiredFieldValidator ID="rfvSolucion" runat="server" ErrorMessage="Campo Obligatorio" Display="None" ControlToValidate="txtSolucion"></asp:RequiredFieldValidator>
             </div>
             <div style="text-align:center">
+                <asp:Button ID="Solucionar" runat="server" OnClick="btnSolucionar_Click" Text="Button" />
             </div>
             </div>
-                <asp:Button ID="btnSolucionar33" runat="server" Text="Solucionar" type="button" AutoPostBack="true" CssClass="btn btn-primary form-control" OnClick="btnSolucionar33_Click" OnCommand="btnSolucionar33_Command"/>
-</asp:Content>
+                </asp:Content>

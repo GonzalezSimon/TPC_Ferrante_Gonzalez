@@ -105,9 +105,9 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                "update Ticket set IDTicketo = @IDTicketo, NombreGrupoSoporte = @GrupoSoporte, IDUsuario = @IDUsuario," +
+                "update Tickets set NombreGrupoSoporte = @GrupoSoporte, IDUsuario = @IDUsuario," +
                 " FechaApertura = @FechaInicio, FechaCierre = @FechaFin , Descripcion = @Descripcion, EstadoTicket = @EstadoTicket," +
-                " Solucion = @Solucion, Estado = @Estado WHERE id =" + modificar.Id);
+                " Solucion = @Solucion, Estado = @Estado WHERE IDTicket =" + modificar.Id);
 
                 datos.agregarParametro("@IDTicketo", modificar.Id);
                 datos.agregarParametro("@GrupoSoporte", modificar.GrupoSoporte);
@@ -117,7 +117,7 @@ namespace Negocio
                 datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
                 datos.agregarParametro("@EstadoTicket", modificar.EstadoTicket);
                 datos.agregarParametro("@Solucion", modificar.Solucion);
-                datos.agregarParametro("@EstadoTicket", modificar.Estado);
+                datos.agregarParametro("@Estado", modificar.Estado);
 
                 datos.ejectutarAccion();
 
