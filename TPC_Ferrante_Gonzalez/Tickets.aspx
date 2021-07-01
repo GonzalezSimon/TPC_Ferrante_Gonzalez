@@ -8,7 +8,7 @@
             </div>
             <div class="">
                 <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Bienvenido <%= usuario.Apellido%> <%=usuario.Nombre%>!</li>
+                                <li class="list-group-item">Bienvenido <%=usuario.FechaCreacion %> <%=usuario.Nombre%>!</li>
                                 <li class="list-group-item">Fecha creación de usuario: <%=usuario.FechaCreacion %></li>
                                 <li class="list-group-item">A third item</li>
                             </ul>
@@ -17,18 +17,19 @@
         </div>
     
     <div class="table-responsive">
-        <asp:GridView ID="TicketGrid" CssClass="table table-bordered table-hover table-responsive tickets" AlternatingRowStyle-BackColor="#b5b5b5" runat="server" AutoGenerateColumns="False" DataSourceID="odsTickets" HorizontalAlign="Center" BackColor="White" BorderColor="#003366" BorderStyle="Double" ForeColor="#002346" OnSelectedIndexChanged="TicketGrid_SelectedIndexChanged" ShowHeaderWhenEmpty="True" AllowPaging="True" AllowSorting="True" CellPadding="5" CellSpacing="5" ShowFooter="True">
+        <asp:GridView ID="TicketGrid" CssClass="table table-bordered table-hover table-responsive tickets" AlternatingRowStyle-BackColor="#b5b5b5" runat="server" AutoGenerateColumns="False" DataSourceID="odsTickets" HorizontalAlign="Center" BackColor="White" BorderColor="#003366" BorderStyle="Double" ForeColor="#002346" OnSelectedIndexChanged="TicketGrid_SelectedIndexChanged1" ShowHeaderWhenEmpty="True" AllowPaging="True" AllowSorting="True" CellPadding="5" CellSpacing="5" ShowFooter="True">
 <AlternatingRowStyle BackColor="#B5B5B5"></AlternatingRowStyle>
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Numero Ticket" SortExpression="Id" />
+                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
                 <asp:BoundField DataField="GrupoSoporte" HeaderText="GrupoSoporte" SortExpression="GrupoSoporte" />
-                <asp:BoundField DataField="FechaApertura" HeaderText="Fecha Apertura" SortExpression="FechaApertura" DataFormatString="{0:dd/MM/yyyy}" />
-                <asp:BoundField DataField="FechaCierre" HeaderText="Fecha Cierre" SortExpression="FechaCierre" DataFormatString="{0:dd/MM/yyyy}" />
-                <asp:BoundField DataField="Descripcion" HeaderText="Descripción" SortExpression="Descripcion" />
-                <asp:BoundField DataField="Solucion" HeaderText="Solución" SortExpression="Solucion" />
-                <asp:BoundField DataField="EstadoTicket" HeaderText="Estado Ticket" SortExpression="EstadoTicket" />
-                <asp:ButtonField Text="<i class='fa fa-reply'> Solucionar</i>" ControlStyle-CssClass="btn btn-primary"><ControlStyle CssClass="btn btn-primary"></ControlStyle>
-                </asp:ButtonField>
+                <asp:BoundField DataField="Usuario.Id" HeaderText="Usuario" SortExpression="Usuario" />
+                <asp:BoundField DataField="FechaApertura" HeaderText="FechaApertura" SortExpression="FechaApertura" />
+                <asp:BoundField DataField="FechaCierre" HeaderText="FechaCierre" SortExpression="FechaCierre" />
+                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                <asp:BoundField DataField="Solucion" HeaderText="Solucion" SortExpression="Solucion" />
+                <asp:BoundField DataField="EstadoTicket" HeaderText="EstadoTicket" SortExpression="EstadoTicket" />
+                <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
+                <asp:ButtonField CommandName="Select" Text="ELBOTON" />
             </Columns>
             <HeaderStyle ForeColor="Black" HorizontalAlign="Center" />
             <RowStyle VerticalAlign="Middle" />
@@ -52,9 +53,7 @@
                 <asp:RequiredFieldValidator ID="rfvSolucion" runat="server" ErrorMessage="Campo Obligatorio" Display="None" ControlToValidate="txtSolucion"></asp:RequiredFieldValidator>
             </div>
             <div style="text-align:center">
-                <asp:Button ID="btnSolucionar" runat="server" Text="Solucionar" CssClass="btn btn-primary form-control" OnClick="btnSolucionar_Click"/>
             </div>
-
             </div>
-
+                <asp:Button ID="btnSolucionar33" runat="server" Text="Solucionar" type="button" AutoPostBack="true" CssClass="btn btn-primary form-control" OnClick="btnSolucionar33_Click" OnCommand="btnSolucionar33_Command"/>
 </asp:Content>

@@ -23,9 +23,6 @@ namespace TPC_Ferrante_Gonzalez
         {
             ticketSeleccionado = (Ticket)Session["ticketSeleccionado"];
 
-
-   
-
             usuario = new Usuario();
 
             usuario = loggeado.listar("and IDUsuario = 1")[0];
@@ -46,24 +43,6 @@ namespace TPC_Ferrante_Gonzalez
 
         }
 
-        protected void TicketGrid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ticketSeleccionado = new Ticket();
-
-            ticketSeleccionado.Id = Convert.ToInt64(TicketGrid.SelectedRow.Cells[1].Text);
-            ticketSeleccionado.GrupoSoporte = TicketGrid.SelectedRow.Cells[2].Text;
-            ticketSeleccionado.FechaApertura = Convert.ToDateTime(TicketGrid.SelectedRow.Cells[3].Text);
-            ticketSeleccionado.FechaCierre = Convert.ToDateTime(TicketGrid.SelectedRow.Cells[4].Text);
-            ticketSeleccionado.Usuario.Id = Convert.ToInt64(TicketGrid.SelectedRow.Cells[5].Text);
-            ticketSeleccionado.EstadoTicket = TicketGrid.SelectedRow.Cells[6].Text;
-            ticketSeleccionado.Solucion = TicketGrid.SelectedRow.Cells[7].Text;
-            ticketSeleccionado.Estado = Convert.ToBoolean(TicketGrid.SelectedRow.Cells[8].Text);
-
-            Session.Add("TicketSol", ticketSeleccionado);
-
-            Response.Redirect("Tickets.aspx");
-        }
-
         protected void btnSolucionar_Click(object sender, EventArgs e)
         {
 
@@ -71,13 +50,14 @@ namespace TPC_Ferrante_Gonzalez
 
             ticketSeleccionado = (Ticket)Session["ticketSeleccionado"];
 
-            txtSolucion.Text = ticketSeleccionado.Solucion;
+            //txtSolucion.Text = ticketSeleccionado.Solucion;
 
                 tickets = (NegocioTicket)Session["tickets"];
                 ticketSeleccionado = ListaTickets.Find(x => x.Id.ToString() == ticketSeleccionado.Id.ToString());
 
                 tickets.modificar(ticketSeleccionado);
 
+            string LAZARO = "anda";
 
 
 
@@ -87,6 +67,37 @@ namespace TPC_Ferrante_Gonzalez
             Response.Redirect("Tickets.aspx");
 
 
+        }
+
+        protected void TicketGrid_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            ticketSeleccionado = new Ticket();
+
+            //var var = TicketGrid.SelectedRow.Cells[7].Text;
+
+            ticketSeleccionado.Id = Convert.ToInt32(TicketGrid.SelectedRow.Cells[0].Text);
+            ticketSeleccionado.GrupoSoporte = TicketGrid.SelectedRow.Cells[1].Text;
+            ticketSeleccionado.Usuario.Id = Convert.ToInt32(TicketGrid.SelectedRow.Cells[2].Text);
+            ticketSeleccionado.FechaApertura = Convert.ToDateTime(TicketGrid.SelectedRow.Cells[3].Text);
+            ticketSeleccionado.FechaCierre = Convert.ToDateTime(TicketGrid.SelectedRow.Cells[4].Text);
+            ticketSeleccionado.Descripcion = TicketGrid.SelectedRow.Cells[5].Text;
+            ticketSeleccionado.Solucion = TicketGrid.SelectedRow.Cells[6].Text;
+            ticketSeleccionado.EstadoTicket = TicketGrid.SelectedRow.Cells[7].Text;
+            ticketSeleccionado.Estado = Convert.ToBoolean(TicketGrid.SelectedRow.Cells[8].Text.ToString());
+
+            txtSolucion.Text = ticketSeleccionado.Solucion;
+
+            Session.Add("TicketSol", ticketSeleccionado);
+        }
+
+        protected void btnSolucionar33_Command(object sender, CommandEventArgs e)
+        {
+            int asd = 1;
+        }
+
+        protected void btnSolucionar33_Click(object sender, EventArgs e)
+        {
+            int NUEVOEVENTO = 1;
         }
     }
 }
