@@ -25,7 +25,7 @@ namespace TPC_Ferrante_Gonzalez
 
             usuario = new Usuario();
 
-            usuario = loggeado.listar("and IDUsuario = 1")[0];
+            usuario = (Usuario)Session["Usuario"];//loggeado.listar("and IDUsuario = 1")[0];
 
             try
             {
