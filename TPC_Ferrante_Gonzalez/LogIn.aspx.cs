@@ -14,15 +14,15 @@ namespace TPC_Ferrante_Gonzalez
         {
 
         }
-        public Usuario InicioSecion(string user,string password)
+        public Usuario InicioSecion(string user, string password)
         {
             NegUsuario n_usuario = new NegUsuario();
             List<Usuario> lista = new List<Usuario>();
             Usuario usu = new Usuario();
             lista = n_usuario.listar();
-            foreach(Usuario item in lista)
+            foreach (Usuario item in lista)
             {
-                if(item.UserName== user&& item.Password == password)
+                if (item.UserName == user && item.Password == password)
                 {
                     usu = item;
                 }
@@ -40,20 +40,36 @@ namespace TPC_Ferrante_Gonzalez
             cliente = InicioSecion(user, Pass);
             if (cliente.Nombre == null)
             {
-                Response.Write("<script> alert("+"'Los datos son incorretos'"+") </script>");
+                Response.Write("<script> alert(" + "'Los datos son incorretos'" + ") </script>");
             }
             else
             {
                 Session["Usuario"] = cliente;
+                Session["NivelAcceso"] = cliente.Tipo.Nombre;
+
                 //Response.Write("<script> alert(" + "'Usuario encontrado'" + ") </script>");
-                Response.Redirect("Usuarios.aspx");
+                switch (cliente.Tipo.Nombre)
+                {
+                    case "A":
+                        Response.Redirect("Tickets.aspx");
+
+                        break;
+                    case "C":
+                        Response.Redirect("Usuarios.aspx");
+                        break;
+                    default:
+                        Response.Redirect("Home.aspx");
+                        break;
+                }
+
+
 
             }
         }
 
         protected void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

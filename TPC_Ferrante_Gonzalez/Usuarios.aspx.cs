@@ -52,7 +52,16 @@ namespace TPC_Ferrante_Gonzalez
         }
         private void ValidarSesion()
         {
-            if (Session["Usuario"] == null)
+            Usuario aux = new Usuario();
+            try
+            {
+                aux = (Usuario)Session["Usuario"];
+            }
+            catch (Exception)
+            {
+
+            }
+            if (Session["Usuario"] == null || !(aux.Tipo.Nombre.Equals("C")))
             {
                 Response.Redirect("Home.aspx");
             }
