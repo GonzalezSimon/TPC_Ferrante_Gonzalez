@@ -18,25 +18,44 @@ namespace TPC_Ferrante_Gonzalez
         protected void Page_Load(object sender, EventArgs e)
         {
             usuario = new Usuario();
-            
-            usuario = loggeado.listar("and IDUsuario = 2")[0];
+            List<ServicioContratado> aux = new List<ServicioContratado>();
 
-
-            NegocioServContratado servicioContratado = new NegocioServContratado();
-
-            try
+            //usuario = loggeado.listar("and IDUsuario = 2")[0];
+            if (!Page.IsPostBack)
             {
-                list = servicioContratado.listar();
+                ValidarSesion();
 
-                Session.Add("listadoServiciosContratados", list);
+                usuario = (Usuario)Session["Usuario"];
+                NegocioServContratado servicioContratado = new NegocioServContratado();
+                aux = servicioContratado.listar();
+
+                foreach (ServicioContratado item in aux)
+                {
+                    if (item.Usuario.Id == usuario.Id)
+                    {
+                        list.Add(item);
+                    }
+                }
+
+                try
+                {
+                    Session.Add("listadoServiciosContratados", list);
+                }
+                catch (Exception /*ex*/)
+                {
+                    /*Session.Add("Error", ex.ToString());
+                    Response.Redirect("Error.aspx");*/
+                }
             }
-            catch(Exception /*ex*/)
+
+
+        }
+        private void ValidarSesion()
+        {
+            if (Session["Usuario"] == null)
             {
-                /*Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx");*/
+                Response.Redirect("Home.aspx");
             }
-
-
         }
     }
 }

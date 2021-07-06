@@ -13,5 +13,20 @@ namespace TPC_Ferrante_Gonzalez
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("LogIn.aspx");
+            }
+            
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session["Usuario"] = null;
+            Response.Redirect("Home.aspx");
+        }
     }
 }
