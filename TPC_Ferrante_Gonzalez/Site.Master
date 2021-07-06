@@ -46,28 +46,12 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">ROTA Host</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="Home.aspx">Home</a>
-                    <a class="nav-link" href="Servicios.aspx">Servicios</a>
-                </div>
-            </div>
-        </nav>-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a href="Home.aspx">
 
                 <img src="Imgs/LogoLogin.png" style="max-height: 50px" />
 
             </a>
-            <!--<a class="navbar-brand" href="#">Navbar</a>-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -80,19 +64,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Servicios.aspx">Servicios</a>
                     </li>
+                    <%if (Session["Usuario"] != null)
+                        { %>
                     <li class="nav-item">
-                        <a class="nav-link" href="Usuarios.aspx">Usuarios</a>
+                        <a class="nav-link" href="Usuarios.aspx">Mis Subcripciones</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Tickets.aspx">Ticket</a>
-                    </li>
-                    <li class="nav-item">
+                    >
+                    <%}%>
+                    <!--<li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+                    </li>-->
                 </ul>
                 <div class="card-inline my-2 my-lg-0">
-                    <!--<input class="form-control mr-sm-2" type="search" placeholder="Search">-->
-                    <a href="LogIn.aspx" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" type="submit">Login </a>
+
+                    <%if (Session["Usuario"] == null)
+                        { %>
+                    <asp:Button ID="btnLogin" runat="server" Text="LogIn" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" OnClick="btnLogin_Click" />
+                    ><%}
+                    else
+                    { %>
+                    <asp:Button ID="btnLogout" runat="server" Text="LogOut" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" OnClick="btnLogout_Click" /><%} %>
                 </div>
             </div>
         </nav>

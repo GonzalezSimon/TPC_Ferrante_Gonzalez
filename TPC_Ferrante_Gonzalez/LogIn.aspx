@@ -13,27 +13,30 @@
                     </div>
                 </div>
                 <div class="card-body login">
-                    <form style="margin: 10px">
+                    <div style="margin: 10px">
                         <div class="input-group form-group login" style="justify-content: center;">
                             <div class="input-group-prepend login">
                                 <span class="input-group-text login"><i class="fas fa-user login"></i></span>
                             </div>
-                            <input type="text" class="form-control login" placeholder="Usuario">
+                            <asp:TextBox ID="txtUsuario" runat="server" class="form-control login" placeholder="Usuario" OnTextChanged="txtUsuario_TextChanged"></asp:TextBox>
+                            <!--<input type="text" class="form-control login" placeholder="Usuario">-->
                         </div>
                         <div class="input-group form-group login" style="justify-content: center;">
                             <div class="input-group-prepend login">
                                 <span class="input-group-text login"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control login" placeholder="Contraseña">
+                            <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control login" placeholder="Contraseña"></asp:TextBox>
+                            <!--<input type="password" class="form-control login" placeholder="Contraseña">-->
                         </div>
                         <div class="row align-items-center remember login" style="margin-left: 0.1px">
                             <input type="checkbox">Recuerdame
 				
                         </div>
                         <div class="form-group login">
-                            <input type="submit" value="Ingresar" class="btn float-right login_btn login">
+                            <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" class="btn float-right login_btn login" />
+                            <!--<input id="btnIngresar"type="submit" value="Ingresar" class="btn float-right login_btn login" onclick="btnIngresar_Click">-->
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="card-footer login">
                     <div class="d-flex justify-content-center links login">
