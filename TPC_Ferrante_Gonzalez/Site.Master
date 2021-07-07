@@ -70,14 +70,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Usuarios.aspx">Mis Subcripciones</a>
                     </li>
-                    >
+                    
                     <%}%>
                     <%if (tpUsuario.Equals("A"))
                         { %>
                     <li class="nav-item">
                         <a class="nav-link" href="Tickets.aspx">Administracion</a>
                     </li>
-                    >
+
                     <%}%>
                     <!--<li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -90,8 +90,8 @@
                     <%if (Session["Usuario"] == null)
                         { %>
                     <asp:Button ID="btnLogin" runat="server" Text="Ingresar" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" OnClick="btnLogin_Click" />
-                    ><%}
-                         else
+                    <%}
+                         else 
                          { %>
 
                     <asp:Button ID="btnLogout" runat="server" Text="Salir" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" OnClick="btnLogout_Click" /><%} %>

@@ -25,22 +25,26 @@ namespace TPC_Ferrante_Gonzalez
 
             usuario = new Usuario();
 
-            usuario = (Usuario)Session["Usuario"];//loggeado.listar("and IDUsuario = 1")[0];
-
-            try
+            if (!Page.IsPostBack)
             {
-                ListaTickets = tickets.listar("and IDTicket = 1");
+                ValidarSesion();
+
+                usuario = (Usuario)Session["Usuario"];//loggeado.listar("and IDUsuario = 1")[0];
+
+                try
+                {
+                    ListaTickets = tickets.listar("and IDTicket = 1");
 
 
-                Session.Add("ticketSeleccionado", ticketSeleccionado);
-                Session.Add("tickets", ListaTickets);
+                    Session.Add("ticketSeleccionado", ticketSeleccionado);
+                    Session.Add("tickets", ListaTickets);
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("Error", ex.ToString());
+                    Response.Redirect("Error.aspx");
+                }
             }
-            catch (Exception ex)
-            {
-                Session.Add("Error", ex.ToString());
-                Response.Redirect("Error.aspx");
-            }
-
         }
 
         protected void btnSolucionar_Click(object sender, EventArgs e)
@@ -87,6 +91,24 @@ namespace TPC_Ferrante_Gonzalez
 
             Session.Add("TicketSol", ticketSeleccionado);
         }
+
+        private void ValidarSesion()
+        {
+            Usuario aux = new Usuario();
+            try
+            {
+                aux = (Usuario)Session["Usuario"];
+            }
+            catch (Exception)
+            {
+
+            }
+            if (Session["Usuario"] == null || !(aux.Tipo.Nombre.Equals("A")))
+            {
+                Response.Redirect("Home.aspx");
+            }
+        }
+
     }
 
 }

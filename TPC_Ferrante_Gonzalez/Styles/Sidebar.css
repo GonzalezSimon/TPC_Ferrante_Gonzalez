@@ -29,6 +29,7 @@
     min-width: max-content;
     overflow-x:scroll;
     margin-right: 0;
+    margin-bottom: 0;
     -webkit-overflow-scrolling: touch;
     min-height: 50vh;
     padding-left:3rem;
