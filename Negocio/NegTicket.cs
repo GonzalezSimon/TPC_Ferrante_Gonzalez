@@ -67,6 +67,64 @@ namespace Negocio
 
         }
 
+        public List<Ticket> listarAbiertos(string consulta = "")
+        {
+            List<Ticket> lista = new List<Ticket>();
+
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {//, FechaCierre
+                datos.setearConsulta("select IDTicket, NombreGrupoSoporte, Descripcion, Solucion, FechaApertura, EstadoTicket, t.Estado EstadoT, T.IDUsuario IDUsuario, u.Usuario Usuario, u.UPassword UPassword, U.Apellido Apellido, U.Nombre Nombre, U.Telefono Telefono, U.Mail Mail, L.IDLocalidad IDLocalidad, L.Nombre NombreL, L.Estado EstadoL, P.IDPais IDPais, P.Nombre NombreP, P.Estado EstadoP from Tickets T, Usuarios U, Localidades L, Paises P where U.IDUsuario = T.IDUsuario and L.IDLocalidad = U.IDLocalidad and P.IDPais = L.IDPais and EstadoTicket like 'A'" + consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Ticket aux = new Ticket();
+
+                    aux.Id = (long)datos.Lector["IDTicket"];
+                    aux.GrupoSoporte = (string)datos.Lector["NombreGrupoSoporte"];
+                    //carga usuario
+                    aux.Usuario.Id = (long)datos.Lector["IDUsuario"];
+                    aux.Usuario.UserName = (string)datos.Lector["Usuario"];
+                    aux.Usuario.Password = (string)datos.Lector["UPassword"];
+                    aux.Usuario.Apellido = (string)datos.Lector["Apellido"];
+                    aux.Usuario.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Usuario.Telefono = (string)datos.Lector["Telefono"];
+                    aux.Usuario.Mail = (string)datos.Lector["Mail"];
+                    //carga usuario.localidad
+                    aux.Usuario.Localidad.Id = (long)datos.Lector["IDLocalidad"];
+                    aux.Usuario.Localidad.Nombre = (string)datos.Lector["NombreL"];
+                    aux.Usuario.Localidad.Estado = (bool)datos.Lector["EstadoL"];
+                    //carga usuario.localida.pais
+                    aux.Usuario.Localidad.Pais.Id = (int)datos.Lector["IDPais"];
+                    aux.Usuario.Localidad.Pais.Nombre = (string)datos.Lector["NombreP"];
+                    aux.Usuario.Localidad.Pais.Estado = (bool)datos.Lector["EstadoP"];
+
+
+                    aux.FechaApertura = (DateTime)datos.Lector["FechaApertura"];
+                    // aux.FechaCierre = (DateTime)datos.Lector["FechaCierre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Solucion = (string)datos.Lector["Solucion"];
+                    aux.EstadoTicket = (string)datos.Lector["EstadoTicket"];
+                    aux.Estado = (bool)datos.Lector["EstadoT"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
         public void agregar(Ticket nuevo)
         {
             AccesoDatos datos = new AccesoDatos();

@@ -10,7 +10,7 @@
 }
 .bg-primary.sidebar-usuarios {
     background-color: #222222 !important;
-    min-height: 50vh;
+    min-height: 25vh;
     width: 18rem;
 }
 .d-flex.contenedor-sidebar {
@@ -31,8 +31,8 @@
     margin-right: 0;
     margin-bottom: 0;
     -webkit-overflow-scrolling: touch;
-    min-height: 50vh;
-    padding-left:3rem;
+    min-height: 25vh;
+    padding-left:0rem;
 }
 
 .text-ticket {

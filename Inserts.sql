@@ -82,3 +82,7 @@ VALUES('RF01', 'Cambiar circuito buenosaires', GETDATE(), null, 2, 'A', 'prueba'
 
 --select * from tickets
 select IDTicket, NombreGrupoSoporte, Descripcion, Solucion, FechaApertura, FechaCierre, EstadoTicket, t.Estado, T.IDUsuario IDUsuario, u.Usuario, u.UPassword, U.Apellido, U.Nombre, U.Telefono, U.Mail, L.IDLocalidad, L.Nombre, L.Estado, P.IDPais, P.Nombre, P.Estado from Tickets T, Usuarios U, Localidades L, Paises P where U.IDUsuario = T.IDUsuario and L.IDLocalidad = U.IDLocalidad and P.IDPais = L.IDPais 
+
+UPDATE Tickets
+set EstadoTicket = 'C'
+where IDTicket = 2;
