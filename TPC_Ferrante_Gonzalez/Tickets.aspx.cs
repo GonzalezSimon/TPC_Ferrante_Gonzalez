@@ -59,6 +59,7 @@ namespace TPC_Ferrante_Gonzalez
             //cketSeleccionado = ListaTickets.Find(x => x.Id.ToString() == ticketSeleccionado.Id.ToString());
             ticketSeleccionado.Solucion = txtSolucion.Text;
             ticketSeleccionado.FechaCierre = DateTime.Now;
+            ticketSeleccionado.EstadoTicket = "R";
 
             tickets.modificar(ticketSeleccionado);
 
