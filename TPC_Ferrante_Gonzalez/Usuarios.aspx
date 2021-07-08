@@ -2,8 +2,10 @@
 
 <asp:Content ID="UsuariosHeader" ContentPlaceHolderID="Header" runat="server">
 
-    <div class="d-flex contenedor-sidebar" style="height: 45rem">
-        <div class="bg-primary.sidebar-usuarios" style="margin: 5rem; background-color: rgba(0,0,0,0.7) !important;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
+                 <div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
             <div class="logo">
                 <img src="<%= usuario.URLimagen %>" alt="..." class="imglogo">
             </div>
@@ -18,30 +20,44 @@
                 <a href="Home.aspx" class="opcoines">Homiado</a>
             </div>
         </div>
-
-        <% foreach (Dominio.ServicioContratado item in list)
-            { %>
-
-        <div class="card" style="width: 25rem;margin: 6rem;margin-left: 2rem;margin-right: 2rem;border-bottom-right-radius: 10%;border-top-left-radius: 10%;background-color: rgba(0,0,0,0.7) !important;color: white;">
-
-            <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-20200407144605-2-2-1586272081.png" class="card-img-top" alt="..." style="height: 8rem;width: 22rem;margin: 5.8%;margin-top: -1.5rem;border-top-left-radius: 8%;border-top-right-radius: 8%;">
-            <div class="card-body" style="height: 1rem; max-height: 7rem;">
-                <h5 class="card-title"><% =item.Servicio.Descripcion %></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <ul class="list-group list-group-flush" style="height: 20rem; margin-top: 6rem;color:black">
-                <li class="list-group-item">Fecha Inicio: <%=item.FechaCompra %></li>
-                <li class="list-group-item">Fecha Fin: <%=item.FechaCancelacion %></li>
-                <li class="list-group-item">Administrador: <% =item.Usuario.Nombre%> </li>
-                <li class="list-group-item">Grupo Soporte: <% =item.GrupoSoporte%> </li>
-            </ul>
-            <div class="card-body">
-                <a href="#" class="card-link">Crear Ticket Soporte</a>
-                <a href="#" class="card-link">Dar de baja</a>
+            <div class="col-sm">
+                <% foreach (Dominio.ServicioContratado item in list)
+                    { %>
+                <div class="card mb-3" style="max-width: 100%;margin:2rem;background-color: rgba(0,0,0,0.7) !important; color: white;"">
+                    <div class="row no-gutters">
+                        <div class="col-4" style="display:flex">
+                            <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-20200407144605-2-2-1586272081.png" alt="..."style="max-width:90%;align-items:center;margin:10px">
+                        </div>
+                        <div class="col"style="display:flex">
+                            <div class="card-body">
+                                 <h5 class="card-title"><% =item.Servicio.Descripcion %></h5>
+                                <p >Fecha Inicio: <%=item.FechaCompra %></p>
+                                 <p >Fecha Fin:<%=item.FechaCancelacion %></p>
+                                 <p >Administrador:  <% =item.Usuario.Nombre%></p>
+                                <p >Grupo Soporte: <% =item.GrupoSoporte%>></p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="row" style="width:100%">
+                                     <asp:Button ID="Button1" runat="server" Text="Ticket Soporte" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" style="width: 100%;
+    margin-left: 2rem;"/>
+                            </div>
+                            <div class="row" style="width:100%">
+                                    <asp:Button ID="Button2" runat="server" Text="Dar de baja" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" style="
+    width: 100%;
+    margin-left: 2rem;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%}%>
             </div>
+
+            
         </div>
-
-        <%}%>
     </div>
+
 </asp:Content>
 
