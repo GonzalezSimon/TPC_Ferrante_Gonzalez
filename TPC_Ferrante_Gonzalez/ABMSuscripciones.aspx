@@ -23,7 +23,7 @@
             <nav id="sidebar" class="sidebar-wrapper">
                 <div class="sidebar-content">
                     <div class="sidebar-brand">
-                        <a href="#">pro sidebar</a>
+                        <a href="#">PANEL</a>
                         <div id="close-sidebar">
                             <i class="fas fa-times"></i>
                         </div>
@@ -34,11 +34,11 @@
                                 alt="User picture">
                         </div>
                         <div class="user-info">
-                            <span class="user-name">Jhon
+                            <span class="user-name"><%= usuario.Nombre %>
            
-                                <strong>Smith</strong>
+                                <strong><%=usuario.Apellido %></strong>
                             </span>
-                            <span class="user-role">Administrator</span>
+                            <span class="user-role"><%= TipoUsuario %></span>
                             <span class="user-status">
                                 <i class="fa fa-circle"></i>
                                 <span>Online</span>
@@ -72,13 +72,13 @@
                             <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fa fa-shopping-cart"></i>
-                                    <span>E-commerce</span>
+                                    <span>Usuarios</span>
                                     <span class="badge badge-pill badge-danger">3</span>
                                 </a>
                                 <div class="sidebar-submenu">
                                     <ul>
                                         <li>
-                                            <a href="#">Products
+                                            <a href="#AMBSuscripciones.aspx">Administrar
 
                                             </a>
                                         </li>

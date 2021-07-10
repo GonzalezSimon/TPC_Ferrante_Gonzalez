@@ -65,7 +65,7 @@ body {
 #close-sidebar {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
+    /*-ms-transition: all 0.3s ease;*/
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
@@ -101,7 +101,7 @@ body {
 }
 /*----------------show sidebar button----------------*/
 #show-sidebar {
-    position: fixed;
+    position: relative;
     left: 0;
     top: 10px;
     border-radius: 0 4px 4px 0px;
@@ -118,7 +118,7 @@ body {
     width: 260px;
     height: 100%;
     max-height: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     left: -300px;
     z-index: 999;

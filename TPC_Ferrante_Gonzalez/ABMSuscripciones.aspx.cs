@@ -16,6 +16,7 @@ namespace TPC_Ferrante_Gonzalez
         public ServicioContratado servicioSeleccionado;
         public List<ServicioContratado> ListaSuscripciones;
         public Usuario usuario;
+        public string TipoUsuario;
        // public NegUsuario loggeado = new NegUsuario();
 
 
@@ -28,6 +29,7 @@ namespace TPC_Ferrante_Gonzalez
             if (!Page.IsPostBack)
             {
                 ValidarSesion();
+                ValidarTipo();
 
                 usuario = (Usuario)Session["Usuario"];//loggeado.listar("and IDUsuario = 1")[0];
 
@@ -61,6 +63,30 @@ namespace TPC_Ferrante_Gonzalez
             if (Session["Usuario"] == null || !(aux.Tipo.Nombre.Equals("A")))
             {
                 Response.Redirect("Home.aspx");
+            }
+        }
+        private void ValidarTipo()
+        {
+            Usuario aux = new Usuario();
+            try
+            {
+                aux = (Usuario)Session["Usuario"];
+            }
+            catch (Exception)
+            {
+
+            }
+            if (Session["Usuario"] != null && (aux.Tipo.Nombre.Equals("A")))
+            {
+                TipoUsuario = "Administrador";
+            }
+            if (Session["Usuario"] != null && (aux.Tipo.Nombre.Equals("S")))
+            {
+                TipoUsuario = "Supervisor";
+            }
+            if (Session["Usuario"] != null && (aux.Tipo.Nombre.Equals("C")))
+            {
+                TipoUsuario = "Cliente";
             }
         }
 
