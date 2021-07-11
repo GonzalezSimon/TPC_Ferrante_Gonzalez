@@ -4,23 +4,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <!--<div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
-                <div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
-                    <div class="logo">
-                        <img src="<%= usuario.URLimagen %>" alt="..." class="imglogo">
-                    </div>
-                    <div class="">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Bienvenido <%=usuario.UserName%>!</li>
-                            <li class="list-group-item">Nombre: <%=usuario.Nombre+" "+usuario.Apellido %></li>
-                            <li class="list-group-item">Cantidad de Servicios: <%=list.Count.ToString() %></li>
-                            <li class="list-group-item">Fecha creación de usuario: <%=usuario.FechaCreacion %></li>
-                            <li class="list-group-item">Fecha creación de usuario: <%=usuario.FechaCreacion %></li>
-                        </ul>
-                        <a href="Home.aspx" class="opcoines">Homiado</a>
-                    </div>
-                </div>
-            </div>-->
+           
             <div class="col-sm">
                 <% foreach (Dominio.ServicioContratado item in list)
                     { %>

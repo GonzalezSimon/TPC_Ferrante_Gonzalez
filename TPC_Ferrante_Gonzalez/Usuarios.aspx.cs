@@ -19,6 +19,7 @@ namespace TPC_Ferrante_Gonzalez
         {
             usuario = new Usuario();
             List<ServicioContratado> aux = new List<ServicioContratado>();
+            Page.Title = "Usuarios";
 
             //usuario = loggeado.listar("and IDUsuario = 2")[0];
             if (!Page.IsPostBack)
