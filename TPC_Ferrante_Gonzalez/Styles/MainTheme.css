@@ -27,7 +27,7 @@
 
 .rombo {
     width: 80px;
-    z-index: -4000;
+    z-index: -2000;
     height: 80px;
     /*border-left: 50px solid transparent;
     border-right: 50px solid transparent;
@@ -38,7 +38,7 @@
     opacity: .3;
     position: absolute;
     overflow: hidden;
-    bottom: -150px;
+    bottom: -150vh;
     animation: rombos 3s linear infinite;
 }
 
@@ -100,11 +100,13 @@
 
 @keyframes rombos {
     0% {
+        visibility:hidden;
         bottom: 0;
         opacity: 0;
     }
 
     30% {
+        visibility:visible;
         transform: translate(20px);
     }
 
