@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.Usuarios" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/SideBar.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.Usuarios" %>
 
 <asp:Content ID="UsuariosHeader" ContentPlaceHolderID="Header" runat="server">
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
+            <!--<div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
                 <div class="col-3" style="margin: 0; background-color: rgba(0,0,0,0.7) !important; max-width: 400px; min-height: 100vh;">
                     <div class="logo">
                         <img src="<%= usuario.URLimagen %>" alt="..." class="imglogo">
@@ -20,7 +20,7 @@
                         <a href="Home.aspx" class="opcoines">Homiado</a>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="col-sm">
                 <% foreach (Dominio.ServicioContratado item in list)
                     { %>
