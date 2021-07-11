@@ -4,8 +4,16 @@
     <div class="Conteiner">
         <div class="form-row">
             <div class="form-group col-md-3">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input list="Subscripciones" class="form-control" placeholder="Elija su subscripcion...">
+                <label >Subscripciones</label>
+                <datalist id="Subscripciones">
+                    <%foreach (var item in list)
+                        { %>
+                    
+                    <option value="<%=item.Servicio.Descripcion.ToString() %>""></option>
+                    
+                    <%} %>
+                </datalist>
             </div>
             <div class="form-group col-md-3">
                 <label for="inputPassword4">Password</label>
