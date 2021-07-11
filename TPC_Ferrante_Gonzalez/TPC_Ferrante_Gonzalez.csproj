@@ -260,6 +260,7 @@
     <Content Include="Styles\MainTheme.css" />
     <Content Include="Styles\MasterSidebar.css" />
     <Content Include="Styles\Sidebar.css" />
+    <Content Include="TicketeraUsuarios.aspx" />
     <Content Include="Tickets.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -336,6 +337,13 @@
     </Compile>
     <Compile Include="SideBar.Master.designer.cs">
       <DependentUpon>SideBar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TicketeraUsuarios.aspx.cs">
+      <DependentUpon>TicketeraUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketeraUsuarios.aspx.designer.cs">
+      <DependentUpon>TicketeraUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tickets.aspx.cs">
       <DependentUpon>Tickets.aspx</DependentUpon>
