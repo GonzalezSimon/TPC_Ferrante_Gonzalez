@@ -17,7 +17,7 @@ namespace TPC_Ferrante_Gonzalez
         public List<ServicioContratado> ListaSuscripciones;
         public Usuario usuario;
         public string TipoUsuario;
-       // public NegUsuario loggeado = new NegUsuario();
+        // public NegUsuario loggeado = new NegUsuario();
 
 
         protected void Page_Load(object sender, EventArgs e)
