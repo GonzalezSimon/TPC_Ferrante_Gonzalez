@@ -11,44 +11,45 @@ namespace TPC_Ferrante_Gonzalez
 {
     public partial class ABMSuscripciones : System.Web.UI.Page
     {
-        public NegocioServContratado Suscripcion = new NegocioServContratado();
-        //public Ticket ticket;
-        public ServicioContratado servicioSeleccionado;
-        public List<ServicioContratado> ListaSuscripciones;
+        public NegUsuario loggeado = new NegUsuario();
         public Usuario usuario;
-        public string TipoUsuario;
-        // public NegUsuario loggeado = new NegUsuario();
 
-
+        public List<ServicioContratado> list = new List<ServicioContratado>();
+        public ServicioContratado modificado = new ServicioContratado();
         protected void Page_Load(object sender, EventArgs e)
         {
-            servicioSeleccionado = (ServicioContratado)Session["servicioSeleccionado"];
-
             usuario = new Usuario();
+            List<ServicioContratado> aux = new List<ServicioContratado>();
+            Page.Title = "Usuarios";
 
+            //usuario = loggeado.listar("and IDUsuario = 2")[0];
             if (!Page.IsPostBack)
             {
                 ValidarSesion();
-                ValidarTipo();
 
-                usuario = (Usuario)Session["Usuario"];//loggeado.listar("and IDUsuario = 1")[0];
+                usuario = (Usuario)Session["Usuario"];
+                NegocioServContratado servicioContratado = new NegocioServContratado();
+                aux = servicioContratado.listar();
+
+                foreach (ServicioContratado item in aux)
+                {
+
+                        list.Add(item);
+                }
 
                 try
                 {
-                    //ListaTickets = tickets.listar("and IDTicket = 1");
-
-
-                    Session.Add("servicioSeleccionado", servicioSeleccionado);
-                    Session.Add("listSuscripciones", ListaSuscripciones);
+                    Session.Add("listadoServiciosContratadosAdm", list);
                 }
-                catch (Exception ex)
+                catch (Exception /*ex*/)
                 {
-                    Session.Add("Error", ex.ToString());
-                    Response.Redirect("Error.aspx");
+                    /*Session.Add("Error", ex.ToString());
+                    Response.Redirect("Error.aspx");*/
                 }
             }
-        }
 
+
+        }
         private void ValidarSesion()
         {
             Usuario aux = new Usuario();
@@ -64,30 +65,7 @@ namespace TPC_Ferrante_Gonzalez
             {
                 Response.Redirect("Home.aspx");
             }
-        }
-        private void ValidarTipo()
-        {
-            Usuario aux = new Usuario();
-            try
-            {
-                aux = (Usuario)Session["Usuario"];
-            }
-            catch (Exception)
-            {
 
-            }
-            if (Session["Usuario"] != null && (aux.Tipo.Nombre.Equals("A")))
-            {
-                TipoUsuario = "Administrador";
-            }
-            if (Session["Usuario"] != null && (aux.Tipo.Nombre.Equals("S")))
-            {
-                TipoUsuario = "Supervisor";
-            }
-            if (Session["Usuario"] != null && (aux.Tipo.Nombre.Equals("C")))
-            {
-                TipoUsuario = "Cliente";
-            }
         }
 
     }

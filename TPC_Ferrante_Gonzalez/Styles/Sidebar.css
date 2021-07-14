@@ -42,3 +42,11 @@
     resize: both;
     margin:0!important;
 }
+
+.text-abmsus {
+    max-width: 50vh;
+    min-width: 25vh;
+    /*overflow: auto;*/
+    resize: both;
+    margin: 0 !important;
+}
