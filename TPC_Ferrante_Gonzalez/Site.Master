@@ -71,7 +71,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Usuarios.aspx">Mis Subcripciones</a>
                     </li>
-                    
+
                     <%}%>
                     <%if (tpUsuario.Equals("A"))
                         { %>
@@ -84,16 +84,16 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>-->
                 </ul>
-                <img src="<%= Img %>" style="max-height: 40px;border-bottom-left-radius:40%;border-top-right-radius:40%;" />
-                <h1 style="margin: 15px;color:antiquewhite;font-size:medium;"><%=Nombre %></h1>
+                <img src="<%= Img %>" style="max-height: 40px; border-bottom-left-radius: 40%; border-top-right-radius: 40%;" />
+                <h1 style="margin: 15px; color: antiquewhite; font-size: medium;"><%=Nombre %></h1>
                 <div class="card-inline my-2 my-lg-0">
 
                     <%if (Session["Usuario"] == null)
                         { %>
                     <asp:Button ID="btnLogin" runat="server" Text="Ingresar" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" OnClick="btnLogin_Click" />
                     <%}
-                         else 
-                         { %>
+                        else
+                        { %>
 
                     <asp:Button ID="btnLogout" runat="server" Text="Salir" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" OnClick="btnLogout_Click" /><%} %>
                 </div>
