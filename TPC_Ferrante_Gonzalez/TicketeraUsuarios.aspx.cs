@@ -38,8 +38,21 @@ namespace TPC_Ferrante_Gonzalez
         }
 
         protected void lstSubs_SelectedIndexChanged(object sender, EventArgs e)
+
         {
-            lblAlias = aux.Find(x => x.Id == lstSubs.SelectedItem.Value);
+            aux = (List<ServicioContratado>)Session["listadoServiciosContratados"];
+            long auxd = long.Parse(lstSubs.SelectedItem.Value);
+            ServicioContratado aux2 = new ServicioContratado();
+            foreach (var item in aux)
+            {
+                if (item.Id == auxd)
+                {
+                    aux2 = item;
+                    
+                }
+            }
+           
+            lblAlias.Text = aux2.GrupoSoporte;
         }
     }
 }

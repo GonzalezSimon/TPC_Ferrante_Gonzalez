@@ -2,43 +2,52 @@
 
 <asp:Content ID="TKUsuarios" ContentPlaceHolderID="Header" runat="server">
     <div class="col clearfix" style="background-color: rgba(0,0,0,0.8) !important; width: 100%; height: 100%; max-height: 95%; min-height: 761px; min-width: 460px;">
-        <div class="row">
+        <div class="row tkUsGeneral">
             <div class="col-1">
             </div>
-            <div class="col-10">
-                <div class="row" style="margin: auto; padding: 2rem">
-                    <div class="col-6">
-                        <div class="row">
-                            <asp:Label ID="Label1" runat="server" Text="Subscripciones" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
+            <div class="col-10 colPrincipal">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div class="row primera" style="margin: auto; padding: 2rem;padding-left:0">
+                    <div class="col-6" style="padding-left:0">
+                        <div class="row titulos">
+                            <div class="col-5">
+                                <asp:Label ID="Label1" runat="server" Text="Subscripciones" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
+                            </div>
+                            <div class="col-6">
+                                <asp:Label runat="server" Text="Alias:" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
+                            </div>
                         </div>
-                        <div class="row">
-                            <asp:DropDownList ID="lstSubs" class="btn btn-secondary dropdown-toggle" runat="server" AutoPostBack="false" placeholder="Elija su subscripcion..." Style="width: auto; max-width: 100%" OnSelectedIndexChanged="lstSubs_SelectedIndexChanged"></asp:DropDownList>
-                            <asp:Label runat="server" Text="Alias:" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
+                        <div class="row controles">
+                            <asp:DropDownList ID="lstSubs" class="btn btn-secondary dropdown-toggle" runat="server" AutoPostBack="True" placeholder="Elija su subscripcion..." Style="width: auto;margin:1rem; max-width: 100%" OnSelectedIndexChanged="lstSubs_SelectedIndexChanged"></asp:DropDownList>
+
                             <asp:Label ID="lblAlias" runat="server" Text="Subscripciones" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin: auto; padding: 2rem">
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <div class="row segunda" style="margin: auto; padding: 2rem;padding-left:0">
                     <div class="col">
-                        <div class="row">
+                        <div class="row titulos" style="padding-left:0">
                             <asp:Label ID="Label2" runat="server" Text="Titulo" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
                         </div>
-                        <div class="row">
-                            <asp:TextBox ID="txtTitulo" class="btn btn-light dropdown-toggle " runat="server" placeholder="Su problema..." Style="width: 50%; max-width: 80%; text-align: left; color: antiquewhite;"></asp:TextBox>
+                        <div class="row controles">
+                            <asp:TextBox ID="txtTitulo" class="btn btn-light dropdown-toggle " runat="server" placeholder="Su problema..." Style="width: 50%; max-width: 80%; text-align: left; ;color: antiquewhite;"></asp:TextBox>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin: auto;">
+                <div class="row tercera" style="margin: auto;">
                     <div class="col">
-                        <div class="row">
+                        <div class="row titulos">
                             <asp:Label ID="Label3" runat="server" Text="Descripcion" Style="padding-bottom: 1rem; color: antiquewhite;"></asp:Label>
                         </div>
-                        <div class="row">
-                            <asp:TextBox ID="txtDescripcion" runat="server" TextMode="MultiLine" Class="text-ticket" Style="height: 18rem"></asp:TextBox>
+                        <div class="row controles">
+                            <asp:TextBox ID="txtDescripcion" runat="server" TextMode="MultiLine" Class="text-ticket" Style="height: 18rem;width:100%"></asp:TextBox>
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin: auto; padding: 2rem">
+                <div class="row cuarta" style="margin: auto; padding: 2rem">
                     <div class="col">
                         <div style="text-align: center">
                             <asp:Button ID="btnEnviar" runat="server" class="btn btn-primary form-control" OnClick="btnEnviar_Click" Text="Enviar" />
