@@ -39,17 +39,4 @@
         </div>
             </div>
         </div>
-    <div class="card" style="text-align: center;">
-
-        <asp:Label ID="lblSolucion" runat="server" Text="Modificar servicio" CssClass="custom-control-label col-sm-2"></asp:Label>
-
-        <div class="col-sm-10">
-            <asp:TextBox ID="txtModificar" runat="server" CssClass="form-control text-abmsus"></asp:TextBox>
-        </div>
-        <div style="text-align: center">
-            <asp:Button ID="Modific" runat="server" CssClass="btn btn-primary form-control"  Text="Aplicar Cambios" />
-        </div>
-    </div>
-    
-
 </asp:Content>

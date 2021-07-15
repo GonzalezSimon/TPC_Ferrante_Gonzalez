@@ -240,7 +240,16 @@ namespace Negocio
 
                     /*Servicio Contratado*/
                     aux.FechaCompra = (DateTime)datos.Lector["FechaInicio"];
-                    aux.FechaCancelacion = (DateTime)datos.Lector["FechaFin"];
+                    if ((DateTime)datos.Lector["FechaFin"] != null)
+                    {
+                        aux.FechaCancelacion = (DateTime)datos.Lector["FechaFin"];
+                    }
+                    else
+                    {
+                        string iDate = "01/01/20010";
+                        DateTime oDate = Convert.ToDateTime(iDate);
+                        aux.FechaCancelacion = oDate;
+                    }
                     aux.GrupoSoporte = (string)datos.Lector["GrupoSoporte"];
                     aux.Estado = (bool)datos.Lector["EstadoSXC"];
 
@@ -298,7 +307,8 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                "update ServicioContratado set IDServicio, IDUSuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, Estado WHERE id =" + modificar.Id);
+                "update ServicioContratado set IDServicio, IDUsuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, EstadoSXC WHERE IDSuscripcion =" + modificar.Id);
+
 
                 datos.agregarParametro("@IDServicio", modificar.Servicio.Id);
                 datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
@@ -307,7 +317,7 @@ namespace Negocio
                 datos.agregarParametro("@FechaInicio", modificar.FechaCompra);
                 datos.agregarParametro("@FechaFin", modificar.FechaCancelacion);
                 datos.agregarParametro("@GrupoSoporte", modificar.GrupoSoporte);
-                datos.agregarParametro("@Estado", modificar.Estado);
+                datos.agregarParametro("@EstadoSXC", modificar.Estado);
 
 
                 datos.ejectutarAccion();
