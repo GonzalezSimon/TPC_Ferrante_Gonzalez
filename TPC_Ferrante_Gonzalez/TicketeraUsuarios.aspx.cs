@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Negocio;
 using Dominio;
 
 namespace TPC_Ferrante_Gonzalez
@@ -21,12 +22,14 @@ namespace TPC_Ferrante_Gonzalez
                 list = new List<Servicio>();
                 aux = new List<ServicioContratado>();
                 aux = (List<ServicioContratado>)Session["listadoServiciosContratados"];
-                foreach (var item in aux)
+
+                /*foreach (var item in aux)
                 {
                     list.Add(item.Servicio);
-                }
-                lstSubs.DataSource = list;
-                lstSubs.DataTextField = "Descripcion";
+                }*/
+
+                lstSubs.DataSource = aux;
+                lstSubs.DataTextField = "GrupoSoporte";
                 lstSubs.DataValueField = "Id";
                 lstSubs.DataBind();
             }
@@ -34,6 +37,24 @@ namespace TPC_Ferrante_Gonzalez
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            Ticket tkusuario = new Ticket();
+            NegocioTicket negt = new NegocioTicket();
+            try
+            {
+                tkusuario.FechaApertura = DateTime.Now;
+                tkusuario.FechaCierre = DateTime.Now;
+                tkusuario.Descripcion = txtDescripcion.Text;
+                tkusuario.Estado = true;
+                tkusuario.GrupoSoporte = lstSubs.Text;
+                tkusuario.EstadoTicket = "A";
+                tkusuario.Solucion = "Pendiente";
+                tkusuario.Usuario = (Usuario)Session["Usuario"];
+                negt.agregar(tkusuario);
+            }
+            catch
+            {
+
+            }
 
         }
 
@@ -48,11 +69,11 @@ namespace TPC_Ferrante_Gonzalez
                 if (item.Id == auxd)
                 {
                     aux2 = item;
-                    
+
                 }
             }
-           
-            lblAlias.Text = aux2.GrupoSoporte;
+
+            //lblAlias.Text = aux2.GrupoSoporte;
         }
     }
 }

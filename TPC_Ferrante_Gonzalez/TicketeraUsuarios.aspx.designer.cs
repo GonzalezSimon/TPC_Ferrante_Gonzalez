@@ -15,13 +15,13 @@ namespace TPC_Ferrante_Gonzalez
     {
 
         /// <summary>
-        /// Control UpdatePanel1.
+        /// Control UPDListas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdatePanel UPDListas;
 
         /// <summary>
         /// Control Label1.
@@ -51,13 +51,13 @@ namespace TPC_Ferrante_Gonzalez
         protected global::System.Web.UI.WebControls.Label lblAlias;
 
         /// <summary>
-        /// Control Label2.
+        /// Control lblTitulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
         /// Control txtTitulo.

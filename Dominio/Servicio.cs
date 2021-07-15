@@ -15,6 +15,8 @@ namespace Dominio
 
         public string Descripcion { get; set; }
 
+        public string URLServicio { get; set; }
+
         public int Slots { get; set; }
 
         public bool Estado { get; set; }
