@@ -30,9 +30,7 @@
                         </div>
                         <div class="row" style="padding-top:1vh">
                             <h6 style="color: antiquewhite;">Modificar Alias:</h6>
-                                    <asp:DropDownList ID="lstModAlias" class="btn btn-secondary dropdown-toggle" runat="server" placeholder="Elija su subscripcion..." Style="width: auto; max-width: 100%; margin-left:3vh;">
-                                    <asp:ListItem></asp:ListItem>
-                                    </asp:DropDownList>
+                                    
                             <asp:TextBox ID="txtAlias" runat="server"></asp:TextBox>
                         </div>
 

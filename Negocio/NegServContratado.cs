@@ -276,16 +276,16 @@ namespace Negocio
             try
             {
                 datos.setearConsulta("insert into ServicioContratado (IDServicio, IDUSuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, EstadoSXC)" +
-                 " VALUES (@IDServicio, @IDUsuario, @IDDelegado1, @IDDelegado2, @FechaInicio, @FechaFin, @GrupoSoporte, @Estado)");
+                 " VALUES (@IDServicio, @IDUsuario, @IDDelegado1, @IDDelegado2, @FechaInicio, @FechaFin, @GrupoSoporte, @EstadoSXC)");
 
                 datos.agregarParametro("@IDServicio", nuevo.Servicio.Id);
                 datos.agregarParametro("@IDUsuario", nuevo.Usuario.Id);
                 datos.agregarParametro("@IDDelegado1", nuevo.Delegado1.Id);
-                datos.agregarParametro("@IDDelegado2", nuevo.Delegado2);
+                datos.agregarParametro("@IDDelegado2", nuevo.Delegado2.Id);
                 datos.agregarParametro("@FechaInicio", nuevo.FechaCompra);
                 datos.agregarParametro("@FechaFin", nuevo.FechaCancelacion);
                 datos.agregarParametro("@GrupoSoporte", nuevo.GrupoSoporte);
-                datos.agregarParametro("@Estado", nuevo.Estado);
+                datos.agregarParametro("@EstadoSXC", nuevo.Estado);
 
 
                 datos.ejectutarAccion();
@@ -307,20 +307,17 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                "update ServicioContratado set IDServicio, IDUsuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, EstadoSXC WHERE IDSuscripcion =" + modificar.Id);
+                "update Suscripciones set IDServicio = @IDServicio, IDUsuario = @IDUsuario, IDDelegado1 = @IDDelegado1, IDDelegado2 = @IDDelegado2, FechaInicio = @FechaInicio, FechaFin = @FechaFin, GrupoSoporte = @GrupoSoporte, EstadoSXC = @EstadoSXC WHERE IDSuscripcion =" + modificar.Id);
 
 
                 datos.agregarParametro("@IDServicio", modificar.Servicio.Id);
                 datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
                 datos.agregarParametro("@IDDelegado1", modificar.Delegado1.Id);
-                datos.agregarParametro("@IDDelegado2", modificar.Delegado2);
+                datos.agregarParametro("@IDDelegado2", modificar.Delegado2.Id);
                 datos.agregarParametro("@FechaInicio", modificar.FechaCompra);
                 datos.agregarParametro("@FechaFin", modificar.FechaCancelacion);
                 datos.agregarParametro("@GrupoSoporte", modificar.GrupoSoporte);
                 datos.agregarParametro("@EstadoSXC", modificar.Estado);
-
-
-                datos.ejectutarAccion();
 
 
                 datos.ejectutarAccion();

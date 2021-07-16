@@ -69,10 +69,17 @@ namespace TPC_Ferrante_Gonzalez
                     lstModSub.DataBind();
 
                     //carga de alias de todos las suscripciones
+                    /*
                     lstModAlias.DataSource = auxSus;
                     lstModAlias.DataTextField = "GrupoSoporte";
                     lstModAlias.DataValueField = "Id";
                     lstModAlias.DataBind();
+
+
+                    //modulo de ddl si se quiere implementar en Alias
+                    <asp:DropDownList ID="lstModAlias" class="btn btn-secondary dropdown-toggle" runat="server" placeholder="Elija su subscripcion..." Style="width: auto; max-width: 100%; margin-left:3vh;">
+                                    <asp:ListItem></asp:ListItem>
+                                    </asp:DropDownList>*/
 
                     //carga de Username de todos sus usuarios
                     lstModUsuario.DataSource = auxUsers;
@@ -186,10 +193,8 @@ namespace TPC_Ferrante_Gonzalez
                 }
                 finally
                 {
-                    //Response.Redirect("ABMSuscripciones.aspx");
+                    Response.Redirect("ABMSuscripciones.aspx");
                 }
-            
         }
     }
-
 }
