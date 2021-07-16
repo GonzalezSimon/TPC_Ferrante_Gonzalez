@@ -79,7 +79,7 @@ namespace Negocio
                 try
                 {
 
-                    datos.setearConsulta("insert into Usuario (Usuario, UPassword, Apellido, Nombre, Telefono, Mail, IDLocalidad, IDTipoUsuario, URLUsuario, FechaCreacion, EstadoUsuario)" +
+                    datos.setearConsulta("insert into Usuarios (Usuario, UPassword, Apellido, Nombre, Telefono, Mail, IDLocalidad, IDTipoUsuario, URLUsuario, FechaCreacion, EstadoUsuario)" +
                     " VALUES (@Usuario, @UPassword, @Apellido, @Nombre, @Telefono, @Mail, @IDLocalidad, @IDTipoUsuario, @URLUsuario, @FechaCreacion,  @EstadoUsuario)");
 
                     datos.agregarParametro("@Usuario", nuevo.UserName);
@@ -89,7 +89,7 @@ namespace Negocio
                     datos.agregarParametro("@Telefono", nuevo.Telefono);
                     datos.agregarParametro("@Mail", nuevo.Mail);
                     datos.agregarParametro("@IDLocalidad", nuevo.Localidad.Id);
-                    datos.agregarParametro("@IDTipoUsuario", nuevo.Tipo.Id);
+                    datos.agregarParametro("@IDTipoUsuario", "3");
                     datos.agregarParametro("@URLUsuario", nuevo.URLimagen);
                     datos.agregarParametro("@FechaCreacion", nuevo.FechaCreacion);
                     datos.agregarParametro("@EstadoUsuario", nuevo.Estado);

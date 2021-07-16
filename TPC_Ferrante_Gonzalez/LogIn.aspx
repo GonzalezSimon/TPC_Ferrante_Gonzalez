@@ -40,7 +40,7 @@
                 </div>
                 <div class="card-footer login">
                     <div class="d-flex justify-content-center links login">
-                        Todavía no tenes cuenta?<a href="#">Registrate</a>
+                        Todavía no tenes cuenta?<a href="Registro.aspx">Registrate</a>
                     </div>
                     <div class="d-flex justify-content-center login">
                         <a href="#">Olvidaste tu contraseña?</a>

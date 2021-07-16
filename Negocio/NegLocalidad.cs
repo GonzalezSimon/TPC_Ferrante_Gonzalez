@@ -17,20 +17,20 @@ namespace Negocio
                        
             try
             {
-                datos.setearConsulta("select IDLocalidad, Nombre, Estado, p.IDPais, p.Nombre, P.Estado  from Localidades inner join Paises as P on P.IDPais = IDPais");
+                datos.setearConsulta("select IDLocalidad, L.Nombre, L.Estado, p.IDPais idpaisP, p.Nombre nombreP, P.Estado EstadoP from Localidades as L inner join Paises as P on L.IDpais = p.IDpais");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
                     Localidad aux = new Localidad();
 
-                    aux.Id = (int)datos.Lector["IDLocalidad"];
-                    aux.Nombre = (string)datos.Lector["Descripcion"];
+                    aux.Id = (long)datos.Lector["IDLocalidad"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Estado = (bool)datos.Lector["Estado"];
                     //carga pais
-                    aux.Pais.Id = (int)datos.Lector["p.IDPais"];
-                    aux.Pais.Nombre = (string)datos.Lector["p.Nombre"];
-                    aux.Pais.Estado = (bool)datos.Lector["p.Estado"];
+                    aux.Pais.Id = (int)datos.Lector["idpaisP"];
+                    aux.Pais.Nombre = (string)datos.Lector["nombreP"];
+                    aux.Pais.Estado = (bool)datos.Lector["EstadoP"];
 
                         lista.Add(aux);
                 }
