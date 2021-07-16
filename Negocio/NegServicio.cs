@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select IDServicio, ts.IDTipoServicio, ts.Nombre, ts.Estado, Precio, Descripcion, Slots, EstadoServicio from Servicios as s" +
+                datos.setearConsulta("select s.IDServicio IDServicio, ts.IDTipoServicio IDTipo, ts.TipoServicio TipoServicio, ts.Estado EstadoTS, s.Precio Precio, s.Descripcion Descripcion, s.Slots Slots, s.URLServicio URLServicio, s.EstadoServicio EstadoServicio from Servicios as s " +
                     "inner join TipoServicio as ts on ts.IDTipoServicio = s.IDTipoServicio");
                 datos.ejecutarLectura();
 
@@ -28,13 +28,14 @@ namespace Negocio
 
                     aux.Id = (long)datos.Lector["IDServicio"];
                     //carga de TipoServicio
-                    aux.Tipo.Id = (int)datos.Lector["IDTipoServicio"];
-                    aux.Tipo.Nombre = (string)datos.Lector["ts.Nombre"];
-                    aux.Tipo.Estado = (bool)datos.Lector["ts.Estado"];
+                    aux.Tipo.Id = (int)datos.Lector["IDTipo"];
+                    aux.Tipo.Nombre = (string)datos.Lector["TipoServicio"];
+                    aux.Tipo.Estado = (bool)datos.Lector["EstadoTS"];
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Slots = (int)datos.Lector["Slots"];
+                    aux.URLServicio = (string)datos.Lector["URLServicio"];
                     aux.Estado = (bool)datos.Lector["EstadoServicio"];
 
                     if(aux.Estado == true) lista.Add(aux);

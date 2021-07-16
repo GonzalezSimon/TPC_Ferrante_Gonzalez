@@ -19,10 +19,10 @@ namespace Negocio
 
             /*try
             {*/
-            datos.setearConsulta("select s.IDServicio, s.IDTipoServicio, ts.TipoServicio, ts.Estado, s.Precio, s.Descripcion, " +
-                "s.Slots, s.EstadoServicio, u.IDUsuario, U.Usuario, u.UPassword, u.Apellido, u.Nombre, u.Telefono, u.Mail, l.IDLocalidad," +
-                " l.Nombre, l.Estado, p.IDPais, p.Nombre, p.Estado, tu.IDTipoUsuario, tu.TipoUsuario, tu.Estado, u.URLUsuario, u.FechaCreacion," +
-                " u.EstadoUsuario, sc.FechaInicio, sc.Fechafin, sc.GrupoSoporte, sc.EstadoSXC from ServicioContratado as sc " +
+            datos.setearConsulta("select sc.IDSuscripcion, s.IDServicio, s.IDTipoServicio, ts.TipoServicio, ts.Estado EstadoT, s.Precio, s.Descripcion, " +
+                "s.Slots, s.URLServicio, s.EstadoServicio, u.IDUsuario, U.Usuario, u.UPassword, u.Apellido, u.Nombre, u.Telefono, u.Mail, l.IDLocalidad," +
+                " l.Nombre NombreL, l.Estado EstadoL, p.IDPais, p.Nombre NombreP, p.Estado EstadoP, tu.IDTipoUsuario, tu.TipoUsuario TipoUsuario, tu.Estado EstadoTu, u.URLUsuario, u.FechaCreacion," +
+                " u.EstadoUsuario, sc.FechaInicio, sc.Fechafin, sc.GrupoSoporte, sc.EstadoSXC from Suscripciones as sc " +
                 "inner join Servicios as s on s.IDServicio = sc.IDServicio " +
                 "inner join TipoServicio as ts on ts.IDTipoServicio = s.IDTipoServicio " +
                 "inner join Usuarios as U on u.IDUsuario = sc.IDUsuario " +
@@ -191,18 +191,23 @@ namespace Negocio
                 while (datos.Lector.Read())
                 {
                     ServicioContratado aux = new ServicioContratado();
+
+
+                    aux.Id = (long)datos.Lector["IDSuscripcion"];
                     /*Servicio*/
+
                     aux.Servicio.Id = (long)datos.Lector["IDServicio"];
                     aux.Servicio.Precio = (decimal)datos.Lector["Precio"];
                     aux.Servicio.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Servicio.Slots = (int)datos.Lector["Slots"];
+                    aux.Servicio.URLServicio = (string)datos.Lector["URLServicio"];
                     aux.Servicio.Estado = (bool)datos.Lector["EstadoServicio"];
                     
 
                     /*Tipo de Servicios*/
                     aux.Servicio.Tipo.Id = (int)datos.Lector["IDTipoServicio"];
                     aux.Servicio.Tipo.Nombre = (string)datos.Lector["TipoServicio"];
-                    aux.Servicio.Tipo.Estado = (bool)datos.Lector[3];
+                    aux.Servicio.Tipo.Estado = (bool)datos.Lector["EstadoT"];
 
                     /*Usuarios*/
                     aux.Usuario.Id = (long)datos.Lector["IDUsuario"];
@@ -218,24 +223,33 @@ namespace Negocio
 
                     /*Carga de Localidad*/
                     aux.Usuario.Localidad.Id = (long)datos.Lector["IDLocalidad"];
-                    aux.Usuario.Localidad.Nombre = (string)datos.Lector[16];
-                    aux.Usuario.Localidad.Estado = (bool)datos.Lector[17];
+                    aux.Usuario.Localidad.Nombre = (string)datos.Lector["NombreL"];
+                    aux.Usuario.Localidad.Estado = (bool)datos.Lector["EstadoL"];
 
                     //Carga de Pais
                     aux.Usuario.Localidad.Pais.Id = (int)datos.Lector["IDPais"];
-                    aux.Usuario.Localidad.Pais.Nombre = (string)datos.Lector[19];
-                    aux.Usuario.Localidad.Pais.Estado = (bool)datos.Lector[20];
+                    aux.Usuario.Localidad.Pais.Nombre = (string)datos.Lector["NombreP"];
+                    aux.Usuario.Localidad.Pais.Estado = (bool)datos.Lector["EstadoP"];
 
                     //Carga de tipo
-                    aux.Usuario.Tipo.Estado = (bool)datos.Lector[23];
-                    aux.Usuario.Tipo.Nombre = (string)datos.Lector[22];
+                    aux.Usuario.Tipo.Estado = (bool)datos.Lector["EstadoTu"];
+                    aux.Usuario.Tipo.Nombre = (string)datos.Lector["TipoUsuario"];
                     aux.Usuario.Tipo.Id = (int)datos.Lector["IDTipoUsuario"];
 
 
 
                     /*Servicio Contratado*/
                     aux.FechaCompra = (DateTime)datos.Lector["FechaInicio"];
-                    aux.FechaCancelacion = (DateTime)datos.Lector["FechaFin"];
+                    if ((DateTime)datos.Lector["FechaFin"] != null)
+                    {
+                        aux.FechaCancelacion = (DateTime)datos.Lector["FechaFin"];
+                    }
+                    else
+                    {
+                        string iDate = "01/01/20010";
+                        DateTime oDate = Convert.ToDateTime(iDate);
+                        aux.FechaCancelacion = oDate;
+                    }
                     aux.GrupoSoporte = (string)datos.Lector["GrupoSoporte"];
                     aux.Estado = (bool)datos.Lector["EstadoSXC"];
 
@@ -262,16 +276,16 @@ namespace Negocio
             try
             {
                 datos.setearConsulta("insert into ServicioContratado (IDServicio, IDUSuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, EstadoSXC)" +
-                 " VALUES (@IDServicio, @IDUsuario, @IDDelegado1, @IDDelegado2, @FechaInicio, @FechaFin, @GrupoSoporte, @Estado)");
+                 " VALUES (@IDServicio, @IDUsuario, @IDDelegado1, @IDDelegado2, @FechaInicio, @FechaFin, @GrupoSoporte, @EstadoSXC)");
 
                 datos.agregarParametro("@IDServicio", nuevo.Servicio.Id);
                 datos.agregarParametro("@IDUsuario", nuevo.Usuario.Id);
                 datos.agregarParametro("@IDDelegado1", nuevo.Delegado1.Id);
-                datos.agregarParametro("@IDDelegado2", nuevo.Delegado2);
+                datos.agregarParametro("@IDDelegado2", nuevo.Delegado2.Id);
                 datos.agregarParametro("@FechaInicio", nuevo.FechaCompra);
                 datos.agregarParametro("@FechaFin", nuevo.FechaCancelacion);
                 datos.agregarParametro("@GrupoSoporte", nuevo.GrupoSoporte);
-                datos.agregarParametro("@Estado", nuevo.Estado);
+                datos.agregarParametro("@EstadoSXC", nuevo.Estado);
 
 
                 datos.ejectutarAccion();
@@ -293,19 +307,17 @@ namespace Negocio
             try
             {
                 datos.setearConsulta(
-                "update ServicioContratado set IDServicio, IDUSuario, IDDelegado1, IDDelegado2, FechaInicio, FechaFin, GrupoSoporte, Estado WHERE id =" + modificar.Id);
+                "update Suscripciones set IDServicio = @IDServicio, IDUsuario = @IDUsuario, IDDelegado1 = @IDDelegado1, IDDelegado2 = @IDDelegado2, FechaInicio = @FechaInicio, FechaFin = @FechaFin, GrupoSoporte = @GrupoSoporte, EstadoSXC = @EstadoSXC WHERE IDSuscripcion =" + modificar.Id);
+
 
                 datos.agregarParametro("@IDServicio", modificar.Servicio.Id);
                 datos.agregarParametro("@IDUsuario", modificar.Usuario.Id);
                 datos.agregarParametro("@IDDelegado1", modificar.Delegado1.Id);
-                datos.agregarParametro("@IDDelegado2", modificar.Delegado2);
+                datos.agregarParametro("@IDDelegado2", modificar.Delegado2.Id);
                 datos.agregarParametro("@FechaInicio", modificar.FechaCompra);
                 datos.agregarParametro("@FechaFin", modificar.FechaCancelacion);
                 datos.agregarParametro("@GrupoSoporte", modificar.GrupoSoporte);
-                datos.agregarParametro("@Estado", modificar.Estado);
-
-
-                datos.ejectutarAccion();
+                datos.agregarParametro("@EstadoSXC", modificar.Estado);
 
 
                 datos.ejectutarAccion();

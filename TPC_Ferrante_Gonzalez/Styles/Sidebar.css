@@ -10,7 +10,7 @@
 }
 .bg-primary.sidebar-usuarios {
     background-color: #222222 !important;
-    min-height: 25vh;
+    min-height: 20vh;
     width: 18rem;
 }
 .d-flex.contenedor-sidebar {
@@ -31,7 +31,7 @@
     margin-right: 0;
     margin-bottom: 0;
     -webkit-overflow-scrolling: touch;
-    min-height: 25vh;
+    min-height: 20vh;
     padding-left:0rem;
 }
 
@@ -41,4 +41,12 @@
     overflow: auto;
     resize: both;
     margin:0!important;
+}
+
+.text-abmsus {
+    max-width: 50vh;
+    min-width: 25vh;
+    /*overflow: auto;*/
+    resize: both;
+    margin: 0 !important;
 }

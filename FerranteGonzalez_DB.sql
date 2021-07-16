@@ -1,8 +1,8 @@
 
 
---use master
+use master
 
---go
+go
 
 create database FerranteGonzalez_DB
 go
@@ -56,11 +56,13 @@ create table Servicios(
 	Precio money not null,
 	Descripcion varchar(250),
 	Slots int check(Slots >= 0),
+	URLServicio varchar(300) not null,
 	EstadoServicio bit not null,
 
 )
 go
-create table ServicioContratado(
+create table Suscripciones(
+	IDSuscripcion bigint primary key not null IDENTITY(1,1),
 	IDServicio bigint not null foreign key references Servicios(IDServicio),
 	IDUsuario bigint not null foreign key references Usuarios(IDUsuario),
 	IDDelegado1 bigint foreign key references Usuarios(IDUsuario),
@@ -69,8 +71,6 @@ create table ServicioContratado(
 	FechaFin date,
 	GrupoSoporte varchar(30) not null,
 	EstadoSXC bit not null,
-
-	Primary key(IDServicio, IDUsuario)
 )
 go
 
@@ -86,6 +86,6 @@ create table Tickets(
 	Estado bit not null
 )
 
-alter table ServicioContratado
-add constraint CHK_ServicioContratado
+alter table Suscripciones
+add constraint CHK_Suscripciones
 check(FechaInicio < FechaFin)

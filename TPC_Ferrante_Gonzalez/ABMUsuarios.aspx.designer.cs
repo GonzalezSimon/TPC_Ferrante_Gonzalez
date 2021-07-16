@@ -11,7 +11,7 @@ namespace TPC_Ferrante_Gonzalez
 {
 
 
-    public partial class ABMSuscripciones
+    public partial class ABMUsuarios
     {
 
         /// <summary>
