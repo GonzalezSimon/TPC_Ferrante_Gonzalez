@@ -81,7 +81,7 @@ body {
         height: 40px;
         display: inline-block;
         border-radius: 4px;
-        margin: 2px;
+        margin: 0;
     }
 
         .page-wrapper .theme.chiller-theme {
@@ -150,7 +150,7 @@ body {
 /*--------------------sidebar-brand----------------------*/
 
 .sidebar-wrapper .sidebar-brand {
-    padding: 10px 20px;
+    padding:0;
     display: flex;
     align-items: center;
 }

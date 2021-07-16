@@ -102,12 +102,12 @@
         </nav>
 
         <div class="page-wrapper chiller-theme toggled">
-            <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="margin-top: 66px; ">
+            <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="margin-top: 66px;">
                 <i class="fas fa-bars"></i>
             </a>
 
-            <nav id="sidebar" class="sidebar-wrapper" style="margin-top: 66px;background:none;width:300px;">
-                <div class="sidebar-content" style="background-color: rgba(0,0,0,0.7) !important;width:300px;">
+            <nav id="sidebar" class="sidebar-wrapper" style="margin-top: 66px; background: none; width: 300px;">
+                <div class="sidebar-content" style="background-color: rgba(0,0,0,0.7) !important; width: 300px;">
                     <div class="sidebar-brand">
                         <a href="#">Administración</a>
                         <div id="close-sidebar">
@@ -302,10 +302,12 @@
                 <!-- sidebar-content  -->
             </nav>
             <!-- sidebar-wrapper  -->
-            <main class="page-content">
-                <div class="container-fluid">
-                    <asp:ContentPlaceHolder ID="Header" runat="server">
-                    </asp:ContentPlaceHolder>
+            <main class="page-content" style="padding-top: 0; margin-top: 66px;">
+                <div class="row justify-content-center" style="padding: 2rem; max-height:90%;height:100%">
+                    <div class="col-12 justify-content-center" style="max-width:95%;width:100%;min-height:761px;min-width:460px">
+                        <asp:ContentPlaceHolder ID="Header" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
                 </div>
             </main>
             <!-- page-content" -->

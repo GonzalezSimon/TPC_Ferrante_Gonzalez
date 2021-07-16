@@ -131,10 +131,9 @@ namespace Negocio
             try
             {
 
-                datos.setearConsulta("insert into Ticket (IDTicket, NombreGrupoSoporte, Descripcion, IDUsuario, FechaApertura, FechaCierre, EstadoTicket, Solucion, Estado)" +
-                " VALUES (@IDTicket, @GrupoSoporte, @Descripcion, @FechaInicio, @FechaFin, @IDUsuario, @EstadoTicket, @Solucion, @Estado)");
+                datos.setearConsulta("insert into Tickets ( NombreGrupoSoporte, Descripcion, IDUsuario, FechaApertura, FechaCierre, EstadoTicket, Solucion, Estado)" +
+                " VALUES (@GrupoSoporte, @Descripcion, @IDUsuario, @FechaInicio, @FechaFin, @EstadoTicket, @Solucion, @Estado)");
 
-                datos.agregarParametro("@IDTicketo", nuevo.Id);
                 datos.agregarParametro("@GrupoSoporte", nuevo.GrupoSoporte);
                 datos.agregarParametro("@Descripcion", nuevo.Descripcion);
                 datos.agregarParametro("@FechaInicio", nuevo.FechaApertura);
@@ -142,7 +141,7 @@ namespace Negocio
                 datos.agregarParametro("@IDUsuario", nuevo.Usuario.Id);
                 datos.agregarParametro("@EstadoTicket", nuevo.EstadoTicket);
                 datos.agregarParametro("@Solucion", nuevo.Solucion);
-                datos.agregarParametro("@EstadoTicket", nuevo.Estado);
+                datos.agregarParametro("@Estado", nuevo.Estado);
 
                 datos.ejectutarAccion();
 

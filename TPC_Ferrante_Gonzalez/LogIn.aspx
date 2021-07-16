@@ -18,14 +18,14 @@
                             <div class="input-group-prepend login">
                                 <span class="input-group-text login"><i class="fas fa-user login"></i></span>
                             </div>
-                            <asp:TextBox ID="txtUsuario" runat="server" class="form-control login" placeholder="Usuario" OnTextChanged="txtUsuario_TextChanged"></asp:TextBox>
+                            <asp:TextBox ID="txtUsuario" runat="server" class="form-control login" placeholder="Usuario" OnTextChanged="txtUsuario_TextChanged" autocomplete="username"></asp:TextBox>
                             <!--<input type="text" class="form-control login" placeholder="Usuario">-->
                         </div>
                         <div class="input-group form-group login" style="justify-content: center;">
                             <div class="input-group-prepend login">
                                 <span class="input-group-text login"><i class="fas fa-key"></i></span>
                             </div>
-                            <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control login" placeholder="Contraseña"></asp:TextBox>
+                            <asp:TextBox ID="txtPass" runat="server" type="password" class="form-control login" placeholder="Contraseña" autocomplete="current-password"></asp:TextBox>
                             <!--<input type="password" class="form-control login" placeholder="Contraseña">-->
                         </div>
                         <div class="row align-items-center remember login" style="margin-left: 0.1px">
@@ -40,7 +40,7 @@
                 </div>
                 <div class="card-footer login">
                     <div class="d-flex justify-content-center links login">
-                        Todavía no tenes cuenta?<a href="#">Registrate</a>
+                        Todavía no tenes cuenta?<a href="Registro.aspx">Registrate</a>
                     </div>
                     <div class="d-flex justify-content-center login">
                         <a href="#">Olvidaste tu contraseña?</a>
