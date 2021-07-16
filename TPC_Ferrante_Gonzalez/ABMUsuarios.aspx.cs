@@ -9,38 +9,40 @@ using Negocio;
 
 namespace TPC_Ferrante_Gonzalez
 {
-    public partial class ABMSuscripciones : System.Web.UI.Page
+    public partial class ABMUsuarios : System.Web.UI.Page
     {
+
         public NegUsuario loggeado = new NegUsuario();
+        public NegUsuario negUsuarioACambiar = new NegUsuario();
         public Usuario usuario;
 
-        public List<ServicioContratado> list = new List<ServicioContratado>();
-        public ServicioContratado modificado = new ServicioContratado();
+        public List<Usuario> uList = new List<Usuario>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            usuario = new Usuario();
-            List<ServicioContratado> aux = new List<ServicioContratado>();
-            Page.Title = "Usuarios";
 
-            //usuario = loggeado.listar("and IDUsuario = 2")[0];
+            usuario = new Usuario();
+
+            List<Usuario> aux = new List<Usuario>();
+
             if (!Page.IsPostBack)
             {
                 ValidarSesion();
 
                 usuario = (Usuario)Session["Usuario"];
-                NegocioServContratado servicioContratado = new NegocioServContratado();
 
                 try
                 {
-                aux = servicioContratado.listar();
 
-                foreach (ServicioContratado item in aux)
-                {
+                    aux = negUsuarioACambiar.listar();
 
-                        list.Add(item);
-                }
+                    foreach (Usuario item in aux)
+                    {
 
-                    Session.Add("listadoServiciosContratadosAdm", list);
+                        uList.Add(item);
+                    }
+
+                    Session.Add("listadoUsuarios", uList);
+
                 }
                 catch (Exception /*ex*/)
                 {
@@ -49,6 +51,7 @@ namespace TPC_Ferrante_Gonzalez
                 }
             }
         }
+
         private void ValidarSesion()
         {
             Usuario aux = new Usuario();
@@ -66,6 +69,5 @@ namespace TPC_Ferrante_Gonzalez
             }
 
         }
-
     }
 }
