@@ -19,7 +19,7 @@ go
 create table Localidades(
 	IDLocalidad bigint not null primary key identity(1,1),
 	Nombre varchar(50) not null,
-	IDPais int not null foreign key references Paises(IDPais),
+	IDPais int foreign key references Paises(IDPais),
 	Estado BIT not null,
 	)
 go
@@ -37,7 +37,7 @@ create table Usuarios(
 	Nombre varchar(50) not null,
 	Telefono varchar(20),
 	Mail varchar(100) not null,
-	IDLocalidad bigint not null foreign key references Localidades(IDLocalidad),
+	IDLocalidad bigint foreign key references Localidades(IDLocalidad),
 	IDTipoUsuario int not null foreign key references TipoUsuario(IDTipoUsuario),
 	URLUsuario varchar(300) not null,
 	FechaCreacion date not null,
