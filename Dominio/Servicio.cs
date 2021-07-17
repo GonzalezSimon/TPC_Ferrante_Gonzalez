@@ -21,8 +21,6 @@ namespace Dominio
 
         public bool Estado { get; set; }
 
-        public string URLServicio { get; set; }
-
         public Servicio()
         {
             Tipo = new TipoServicio();

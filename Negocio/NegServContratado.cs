@@ -12,7 +12,7 @@ namespace Negocio
         public List<ServicioContratado> listar(string consulta = "")
         {
             List<ServicioContratado> lista = new List<ServicioContratado>();
-            
+
             AccesoDatos datos = new AccesoDatos();
             /*AccesoDatos del1 = new AccesoDatos();
             AccesoDatos del2 = new AccesoDatos();*/
@@ -43,7 +43,6 @@ namespace Negocio
                 " inner join Pais as p on p.IDPais = l.IDPais" +
                 " inner join TipoUsuario as TU on tu.IDTipoUsuario = u.IDTipoUsuario");
             del1.ejecutarLectura();
-
             del2.setearConsulta("select " +
                 " u.IDUsuario, U.Usuario, u.UPassword, u.Apellido, u.Nombre, u.Telefono, u.Mail, " +
                 " l.IDLocalidad, l.Nombre, l.Estado," +
@@ -187,7 +186,8 @@ namespace Negocio
             //    datos.cerrarConexion();
             ///*}*/
             #endregion
-            try {
+            try
+            {
                 while (datos.Lector.Read())
                 {
                     ServicioContratado aux = new ServicioContratado();
@@ -202,7 +202,7 @@ namespace Negocio
                     aux.Servicio.Slots = (int)datos.Lector["Slots"];
                     aux.Servicio.URLServicio = (string)datos.Lector["URLServicio"];
                     aux.Servicio.Estado = (bool)datos.Lector["EstadoServicio"];
-                    
+
 
                     /*Tipo de Servicios*/
                     aux.Servicio.Tipo.Id = (int)datos.Lector["IDTipoServicio"];
@@ -260,9 +260,9 @@ namespace Negocio
                     }
                     cont = 3;
                 }
-                
+
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
