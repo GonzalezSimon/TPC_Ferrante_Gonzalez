@@ -18,29 +18,9 @@
                             <asp:Label ID="lblUsernName" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
                         </div>
                         <div class="row" style="padding-top: 1vh">
-                            <h6 style="color: antiquewhite;">Modificar User Name:</h6>
+                            
 
-                            <asp:TextBox ID="txtUserName" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
-                        </div>
-
-                        <div class="row" style="padding-top: 3vh">
-                            <h6 style="color: antiquewhite;">Nombre del usuario:</h6>
-                            <asp:Label ID="lblNombre" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
-                        </div>
-                        <div class="row" style="padding-top: 1vh">
-                            <h6 style="color: antiquewhite;">Modificar nombre de usuario:</h6>
-
-                            <asp:TextBox ID="txtNombre" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
-                        </div>
-
-                        <div class="row" style="padding-top: 3vh">
-                            <h6 style="color: antiquewhite;">Apellido de usuario:</h6>
-                            <asp:Label ID="lblApellido" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
-                        </div>
-                        <div class="row" style="padding-top: 1vh">
-                            <h6 style="color: antiquewhite;">Apellido nombre de usuario:</h6>
-
-                            <asp:TextBox ID="txtApellido" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <asp:TextBox ID="txtUserName" runat="server" placeholder="Nuevo nombre de Usuario" Style=" margin-left: 1.5vh"></asp:TextBox>
                         </div>
 
                         <div class="row" style="padding-top: 3vh">
@@ -48,19 +28,40 @@
                             <asp:Label ID="lblPassword" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
                         </div>
                         <div class="row" style="padding-top: 1vh">
-                            <h6 style="color: antiquewhite;">Modificar Contraseña de usuario:</h6>
 
-                            <asp:TextBox ID="txtPasswrd" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <asp:TextBox ID="txtPasswrd" runat="server" type="password" placeholder="Nueva contraseña" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <asp:TextBox ID="txtPasswrdConf" runat="server" placeholder="Confirmar contraseña" Style=" margin-left: 1.5vh"></asp:TextBox>
                         </div>
+
+                        <div class="row" style="padding-top: 3vh">
+                            <h6 style="color: antiquewhite;">Nombre del usuario:</h6>
+                            <asp:Label ID="lblNombre" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
+                        </div>
+                        <div class="row" style="padding-top: 1vh">
+
+
+                            <asp:TextBox ID="txtNombre" runat="server" placeholder="Nuevo nombre" Style=" margin-left: 1.5vh"></asp:TextBox>
+                        </div>
+
+                        <div class="row" style="padding-top: 3vh">
+                            <h6 style="color: antiquewhite;">Apellido de usuario:</h6>
+                            <asp:Label ID="lblApellido" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
+                        </div>
+                        <div class="row" style="padding-top: 1vh">
+
+
+                            <asp:TextBox ID="txtApellido" runat="server" placeholder="Nuevo apellido" Style=" margin-left: 1.5vh"></asp:TextBox>
+                        </div>
+
 
                         <div class="row" style="padding-top: 3vh">
                             <h6 style="color: antiquewhite;">Telefono de usuario:</h6>
                             <asp:Label ID="lblTelefono" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
                         </div>
                         <div class="row" style="padding-top: 1vh">
-                            <h6 style="color: antiquewhite;">Modificar Telefono de usuario:</h6>
 
-                            <asp:TextBox ID="txtTelefono" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
+
+                            <asp:TextBox ID="txtTelefono" runat="server" placeholder="Nuevo telefono" Style=" margin-left: 1.5vh"></asp:TextBox>
                         </div>
 
                         <div class="row" style="padding-top: 3vh">
@@ -68,9 +69,9 @@
                             <asp:Label ID="lblMail" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
                         </div>
                         <div class="row" style="padding-top: 1vh">
-                            <h6 style="color: antiquewhite;">Modificar Mail de usuario:</h6>
 
-                            <asp:TextBox ID="txtMail" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
+
+                            <asp:TextBox ID="txtMail" runat="server" placeholder="Nuevo mail" Style=" margin-left: 1.5vh"></asp:TextBox>
                         </div>
 
                         <div class="row" style="padding-top: 3vh">
@@ -80,7 +81,7 @@
                         <div class="row" style="padding-top: 1vh">
                             <h6 style="color: antiquewhite;">Modificar Localidad de usuario:(hay que buscar otra forma, capas un + para agregar localidades, o un trigger en la db)</h6>
 
-                            <asp:TextBox ID="txtLocalidad" runat="server" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <asp:TextBox ID="txtLocalidad" runat="server" placeholder="Nueva localidad" Style=" margin-left: 1.5vh"></asp:TextBox>
                         </div>
 
                         <div class="row" style="padding-top: 3vh">
@@ -94,9 +95,19 @@
                             </asp:DropDownList>
                         </div>
 
+                        <div class="row" style="padding-top: 3vh">
+                            <h6 style="color: antiquewhite;">Estado del servicio:</h6>
+                            <asp:Label ID="lblEstadoUsuario" runat="server" Text="Vigencia" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
+                        </div>
+                        <div class="row" style="padding-top: 1vh">
+                            <h6 style="color: antiquewhite;">Modificar Estado:</h6>
+                            <asp:CheckBox ID="cbxEstadoUsuario" runat="server" />
+                        </div>
 
 
-
+                        <div style="text-align: center">
+                    <asp:Button ID="btnEnviarUsuario" runat="server" class="btn btn-primary form-control clearfix" Style="margin-bottom: 2vh; justify-content: center;" Text="Modificar Usuario" OnClick="btnEnviarUsuario_Click" />
+                </div>
 
                         <div class="col-1">
                         </div>

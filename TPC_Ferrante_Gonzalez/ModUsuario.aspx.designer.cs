@@ -42,6 +42,33 @@ namespace TPC_Ferrante_Gonzalez
         protected global::System.Web.UI.WebControls.TextBox txtUserName;
 
         /// <summary>
+        /// Control lblPassword.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPassword;
+
+        /// <summary>
+        /// Control txtPasswrd.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPasswrd;
+
+        /// <summary>
+        /// Control txtPasswrdConf.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPasswrdConf;
+
+        /// <summary>
         /// Control lblNombre.
         /// </summary>
         /// <remarks>
@@ -76,24 +103,6 @@ namespace TPC_Ferrante_Gonzalez
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
-
-        /// <summary>
-        /// Control lblPassword.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassword;
-
-        /// <summary>
-        /// Control txtPasswrd.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswrd;
 
         /// <summary>
         /// Control lblTelefono.
@@ -166,5 +175,32 @@ namespace TPC_Ferrante_Gonzalez
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList lstModTipoUsuario;
+
+        /// <summary>
+        /// Control lblEstadoUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEstadoUsuario;
+
+        /// <summary>
+        /// Control cbxEstadoUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbxEstadoUsuario;
+
+        /// <summary>
+        /// Control btnEnviarUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEnviarUsuario;
     }
 }

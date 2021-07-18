@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
+using Servicios;
 
 namespace TPC_Ferrante_Gonzalez
 {
@@ -65,22 +66,22 @@ namespace TPC_Ferrante_Gonzalez
                     {
                         lblTipoUsuario.Text = "Administrador";
                     }
-                    else if(usuario.Tipo.Nombre.ToString() == "C")
+                    else if (usuario.Tipo.Nombre.ToString() == "C")
                     {
                         lblTipoUsuario.Text = "Cliente";
                     }
-                    else if(usuario.Tipo.Nombre.ToString() == "S")
+                    else if (usuario.Tipo.Nombre.ToString() == "S")
                     {
                         lblTipoUsuario.Text = "Supervisor";
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
 
                 }
                 finally
                 {
-
+                    Session.Add("usuarioAModificar", usuario);
                 }
             }
         }
@@ -91,6 +92,52 @@ namespace TPC_Ferrante_Gonzalez
             usuario = listado.Find(x => x.Id == id);
 
             return usuario;
+        }
+
+        protected void btnEnviarUsuario_Click(object sender, EventArgs e)
+        {
+            NegUsuario usuarioAModificar = new NegUsuario();
+            usuario = (Usuario)Session["usuarioAModificar"];
+
+            usuario.UserName = txtUserName.Text;
+
+            if (txtPasswrd.Text == txtPasswrdConf.Text)
+                usuario.Password = txtPasswrd.Text;
+
+            usuario.Nombre = txtNombre.Text;
+            usuario.Apellido = txtApellido.Text;
+            usuario.Telefono = txtTelefono.Text;
+            usuario.Mail = txtMail.Text;
+            usuario.Tipo.Id = ((int)lstModTipoUsuario.SelectedIndex+1);
+            usuario.Estado = cbxEstadoUsuario.Checked;
+
+            Session.Add("usuarioAModificar", usuario);
+
+            try
+            {
+                usuarioAModificar.modificar(usuario);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                    EmailService emailService = new EmailService();
+                    emailService.armarCorreo(usuario.Mail.ToString(), "Cambio en su Usuario", "Se ha modificado satisfactoriamente su usuario", "Usuario modificado.");
+                try
+                {
+                    emailService.enviarMail();
+                }
+                catch (Exception ex)
+                {
+
+                }
+                finally
+                {
+                    Response.Redirect("ABMUsuarios.aspx");
+                }
+            }
         }
     }
 }

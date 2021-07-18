@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
 using Negocio;
+using Servicios;
 using System.Globalization;
 
 namespace TPC_Ferrante_Gonzalez
@@ -192,8 +193,21 @@ namespace TPC_Ferrante_Gonzalez
 
                 }
                 finally
-                {
-                    Response.Redirect("ABMSuscripciones.aspx");
+                    {
+                        EmailService emailService = new EmailService();
+                        emailService.armarCorreo(servicio.Usuario.Mail.ToString(), "Cambio en su servicio", "Se han aplicado los cambios en su servicio", "Suscripción modificada.");
+                    try
+                    {
+                    emailService.enviarMail();
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                    finally
+                    {
+                        Response.Redirect("ABMSuscripciones.aspx");
+                    }
                 }
         }
     }

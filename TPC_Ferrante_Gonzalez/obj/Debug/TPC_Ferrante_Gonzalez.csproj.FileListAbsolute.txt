@@ -78,11 +78,8 @@ F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzal
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CopyComplete
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.dll
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.pdb
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Net.Http.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.ValueTuple.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\VBCSCompiler.exe
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.AssemblyReference.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\TPC_Ferrante_Gonzalez.dll.config
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\TPC_Ferrante_Gonzalez.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\TPC_Ferrante_Gonzalez.pdb
@@ -105,6 +102,7 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\rosl
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\Microsoft.Win32.Primitives.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.AppContext.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Collections.Immutable.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Console.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
@@ -114,6 +112,7 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\rosl
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.IO.Compression.ZipFile.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Net.Http.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Net.Sockets.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
@@ -123,12 +122,15 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\rosl
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Text.Encoding.CodePages.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.ValueTuple.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Xml.ReaderWriter.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Xml.XmlDocument.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Xml.XPath.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\vbc.exe
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\vbc.exe.config
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\vbc.rsp
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\VBCSCompiler.exe
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Antlr3.Runtime.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\AspNet.ScriptManager.bootstrap.dll
@@ -142,10 +144,12 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Micr
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Negocio.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Newtonsoft.Json.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Servicios.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\System.Web.Optimization.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\WebGrease.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Dominio.pdb
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Negocio.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Servicios.pdb
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Newtonsoft.Json.xml
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\System.Web.Optimization.xml
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Antlr3.Runtime.pdb
@@ -153,8 +157,6 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Micr
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\es\System.Web.Optimization.resources.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.AssemblyReference.cache
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CopyComplete
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.pdb

@@ -114,7 +114,7 @@ namespace Negocio
                 try
                 {
                     datos.setearConsulta(
-                    "update Usuarios set Usuario = @Usuario, UPassword = @UPassword, Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Mail = @Mail, Telefono = @Telefono, IDLocalidad = @IDLocalidad, IDTipoUsuario = @IDTipoUsuario, URLUsuario = @URLUsuario, FechaCreacion = @FechaCreacion, EstadoUsuario = @EstadoUsuario WHERE IDUsuario =" + modificar.Id);
+                    "update Usuarios set Usuario = @Usuario, UPassword = @UPassword, Apellido = @Apellido, Nombre = @Nombre, Telefono = @Telefono, Mail = @Mail, IDLocalidad = @IDLocalidad, IDTipoUsuario = @IDTipoUsuario, URLUsuario = @URLUsuario, FechaCreacion = @FechaCreacion, EstadoUsuario = @EstadoUsuario WHERE IDUsuario =" + modificar.Id);
 
                     datos.agregarParametro("@Usuario", modificar.UserName);
                     datos.agregarParametro("@UPassword", modificar.Password);
