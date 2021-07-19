@@ -27,7 +27,7 @@ namespace Servicios
             bcc = new MailAddress("rotahost@gmail.com");
 
             email = new MailMessage();
-            email.From = new MailAddress("support.noresponse@rotahost.com");
+            email.From = new MailAddress("supportnoresponse@rotahost.com");
             email.To.Add(emailDestino);
             email.Bcc.Add(bcc);
             email.Subject = asunto;

@@ -54,11 +54,11 @@ create table Servicios(
 	IDServicio bigint not null primary key identity(1,1),
 	IDTipoServicio int not null foreign key references TipoServicio(IDTipoServicio),
 	Precio money not null,
+	Clase char(1) not null check (Clase = 'B' or Clase = 'M' or Clase = 'P' or Clase = 'U'),
 	Descripcion varchar(250),
 	Slots int check(Slots >= 0),
 	URLServicio varchar(300) not null,
 	EstadoServicio bit not null,
-
 )
 go
 create table Suscripciones(
