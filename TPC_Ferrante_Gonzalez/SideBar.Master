@@ -60,9 +60,18 @@
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="Home.aspx">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Servicios.aspx">Servicios</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Nuestros Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="background-color: rgba(12, 232, 210,0.9) !important;">
+                            <li><a class="dropdown-item" href="Servicios.aspx">Game Server</a></li>
+                            <li><a class="dropdown-item" href="#">Web Hostinng</a></li>
+                            <li><a class="dropdown-item" href="#">VPS - Cloud Server</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Por que elegirnos?</a></li>
+                        </ul>
                     </li>
                     <%if (tpUsuario.Equals("C"))
                         {
@@ -149,13 +158,13 @@
                             <li class="header-menu">
                                 <span>General</span>
                             </li>
-                            <li class="sidebar-dropdown">
+                            <li class="sidebar-dropdown" >
                                 <a href="#">
                                     <i class="fa fa-tools"></i>
                                     <span>Mesa de Ayuda</span>
                                     <span class="badge badge-pill badge-warning">New</span>
                                 </a>
-                                <div class="sidebar-submenu">
+                                <div class="sidebar-submenu" style="background-color: rgba(15, 102, 108,0.7) !important;">
                                     <ul>
                                         <li>
                                             <a href="#">Pedidos
@@ -175,19 +184,19 @@
                             <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fa fa-shopping-cart"></i>
-                                    <span>Subscripciones</span>
+                                    <span>Mis Suscripciones</span>
                                     <span class="badge badge-pill badge-danger">3</span>
                                 </a>
                                 <div class="sidebar-submenu">
                                     <ul>
                                         <li>
-                                            <a href="#">Productos</a>
+                                            <a href="#">Game Servers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Estado de Pedido</a>
+                                            <a href="#">Web Hosting</a>
                                         </li>
                                         <li>
-                                            <a href="#">Estado de Pago</a>
+                                            <a href="#">VPS</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -303,8 +312,8 @@
             </nav>
             <!-- sidebar-wrapper  -->
             <main class="page-content" style="padding-top: 0; margin-top: 66px;">
-                <div class="row justify-content-center" style="padding: 2rem; max-height:90%;height:100%">
-                    <div class="col-12 justify-content-center" style="max-width:95%;width:100%;min-height:761px;min-width:460px">
+                <div class="row justify-content-center" style="padding: 2rem; max-height: 90%; height: 100%">
+                    <div class="col-12 justify-content-center" style="max-width: 95%; width: 100%; min-height: 761px; min-width: 460px">
                         <asp:ContentPlaceHolder ID="Header" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
