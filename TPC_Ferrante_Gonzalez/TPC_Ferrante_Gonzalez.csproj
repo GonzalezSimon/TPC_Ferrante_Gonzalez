@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABMSuscripciones.aspx" />
     <Content Include="About.aspx" />
     <Content Include="CargaJuegos.aspx" />
     <Content Include="Contact.aspx" />
@@ -266,6 +267,7 @@
     <Content Include="Styles\Sidebar.css" />
     <Content Include="TicketeraUsuarios.aspx" />
     <Content Include="Tickets.aspx" />
+    <Content Include="TicketsPendientes.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -273,6 +275,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMSuscripciones.aspx.cs">
+      <DependentUpon>ABMSuscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMSuscripciones.aspx.designer.cs">
+      <DependentUpon>ABMSuscripciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -342,6 +351,13 @@
     <Compile Include="Servicios.aspx.designer.cs">
       <DependentUpon>Servicios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SideBarAdmins.Master.cs">
+      <DependentUpon>SideBarAdmins.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SideBarAdmins.Master.designer.cs">
+      <DependentUpon>SideBarAdmins.Master</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -377,6 +393,13 @@
     <Compile Include="Tickets.aspx.designer.cs">
       <DependentUpon>Tickets.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TicketsPendientes.aspx.cs">
+      <DependentUpon>TicketsPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketsPendientes.aspx.designer.cs">
+      <DependentUpon>TicketsPendientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,6 +418,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ImgJuegos\" />
+    <Folder Include="ImgUsuarios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -411,6 +435,7 @@
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="SideBar.Master" />
+    <Content Include="SideBarAdmins.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

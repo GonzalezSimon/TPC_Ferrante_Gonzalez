@@ -14,7 +14,7 @@ namespace TPC_Ferrante_Gonzalez
         {
 
         }
-        public Usuario InicioSecion(string user, string password)
+        public Usuario InicioSesion(string user, string password)
         {
             NegUsuario n_usuario = new NegUsuario();
             List<Usuario> lista = new List<Usuario>();
@@ -37,7 +37,7 @@ namespace TPC_Ferrante_Gonzalez
             string Pass = txtPass.Text;
             Usuario cliente = new Usuario();
 
-            cliente = InicioSecion(user, Pass);
+            cliente = InicioSesion(user, Pass);
             if (cliente.Nombre == null)
             {
                 Response.Write("<script> alert(" + "'Los datos son incorretos'" + ") </script>");
@@ -51,7 +51,7 @@ namespace TPC_Ferrante_Gonzalez
                 switch (cliente.Tipo.Nombre)
                 {
                     case "A":
-                        Response.Redirect("Tickets.aspx");
+                        Response.Redirect("TicketsPendientes.aspx");
 
                         break;
                     case "C":

@@ -1,7 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ABMSuscripciones.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ABMSuscripciones" MasterPageFile="Site.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ABMSuscripciones.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ABMSuscripciones" MasterPageFile="SideBarAdmins.Master" %>
 
 <asp:Content ID="Tickets" ContentPlaceHolderID="Header" runat="server">
-    <div class="d-flex contenedor-sidebar">
+    <!--<div class="d-flex contenedor-sidebar">
         <!--<div class="bg-primary sidebar-usuarios">
             <div class="logo">
                 <img src="<%= usuario.URLimagen %>" alt="..." class="imglogo">
@@ -14,7 +14,7 @@
                 </ul>
                 <a href="Home.aspx" class="opcoines">Homiado</a>
 
-                <!-- sidebar-search  -->
+                <!-- sidebar-search  
 
         <div class="page-wrapper chiller-theme toggled">
             <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -54,13 +54,13 @@
                                 <a href="#">
                                     <i class="fa fa-tachometer-alt"></i>
                                     <span>Tickets</span>
-                                    <!--<span class="badge badge-pill badge-warning">New</span>-->
+                                    <!--<span class="badge badge-pill badge-warning">New</span>
                                 </a>
                                 <div class="sidebar-submenu">
                                     <ul>
                                         <li>
                                             <a href="TicketsPendientes.aspx">Tickets Pendientes
-                    <!--<span class="badge badge-pill badge-success">Pro</span>-->
+                    <!--<span class="badge badge-pill badge-success">Pro</span>
                                             </a>
                                         </li>
                                         <li>
@@ -180,9 +180,9 @@
                     </div>
                     </div>
                     </nav>
-                    <!-- sidebar-menu  -->
+                    <!-- sidebar-menu  
 
                 </div>
-        </div>
+        </div>-->
 
 </asp:Content>

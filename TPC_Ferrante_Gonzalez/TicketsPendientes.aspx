@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TicketsPendientes.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.TicketsPendientes" MasterPageFile="~/Site.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TicketsPendientes.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.TicketsPendientes" MasterPageFile="~/SideBarAdmins.Master" %>
 
 <asp:Content ID="TicketsPendientes" ContentPlaceHolderID="Header" runat="server">
     <div class="d-flex contenedor-sidebar">

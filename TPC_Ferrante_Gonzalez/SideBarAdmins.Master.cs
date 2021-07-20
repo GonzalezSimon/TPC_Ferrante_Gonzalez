@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace TPC_Ferrante_Gonzalez
 {
-    public partial class SideBar : MasterPage
+    public partial class SideBarAdmins : MasterPage
     {
         public Usuario user = null;
         public string tpUsuario = "";
@@ -22,7 +22,7 @@ namespace TPC_Ferrante_Gonzalez
             {
                 user = (Usuario)Session["Usuario"];
                 Img = user.URLimagen;
-                Nombre = user.UserName;
+                Nombre = user.Nombre;
             }
             if (Session["NivelAcceso"] != null)
             {
@@ -60,6 +60,7 @@ namespace TPC_Ferrante_Gonzalez
         {
             Session["Usuario"] = null;
             Response.Redirect("Home.aspx");
+
         }
     }
 }
