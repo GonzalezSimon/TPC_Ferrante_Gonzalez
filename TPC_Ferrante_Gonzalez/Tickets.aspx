@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/SideBar.Master" AutoEventWireup="True" CodeBehind="Tickets.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.Tickets" MaintainScrollPositionOnPostback="True" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/SideBarAdmins.Master" AutoEventWireup="True" CodeBehind="Tickets.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.Tickets" MaintainScrollPositionOnPostback="True" %>
 
 
 

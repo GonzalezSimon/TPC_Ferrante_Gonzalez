@@ -2,6 +2,7 @@
 using Negocio;
 using System;
 using System.Collections.Generic;
+using System.Web.UI.WebControls;
 
 namespace TPC_Ferrante_Gonzalez
 {
@@ -41,12 +42,24 @@ namespace TPC_Ferrante_Gonzalez
             user.Mail = txtMail.Text;
             user.Password = txtPass.Text;
             user.Telefono = txtTelefono.Text;
-            user.URLimagen = "no definido";
+            user.URLimagen = GuardarImagen(fuImagenUsuario,user.Nombre+"_"+user.Apellido);
             user.UserName = txtNombUsuario.Text;
 
             n_usuario.agregar(user);
-            
 
+            Response.Redirect("Login.aspx");
+
+        }
+        protected string GuardarImagen(FileUpload aux, string NombreArchivo)
+        {
+            if (aux.HasFile)
+            {
+                string ruta = "/ImgUsuarios/" + NombreArchivo + ".png";
+                aux.SaveAs(Server.MapPath(ruta));
+                return ruta;
+            }
+            
+            return "Sin Definir";
         }
     }
 }

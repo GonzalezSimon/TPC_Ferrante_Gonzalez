@@ -50,6 +50,7 @@
     <Compile Include="NegTipoServicio.cs" />
     <Compile Include="NegTipoUsuario.cs" />
     <Compile Include="NegUsuario.cs" />
+    <Compile Include="NegVideoJuegos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

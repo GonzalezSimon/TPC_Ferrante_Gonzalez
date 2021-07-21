@@ -65,7 +65,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Servicios.aspx">Servicios</a>
                     </li>
-                    <%if (tpUsuario.Equals("C"))
+                   <!-- <%if (tpUsuario.Equals("C"))
                         {
                     %>
                     <li class="nav-item">

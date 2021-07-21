@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SideBar.Master.cs" Inherits="TPC_Ferrante_Gonzalez.SideBar" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SideBarAdmins.master.cs" Inherits="TPC_Ferrante_Gonzalez.SideBarAdmins" %>
 
 <!DOCTYPE html>
 
@@ -48,7 +48,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 100%; z-index: 1000;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center" style="position: fixed; width: 100%; z-index: 1000;">
             <a href="Home.aspx">
                 <img src="Imgs/LogoLogin.png" style="max-height: 50px" />
             </a>
@@ -59,43 +59,11 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="Home.aspx">Home <span class="sr-only">(current)</span></a>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Nuestros Servicios
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="background-color: rgba(12, 232, 210,0.9) !important;">
-                            <li><a class="dropdown-item" href="Servicios.aspx">Game Server</a></li>
-                            <li><a class="dropdown-item" href="#">Web Hostinng</a></li>
-                            <li><a class="dropdown-item" href="#">VPS - Cloud Server</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Por que elegirnos?</a></li>
-                        </ul>
-                    </li>
-                    <%if (tpUsuario.Equals("C"))
-                        {
-                    %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Usuarios.aspx">Mis Subcripciones</a>
-                    </li>
+                        <a class="nav-link" href="Home.aspx">AdminMode <span class="sr-only">(current)</span></a>
 
-                    <%}%>
-                    <%if (tpUsuario.Equals("A"))
-                        { %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Tickets.aspx">Administracion</a>
                     </li>
-
-                    <%}%>
-                    <!--<li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>-->
                 </ul>
 
-                <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                    style="max-height: 30px; border-bottom-left-radius: 40%; border-top-right-radius: 40%;" />
-                <h1 style="margin: 15px; color: antiquewhite; font-size: medium;"><%=Nombre %></h1>
                 <div class="card-inline my-2 my-lg-0">
 
                     <%if (Session["Usuario"] == null)
@@ -158,50 +126,48 @@
                             <li class="header-menu">
                                 <span>General</span>
                             </li>
-                            <li class="sidebar-dropdown" >
+                            <li class="sidebar-dropdown">
                                 <a href="#">
-                                    <i class="fa fa-tools"></i>
-                                    <span>Mesa de Ayuda</span>
+                                    <i class="fas fa-users"></i>
+                                    <span>ABMs                                    </span>
                                     <span class="badge badge-pill badge-warning">New</span>
                                 </a>
-                                <div class="sidebar-submenu" style="background-color: rgba(15, 102, 108,0.7) !important;">
+                                <!--ABMS-->
+                                <div class="sidebar-submenu " style="background-color: rgba(15, 102, 108,0.7) !important;">
                                     <ul>
                                         <li>
-                                            <a href="#">Pedidos
-                   
-                                                <span class="badge badge-pill badge-success">Pro</span>
-                                            </a>
+                                            <a href="#">Usuarios <span class="badge badge-pill badge-success">Pro</span> </a>
                                         </li>
                                         <li>
-                                            <a href="TicketeraUsuarios.aspx">Problemas Tecnicos</a>
+                                            <a href="ABMSuscripciones.aspx">Suscripciones</a>
                                         </li>
                                         <li>
-                                            <a href="#">Tienes Dudas?</a>
+                                            <a href="#">Servicios</a>
                                         </li>
+
                                     </ul>
                                 </div>
                             </li>
+                            <!--Soporte-->
                             <li class="sidebar-dropdown">
                                 <a href="#">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span>Mis Suscripciones</span>
+                                    <i class="fas fa-headset"></i>
+                                    <span>Soporte</span>
                                     <span class="badge badge-pill badge-danger">3</span>
                                 </a>
                                 <div class="sidebar-submenu">
                                     <ul>
                                         <li>
-                                            <a href="#">Game Servers</a>
+                                            <a href="TicketsPendientes.aspx">Tickets Abiertos</a>
                                         </li>
                                         <li>
-                                            <a href="#">Web Hosting</a>
+                                            <a href="Tickets.aspx">Historico de Casos</a>
                                         </li>
-                                        <li>
-                                            <a href="#">VPS</a>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </li>
-                            <li class="sidebar-dropdown">
+                            <!-- <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fas fa-gamepad"></i>
                                     <span>Juegos Compatibles</span>
@@ -224,8 +190,8 @@
                                             <a href="#">Forms</a>
                                         </li>
                                     </ul>
-                                </div>-->
-                            </li>
+                                </div>
+                            </li>-->
                             <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fas fa-server"></i>
