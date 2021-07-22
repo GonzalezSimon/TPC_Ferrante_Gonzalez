@@ -9,3 +9,10 @@ F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csprojAssemblyReferen
 F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.dll
 F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\MercadoPago.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Newtonsoft.Json.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\MercadoPago.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\MercadoPago.xml
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Newtonsoft.Json.xml
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.CopyComplete

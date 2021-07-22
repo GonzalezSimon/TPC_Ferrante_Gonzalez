@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <asp:Button ID="btnEnviar" class="btn float-right login_btn login" runat="server" Text="Enviar" />
+                                    <asp:Button ID="btnEnviar" class="btn float-right login_btn login" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
                                 </div>
                             </div>
 

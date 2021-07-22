@@ -52,6 +52,9 @@
     <Reference Include="AspNet.ScriptManager.jQuery, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AspNet.ScriptManager.jQuery.3.6.0\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
+    <Reference Include="MercadoPago, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\mercadopago-sdk.2.0.0\lib\net461\MercadoPago.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -61,6 +64,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -111,6 +115,14 @@
     <Content Include="ABMUsuarios.aspx" />
     <Content Include="About.aspx" />
     <Content Include="CargaJuegos.aspx" />
+    <Content Include="checkout-payment-sample-master\client\css\index.css" />
+    <Content Include="checkout-payment-sample-master\client\img\horizontal_logo.png" />
+    <Content Include="checkout-payment-sample-master\client\img\product.png" />
+    <Content Include="checkout-payment-sample-master\client\index.html" />
+    <Content Include="checkout-payment-sample-master\client\js\index.js" />
+    <Content Include="checkout-payment-sample-master\server\node\server.js" />
+    <Content Include="checkout-payment-sample-master\server\php\server.php" />
+    <Content Include="CheckOutMP.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -139,6 +151,7 @@
     <Content Include="ModSuscripcion.aspx" />
     <Content Include="ModUsuario.aspx" />
     <Content Include="Registro.aspx" />
+    <Content Include="ResumenServicio.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -163,6 +176,15 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="checkout-payment-sample-master\README.md" />
+    <Content Include="checkout-payment-sample-master\server\node\.gitignore" />
+    <Content Include="checkout-payment-sample-master\server\node\package-lock.json" />
+    <Content Include="checkout-payment-sample-master\server\node\package.json" />
+    <Content Include="checkout-payment-sample-master\server\node\README.md" />
+    <Content Include="checkout-payment-sample-master\server\php\.gitignore" />
+    <Content Include="checkout-payment-sample-master\server\php\composer.json" />
+    <Content Include="checkout-payment-sample-master\server\php\composer.lock" />
+    <Content Include="checkout-payment-sample-master\server\php\README.md" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -310,6 +332,13 @@
     <Compile Include="CargaJuegos.aspx.designer.cs">
       <DependentUpon>CargaJuegos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CheckOutMP.aspx.cs">
+      <DependentUpon>CheckOutMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOutMP.aspx.designer.cs">
+      <DependentUpon>CheckOutMP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -369,6 +398,13 @@
     </Compile>
     <Compile Include="Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenServicio.aspx.cs">
+      <DependentUpon>ResumenServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumenServicio.aspx.designer.cs">
+      <DependentUpon>ResumenServicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Servicios.aspx.cs">
       <DependentUpon>Servicios.aspx</DependentUpon>

@@ -162,3 +162,6 @@ F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzal
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CopyComplete
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.dll
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\MercadoPago.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\MercadoPago.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\MercadoPago.xml

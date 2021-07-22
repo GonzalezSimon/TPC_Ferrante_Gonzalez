@@ -87,5 +87,11 @@ namespace TPC_Ferrante_Gonzalez
             }
             return listado;
         }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dlServicio.SelectedValue);
+            Response.Redirect("ResumenServicio.aspx?id="+id);
+        }
     }
 }
