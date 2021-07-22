@@ -14,23 +14,38 @@
                         <div class="card-body login">
                             <div class="col">
                                 <div class="row">
-                                    <asp:Label ID="lblDescripcion" runat="server" Text="Label"></asp:Label>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
-                                        <asp:Image ID="imgJuego" runat="server" Style="max-width: 8vh" ImageUrl="~/ImgJuegos/ark.png" />
+                                    <div class="card text-white bg-dark mb-3" style="min-width: 100%;">
+                                        <div class="row justify-content-center align-items-center minh-100">
+                                            <div class="col-md-4">
+                                                
+                                                    <asp:Image class="img-fluid rounded mx-auto d-block" ID="imgJuego" runat="server" Style="max-width: 100%" ImageUrl="~/ImgJuegos/ark.png" />
+                                                
+                                            </div>
+                                            <div class="col-md-8 ">
+                                                <div class="card-body">
+                                                    <asp:Label ID="lblDescripcion" class="card-title" runat="server" Text="Label"></asp:Label>
+                                                    <hr />
+                                                    <p class="card-text">
+                                                         <asp:Label ID="Label1" class="card-title" runat="server" Text="Slots:"></asp:Label>
+                                                        <asp:Label ID="lblSlots" runat="server" Text="Label"></asp:Label>
+                                                    </p>
+                                                    <p class="card-text">
+                                                        <asp:Label ID="Label2" class="card-title" runat="server" Text="Precio:"></asp:Label>
+                                                        <hr />
+                                                        <asp:Label ID="lblPrecio" style="font-size:30px;color:yellow" runat="server" Text="Label"></asp:Label>
+                                                        <p>
+                                                        </p>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-8">
-                                        <div class="col-4">
-                                             <asp:Label ID="lblSlots" runat="server" Text="Label"></asp:Label>
-                                        </div>
-                                        <div class="col-4">
-                                             <asp:Label ID="lblPrecio" runat="server" Text="Label"></asp:Label>
-                                        </div>
-                                    </div
+                                   
                                 </div>
-                                <div class="row">
-                                    <asp:Button ID="btnEnviar" class="btn float-right login_btn login" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
+                                <div class=" row justify-content-center align-items-center minh-100">
+                                    <asp:Button ID="btnEnviar" class="btn float-right login_btn login" style="min-width:100%" runat="server" Text="Mercado Pago" OnClick="btnEnviar_Click" />
                                 </div>
                             </div>
 

@@ -67,5 +67,10 @@ namespace TPC_Ferrante_Gonzalez
                 Response.Redirect("Home.aspx");
             }
         }
+
+        protected void btnNuevoGameServer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GameServers.aspx");
+        }
     }
 }

@@ -140,9 +140,14 @@
     <Content Include="Imgs\7daystoday.jpg" />
     <Content Include="Imgs\animacion.png" />
     <Content Include="Imgs\ARKSurvival.jpg" />
+    <Content Include="Imgs\BackGround\7Dtd-Carousel-full-Screen.jpg" />
+    <Content Include="Imgs\BackGround\ARK-Carousel-full-Screen.jpg" />
+    <Content Include="Imgs\BackGround\CSGO-Carousel-full-Screen.jpg" />
+    <Content Include="Imgs\BackGround\Valheim-Carousel-full-Screen.jpg" />
     <Content Include="Imgs\CSGO.jpg" />
     <Content Include="Imgs\Guía-Valheim-todo-lo-que-debes-saber-e1614335184644.jpg" />
     <Content Include="Imgs\LogoLogin.png" />
+    <Content Include="Imgs\Servicios\R.png" />
     <Content Include="Imgs\Valheim2.jpg" />
     <Content Include="Imgs\Valheim3.jpg" />
     <Content Include="JavaScript\functions.js" />

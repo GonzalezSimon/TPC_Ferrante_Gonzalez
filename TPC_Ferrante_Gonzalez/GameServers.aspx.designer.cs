@@ -24,15 +24,6 @@ namespace TPC_Ferrante_Gonzalez
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control dlJuego.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dlJuego;
-
-        /// <summary>
         /// Control imgJuego.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace TPC_Ferrante_Gonzalez
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgJuego;
+
+        /// <summary>
+        /// Control dlJuego.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dlJuego;
 
         /// <summary>
         /// Control dlServicio.

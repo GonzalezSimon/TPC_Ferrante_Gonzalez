@@ -16,20 +16,21 @@ namespace TPC_Ferrante_Gonzalez
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 int id = int.Parse(Request.QueryString["Id"]);
                 //Nuevo servicio
                 servicioAContratar = new Servicio();
 
                 ValidarServicio(id);
+
+                lblDescripcion.Text = servicioAContratar.Descripcion;
+                imgJuego.ImageUrl = servicioAContratar.URLServicio;//ACA ES CUANDO LA COMPOSICION ES DIOS: servicioAContratar.IDJuego.URLImagen.....
+                lblSlots.Text = servicioAContratar.Slots.ToString();
+                lblPrecio.Text = servicioAContratar.Precio.ToString("c", CultureInfo.GetCultureInfo("es-AR"));
+
+
             }
-            lblDescripcion.Text = servicioAContratar.Descripcion;
-            imgJuego.ImageUrl = servicioAContratar.URLServicio;//ACA ES CUANDO LA COMPOSICION ES DIOS: servicioAContratar.IDJuego.URLImagen.....
-            lblSlots.Text = servicioAContratar.Slots.ToString();
-            lblPrecio.Text = servicioAContratar.Precio.ToString("c", CultureInfo.GetCultureInfo("es-AR"));
-
-
 
         }
 

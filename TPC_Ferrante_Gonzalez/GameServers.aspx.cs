@@ -18,7 +18,7 @@ namespace TPC_Ferrante_Gonzalez
         public VideoJuegos juegos = new VideoJuegos();
         public List<VideoJuegos> listjuegos = new List<VideoJuegos>();
         public List<Servicio> listServ = new List<Servicio>();
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -37,9 +37,13 @@ namespace TPC_Ferrante_Gonzalez
                 dlJuego.DataValueField = "Id";
                 dlJuego.DataBind();
                 OrdenaDrop(ref dlJuego);
-                //OrdenaDrop(ref dlJuego);
 
-                imgJuego.ImageUrl = "/Imgs/animacion.png";
+                dlServicio.DataSource = CargaServ(Convert.ToInt32(dlJuego.SelectedValue));
+                dlServicio.DataTextField = "Descripcion";
+                dlServicio.DataValueField = "Id";
+                dlServicio.DataBind();
+
+                //imgJuego.ImageUrl = listjuegos.Find(x => x.Id == Convert.ToInt32(dlJuego.SelectedValue)).Imagen;
             }
 
         }
@@ -59,21 +63,16 @@ namespace TPC_Ferrante_Gonzalez
         protected void dlJuego_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<VideoJuegos> aux = (List<VideoJuegos>)Session["Juegos"];
-            int idjue = 0;
-           
-            foreach (var item in aux)
-            {
-                if (item.Id == Convert.ToInt32(dlJuego.SelectedValue))
-                {
-                    imgJuego.ImageUrl = item.Imagen;
-                    idjue = item.Id;
-                }
-            }
+
+            imgJuego.ImageUrl = aux.Find(x => x.Id == Convert.ToInt32(dlJuego.SelectedValue)).Imagen;
+            int idjue = aux.Find(x => x.Id == Convert.ToInt32(dlJuego.SelectedValue)).Id;
+
             dlServicio.DataSource = CargaServ(idjue);
             dlServicio.DataTextField = "Descripcion";
             dlServicio.DataValueField = "Id";
             dlServicio.DataBind();
         }
+        
         protected List<Servicio> CargaServ(int id)
         {
             List<Servicio> aux = (List<Servicio>)Session["Servicios"];
@@ -91,7 +90,7 @@ namespace TPC_Ferrante_Gonzalez
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dlServicio.SelectedValue);
-            Response.Redirect("ResumenServicio.aspx?id="+id);
+            Response.Redirect("ResumenServicio.aspx?id=" + id);
         }
     }
 }
