@@ -124,6 +124,7 @@
     <Content Include="GameServers.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="ImgJuegos\ark.png" />
     <Content Include="Imgs\7daystoday.jpg" />
     <Content Include="Imgs\animacion.png" />
     <Content Include="Imgs\ARKSurvival.jpg" />
@@ -449,7 +450,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ImgJuegos\" />
     <Folder Include="ImgUsuarios\" />
   </ItemGroup>
   <ItemGroup>

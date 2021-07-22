@@ -17,7 +17,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select IDJuego, Nombre, Empresa, Imagen, Estado from Juegos");
+                datos.setearConsulta("select IDJuego, Nombre, Empresa, Imagen, Estado from Juegos order by Nombre desc");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())

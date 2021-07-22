@@ -3,3 +3,9 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Servicios.
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.pdb
+F:\Git\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Servicios.dll
+F:\Git\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Servicios.pdb
+F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.dll
+F:\Git\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.pdb

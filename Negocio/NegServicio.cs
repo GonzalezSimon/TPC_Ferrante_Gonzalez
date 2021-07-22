@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("select s.IDServicio IDServicio, ts.IDTipoServicio IDTipo, ts.TipoServicio TipoServicio, ts.Estado EstadoTS, s.Precio Precio, s.Descripcion Descripcion, s.Slots Slots, s.URLServicio URLServicio, s.EstadoServicio EstadoServicio from Servicios as s " +
+                datos.setearConsulta("select s.IDServicio IDServicio,IdJuego, ts.IDTipoServicio IDTipo, ts.TipoServicio TipoServicio, ts.Estado EstadoTS, s.Precio Precio, s.Descripcion Descripcion, s.Slots Slots, s.URLServicio URLServicio, s.EstadoServicio EstadoServicio from Servicios as s " +
                     "inner join TipoServicio as ts on ts.IDTipoServicio = s.IDTipoServicio");
                 datos.ejecutarLectura();
 
@@ -31,7 +31,7 @@ namespace Negocio
                     aux.Tipo.Id = (int)datos.Lector["IDTipo"];
                     aux.Tipo.Nombre = (string)datos.Lector["TipoServicio"];
                     aux.Tipo.Estado = (bool)datos.Lector["EstadoTS"];
-
+                    aux.IdJuego = (int)datos.Lector["IdJuego"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Slots = (int)datos.Lector["Slots"];

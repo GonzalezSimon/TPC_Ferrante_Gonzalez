@@ -10,6 +10,7 @@ namespace Dominio
     {
         public long Id { get; set; }
         public TipoServicio Tipo { get; set; }
+        public int IdJuego { get; set; }
 
         public decimal Precio { get; set; }
 

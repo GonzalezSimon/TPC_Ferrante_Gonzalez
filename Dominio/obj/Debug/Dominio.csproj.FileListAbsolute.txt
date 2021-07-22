@@ -1,11 +1,11 @@
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\Debug\Dominio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\Debug\Dominio.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.pdb
 F:\Git\TPC_Ferrante_Gonzalez\Dominio\bin\Debug\Dominio.dll
 F:\Git\TPC_Ferrante_Gonzalez\Dominio\bin\Debug\Dominio.pdb
 F:\Git\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
 F:\Git\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 F:\Git\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.dll
 F:\Git\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.pdb
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\Debug\Dominio.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\Debug\Dominio.pdb
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Debug\Dominio.pdb
