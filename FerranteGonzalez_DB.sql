@@ -9,7 +9,13 @@ go
 
 use FerranteGonzalez_DB
 go
-
+create table Juegos(
+	IDJuego int not null primary key identity(1,1),
+	Nombre varchar(50) unique not null,
+	Empresa varchar(50),
+	Imagen varchar(100) not null,
+	Estado BIT not null,
+	)
 create table Paises(
 	IDPais int not null primary key identity(1,1),
 	Nombre varchar(50) unique not null,
@@ -53,11 +59,13 @@ go
 create table Servicios(
 	IDServicio bigint not null primary key identity(1,1),
 	IDTipoServicio int not null foreign key references TipoServicio(IDTipoServicio),
+	IDJuego int not null foreign key references Juegos (IDJuego),
 	Precio money not null,
 	Descripcion varchar(250),
 	Slots int check(Slots >= 0),
 	URLServicio varchar(300) not null,
 	EstadoServicio bit not null,
+
 )
 go
 create table Suscripciones(
@@ -88,3 +96,5 @@ create table Tickets(
 alter table Suscripciones
 add constraint CHK_Suscripciones
 check(FechaInicio < FechaFin)
+
+alter table Juegos ALTER COLUMN Imagen varchar(50)

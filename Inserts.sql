@@ -26,33 +26,40 @@ VALUES
 insert into TipoServicio(TipoServicio, Estado)
 VALUES ('rFactor',1), ('rFactor2',1),('Asseto Corsa',1), ('CS:GO',1), ('CS 1.6',1), ('Automobilista',1), ('STC V3',1);
 
+--Select * from Juegos
+
 --select * from TipoServicio
 
-insert into Servicios(IDTipoServicio, Slots, Descripcion, EstadoServicio, Precio, URLServicio)
+insert into Servicios(IDTipoServicio,IDJuego, Slots, Descripcion, EstadoServicio, Precio, URLServicio)
 VALUES
+--ARK--
+(1,1, 20, 'ARK: Survival Evolved, 20 slots 30 dias', 1, 1200, 'Imgs/rflite.png'),
+(1,1, 20, 'ARK: Survival Evolved, 30 slots 30 dias', 1, 1800, 'Imgs/rflite.png'),
+(1,1, 20, 'ARK: Survival Evolved, 40 slots 30 dias', 1, 2300, 'Imgs/rflite.png'),
+(1,1, 20, 'ARK: Survival Evolved, 50 slots 30 dias', 1, 2800, 'Imgs/rflite.png'),
 -- rFactor 1 lite
-(1, 20, 'rFactor Liveracers Lite, 20 slots 30 dias', 1, 950, 'Imgs/rflite.png'),
-(1, 25, 'rFactor Liveracers Lite, 25 slots 30 dias', 1, 1150, 'Imgs/rflite.png'),
-(1, 30, 'rFactor Liveracers Lite, 30 slots 30 dias', 1, 1350, 'Imgs/rflite.png'),
-(1, 35, 'rFactor Liveracers Lite, 35 slots 30 dias', 1, 1550, 'Imgs/rflite.png'),
-(1, 40, 'rFactor Liveracers Lite, 40 slots 30 dias', 1, 1750, 'Imgs/rflite.png'),
-(1, 45, 'rFactor Liveracers Lite, 45 slots 30 dias', 1, 1900, 'Imgs/rflite.png'),
+(1,2, 20, 'rFactor Liveracers Lite, 20 slots 30 dias', 1, 950, 'Imgs/rflite.png'),
+(1,2, 25, 'rFactor Liveracers Lite, 25 slots 30 dias', 1, 1150, 'Imgs/rflite.png'),
+(1,2, 30, 'rFactor Liveracers Lite, 30 slots 30 dias', 1, 1350, 'Imgs/rflite.png'),
+(1,2, 35, 'rFactor Liveracers Lite, 35 slots 30 dias', 1, 1550, 'Imgs/rflite.png'),
+(1,2, 40, 'rFactor Liveracers Lite, 40 slots 30 dias', 1, 1750, 'Imgs/rflite.png'),
+(1,2, 45, 'rFactor Liveracers Lite, 45 slots 30 dias', 1, 1900, 'Imgs/rflite.png'),
 --rFactor 1 Log Analyzer
-(1, 20, 'rFactor Liveracers Lite + Log Analyzer, 20 slots 30 dias', 1, 1150, 'Imgs/rflog.png'),
-(1, 25, 'rFactor Liveracers Lite + Log Analyzer, 25 slots 30 dias', 1, 1350, 'Imgs/rflog.png'),
-(1, 30, 'rFactor Liveracers Lite + Log Analyzer, 30 slots 30 dias', 1, 1550, 'Imgs/rflog.png'),
-(1, 35, 'rFactor Liveracers Lite + Log Analyzer, 35 slots 30 dias', 1, 1750, 'Imgs/rflog.png'),
-(1, 40, 'rFactor Liveracers Lite + Log Analyzer, 40 slots 30 dias', 1, 1950, 'Imgs/rflog.png'),
-(1, 45, 'rFactor Liveracers Lite + Log Analyzer, 45 slots 30 dias', 1, 2100, 'Imgs/rflog.png'),
+(1,2, 20, 'rFactor Liveracers Lite + Log Analyzer, 20 slots 30 dias', 1, 1150, 'Imgs/rflog.png'),
+(1,2, 25, 'rFactor Liveracers Lite + Log Analyzer, 25 slots 30 dias', 1, 1350, 'Imgs/rflog.png'),
+(1,2, 30, 'rFactor Liveracers Lite + Log Analyzer, 30 slots 30 dias', 1, 1550, 'Imgs/rflog.png'),
+(1,2, 35, 'rFactor Liveracers Lite + Log Analyzer, 35 slots 30 dias', 1, 1750, 'Imgs/rflog.png'),
+(1,2, 40, 'rFactor Liveracers Lite + Log Analyzer, 40 slots 30 dias', 1, 1950, 'Imgs/rflog.png'),
+(1,2, 45, 'rFactor Liveracers Lite + Log Analyzer, 45 slots 30 dias', 1, 2100, 'Imgs/rflog.png'),
 --rFactor 1 Live Premium
-(1, 20, 'rFactor Liveracers Premium, 20 slots 30 dias', 1, 1700, 'Imgs/rfprem.png'),
-(1, 25, 'rFactor Liveracers Premium, 25 slots 30 dias', 1, 1900, 'Imgs/rfprem.png'),
-(1, 30, 'rFactor Liveracers Premium, 30 slots 30 dias', 1, 2100, 'Imgs/rfprem.png'),
-(1, 35, 'rFactor Liveracers Premium, 35 slots 30 dias', 1, 2300, 'Imgs/rfprem.png'),
-(1, 40, 'rFactor Liveracers Premium, 40 slots 30 dias', 1, 2500, 'Imgs/rfprem.png'),
-(1, 45, 'rFactor Liveracers Premium, 45 slots 30 dias', 1, 2700, 'Imgs/rfprem.png'),
+(1,2, 20, 'rFactor Liveracers Premium, 20 slots 30 dias', 1, 1700, 'Imgs/rfprem.png'),
+(1,2, 25, 'rFactor Liveracers Premium, 25 slots 30 dias', 1, 1900, 'Imgs/rfprem.png'),
+(1,2, 30, 'rFactor Liveracers Premium, 30 slots 30 dias', 1, 2100, 'Imgs/rfprem.png'),
+(1,2, 35, 'rFactor Liveracers Premium, 35 slots 30 dias', 1, 2300, 'Imgs/rfprem.png'),
+(1,2, 40, 'rFactor Liveracers Premium, 40 slots 30 dias', 1, 2500, 'Imgs/rfprem.png'),
+(1,2, 45, 'rFactor Liveracers Premium, 45 slots 30 dias', 1, 2700, 'Imgs/rfprem.png');
 
-(3, 30,'Servidor Asseto Corsa + Admin', 1, 1750, 'Imgs/assettoc.png');
+--(3, 30,'Servidor Asseto Corsa + Admin', 1, 1750, 'Imgs/assettoc.png');
 
 
 --select * from servicios
@@ -93,7 +100,7 @@ VALUES('RF01', 'Cambiar circuito buenosaires', GETDATE(), null, 2, 'A', 'prueba'
 
 --query de tickets en negtickets
 --select IDTicket, NombreGrupoSoporte, Descripcion, Solucion, FechaApertura, FechaCierre, EstadoTicket, t.Estado, T.IDUsuario IDUsuario, u.Usuario, u.UPassword, U.Apellido, U.Nombre, U.Telefono, U.Mail, L.IDLocalidad, L.Nombre, L.Estado, P.IDPais, P.Nombre, P.Estado from Tickets T, Usuarios U, Localidades L, Paises P where U.IDUsuario = T.IDUsuario and L.IDLocalidad = U.IDLocalidad and P.IDPais = L.IDPais 
-
+--select * from Juegos
 UPDATE Tickets
 set EstadoTicket = 'C'
 where IDTicket = 2;
