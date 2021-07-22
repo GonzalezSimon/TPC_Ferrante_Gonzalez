@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CargaJuegos.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.CargaJuegos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="SideBarAdmins.Master" AutoEventWireup="true" CodeBehind="CargaJuegos.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.CargaJuegos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
     <div class="container login" style="align-items: center; height: 45rem">

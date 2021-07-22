@@ -1,6 +1,5 @@
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Servicios.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\Debug\Servicios.pdb
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\Debug\Servicios.pdb

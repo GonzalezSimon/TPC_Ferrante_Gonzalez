@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModUsuario.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ModUsuario" MasterPageFile="SideBar.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModUsuario.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ModUsuario" MasterPageFile="SideBarAdmins.Master" %>
 
 <asp:Content ID="ModUsuario" ContentPlaceHolderID="Header" runat="server">
 

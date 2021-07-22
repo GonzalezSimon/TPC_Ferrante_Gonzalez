@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModSuscripcion.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ModSuscripcion" MasterPageFile="SideBar.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModSuscripcion.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ModSuscripcion" MasterPageFile="SideBarAdmins.Master" %>
 
 <asp:Content ID="ModSuscripcion" ContentPlaceHolderID="Header" runat="server">
 

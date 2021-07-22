@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ABMSuscripciones.aspx" />
+    <Content Include="ABMUsuarios.aspx" />
     <Content Include="About.aspx" />
     <Content Include="CargaJuegos.aspx" />
     <Content Include="Contact.aspx" />
@@ -134,6 +135,8 @@
     <Content Include="JavaScript\functions.js" />
     <Content Include="JavaScript\MasterSidebar.js" />
     <Content Include="LogIn.aspx" />
+    <Content Include="ModSuscripcion.aspx" />
+    <Content Include="ModUsuario.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -268,6 +271,7 @@
     <Content Include="TicketeraUsuarios.aspx" />
     <Content Include="Tickets.aspx" />
     <Content Include="TicketsPendientes.aspx" />
+    <Content Include="usuarioMod.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -281,6 +285,13 @@
     </Compile>
     <Compile Include="ABMSuscripciones.aspx.designer.cs">
       <DependentUpon>ABMSuscripciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABMUsuarios.aspx.cs">
+      <DependentUpon>ABMUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMUsuarios.aspx.designer.cs">
+      <DependentUpon>ABMUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -335,6 +346,20 @@
     </Compile>
     <Compile Include="LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModSuscripcion.aspx.cs">
+      <DependentUpon>ModSuscripcion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModSuscripcion.aspx.designer.cs">
+      <DependentUpon>ModSuscripcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModUsuario.aspx.cs">
+      <DependentUpon>ModUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModUsuario.aspx.designer.cs">
+      <DependentUpon>ModUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">
@@ -400,6 +425,13 @@
     <Compile Include="TicketsPendientes.aspx.designer.cs">
       <DependentUpon>TicketsPendientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="usuarioMod.aspx.cs">
+      <DependentUpon>usuarioMod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usuarioMod.aspx.designer.cs">
+      <DependentUpon>usuarioMod.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -457,6 +489,10 @@
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{9de6a011-ee8c-4945-8dc7-e4d63a328385}</Project>
       <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{724d3bdc-43ec-41c5-a5a2-e04fcff673d4}</Project>
+      <Name>Servicios</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

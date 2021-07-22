@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ABMSuscripciones.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ABMSuscripciones" MasterPageFile="SideBar.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ABMSuscripciones.aspx.cs" Inherits="TPC_Ferrante_Gonzalez.ABMSuscripciones" MasterPageFile="SideBarAdmins.Master" %>
 
 <asp:Content ID="ABMSuscripciones" ContentPlaceHolderID="Header" runat="server">
     <div class="container-fluid">

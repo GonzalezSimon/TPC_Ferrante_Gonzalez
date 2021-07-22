@@ -136,13 +136,13 @@
                                 <div class="sidebar-submenu " style="background-color: rgba(15, 102, 108,0.7) !important;">
                                     <ul>
                                         <li>
-                                            <a href="#">Usuarios <span class="badge badge-pill badge-success">Pro</span> </a>
+                                            <a href="ABMUsuarios.aspx">Usuarios <span class="badge badge-pill badge-success">Pro</span> </a>
                                         </li>
                                         <li>
                                             <a href="ABMSuscripciones.aspx">Suscripciones</a>
                                         </li>
                                         <li>
-                                            <a href="#">Servicios</a>
+                                            <a href="CargaJuegos.aspx">Carga Videojuegos</a>
                                         </li>
 
                                     </ul>
@@ -167,31 +167,6 @@
                                     </ul>
                                 </div>
                             </li>
-                            <!-- <li class="sidebar-dropdown">
-                                <a href="#">
-                                    <i class="fas fa-gamepad"></i>
-                                    <span>Juegos Compatibles</span>
-                                </a>
-                                <!--<div class="sidebar-submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="#">General</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Panels</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Tables</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Icons</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Forms</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>-->
                             <li class="sidebar-dropdown">
                                 <a href="#">
                                     <i class="fas fa-server"></i>
@@ -215,22 +190,6 @@
                                     </ul>
                                 </div>
                             </li>
-                            <!--<li class="sidebar-dropdown">
-                                <a href="#">
-                                    <i class="fa fa-globe"></i>
-                                    <span>Maps</span>
-                                </a>
-                                <div class="sidebar-submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Google maps</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Open street map</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>-->
                             <li class="header-menu">
                                 <span>Extra</span>
                             </li>
