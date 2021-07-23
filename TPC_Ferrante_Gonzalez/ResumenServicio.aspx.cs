@@ -43,7 +43,7 @@ namespace TPC_Ferrante_Gonzalez
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (loggeado == null)
+            if (loggeado.Nombre == null)
             {
                 Response.Write("<script> alert(" + "'¡Debe de estar loggiado para acceder al servicio!'" + ") </script>");
             }
