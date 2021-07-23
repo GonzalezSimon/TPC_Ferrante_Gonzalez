@@ -25,5 +25,57 @@ namespace Dominio
             Delegado1 = new Usuario();
             Delegado2 = new Usuario();
         }
+
+        public static ServicioContratado operator +(ServicioContratado serv, ServicioContratado _serv)
+        {
+            if(serv.Id != _serv.Id)
+            {
+                serv.Id = _serv.Id;
+            }
+
+            if (serv.Servicio.Id != _serv.Servicio.Id && _serv != null)
+            {
+                serv.Servicio.Id = _serv.Servicio.Id;
+            }
+
+            if(serv.Usuario.Id != _serv.Usuario.Id && _serv != null)
+            {
+                serv.Usuario.Id = _serv.Usuario.Id;
+            }
+
+            if (serv.Delegado1.Id != _serv.Delegado1.Id && _serv != null)
+            {
+                serv.Delegado1.Id = _serv.Delegado1.Id;
+            }
+
+            if (serv.Delegado2.Id != _serv.Delegado2.Id && _serv != null)
+            {
+                serv.Delegado2.Id = _serv.Delegado2.Id;
+            }
+
+
+            if(serv.FechaCompra != _serv.FechaCompra && _serv != null)
+            {
+                serv.FechaCompra = _serv.FechaCompra;
+            }
+
+            if(serv.FechaCancelacion != _serv.FechaCancelacion && _serv != null)
+            {
+                serv.FechaCancelacion = _serv.FechaCancelacion;
+            }
+
+            if(serv.GrupoSoporte != _serv.GrupoSoporte && _serv.GrupoSoporte != "")
+            {
+                serv.GrupoSoporte = _serv.GrupoSoporte;
+            }
+
+            if(serv.Estado != _serv.Estado && _serv != null)
+            {
+                serv.Estado = _serv.Estado;
+            }
+
+            return serv;
+        }
+
     }
 }

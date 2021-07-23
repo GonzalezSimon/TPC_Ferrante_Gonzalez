@@ -26,6 +26,9 @@ VALUES
 insert into TipoServicio(TipoServicio, Estado)
 VALUES ('rFactor',1), ('rFactor2',1),('Asseto Corsa',1), ('CS:GO',1), ('CS 1.6',1), ('Automobilista',1), ('STC V3',1);
 
+insert into Juegos(Nombre, Empresa,Imagen,Estado)
+VALUES('ARK: Survival Evolved', 'RotaHost', 'ImgsJuegos/ark.png', 1),
+('rFactor', 'RotaHost', 'ImgsJuegos/rFactor.png', 1);
 --Select * from Juegos
 
 --select * from TipoServicio

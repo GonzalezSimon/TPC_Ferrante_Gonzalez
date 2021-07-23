@@ -13,6 +13,7 @@ namespace TPC_Ferrante_Gonzalez
     public partial class ResumenServicio : System.Web.UI.Page
     {
         public Servicio servicioAContratar;
+        public Usuario loggeado;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -44,7 +45,10 @@ namespace TPC_Ferrante_Gonzalez
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-
+            if (loggeado == null)
+            {
+                Response.Write("<script> alert(" + "Usted debe de estar loggeado para poder efectuar la compra" + ") </script>");
+            }
         }
     }
 }

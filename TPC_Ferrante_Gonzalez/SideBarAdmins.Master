@@ -59,7 +59,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="Home.aspx">AdminMode <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="TicketsAbiertos.aspx">AdminMode <span class="sr-only">(current)</span></a>
 
                     </li>
                 </ul>
@@ -194,20 +194,20 @@
                                 <span>Extra</span>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="EnConstruccion.aspx">
                                     <i class="fa fa-book"></i>
                                     <span>Documentation</span>
                                     <span class="badge badge-pill badge-primary">Beta</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="EnConstruccion.aspx">
                                     <i class="far fa-calendar-check"></i>
                                     <span>Vencimientos</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="EnConstruccion.aspx">
                                     <i class="fa fa-folder"></i>
                                     <span>Examples</span>
                                 </a>
@@ -215,24 +215,6 @@
                         </ul>
                     </div>
                     <!-- sidebar-menu  -->
-                    <div class="sidebar-footer" style="margin-top: 70%">
-                        <a href="#">
-                            <i class="fa fa-bell"></i>
-                            <span class="badge badge-pill badge-warning notification">3</span>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-envelope"></i>
-                            <span class="badge badge-pill badge-success notification">7</span>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-cog"></i>
-                            <span class="badge-sonar"></span>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-power-off"></i>
-                        </a>
-                    </div>
-                </div>
                 <!-- sidebar-content  -->
             </nav>
             <!-- sidebar-wrapper  -->

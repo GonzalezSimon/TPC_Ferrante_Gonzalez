@@ -48,11 +48,9 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; width: 100%; z-index: 1000;">
             <a href="Home.aspx">
-
                 <img src="Imgs/LogoLogin.png" style="max-height: 50px" />
-
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,11 +60,20 @@
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="Home.aspx">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Nuestros Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="background-color: rgba(12, 232, 210,0.9) !important;">
+                            <li><a class="dropdown-item" href="GameServers.aspx">Game Server</a></li>
+                            <li><a class="dropdown-item" href="#">Web Hostinng</a></li>
+                            <li><a class="dropdown-item" href="#">VPS - Cloud Server</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Por que elegirnos?</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Servicios.aspx">Servicios</a>
-                    </li>
-                   <!-- <%if (tpUsuario.Equals("C"))
+                    <%if (tpUsuario.Equals("C"))
                         {
                     %>
                     <li class="nav-item">
@@ -85,7 +92,9 @@
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>-->
                 </ul>
-                <img src="<%= Img %>" style="max-height: 40px; border-bottom-left-radius: 40%; border-top-right-radius: 40%;" />
+
+                <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                    style="max-height: 30px; border-bottom-left-radius: 40%; border-top-right-radius: 40%;" />
                 <h1 style="margin: 15px; color: antiquewhite; font-size: medium;"><%=Nombre %></h1>
                 <div class="card-inline my-2 my-lg-0">
 

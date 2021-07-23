@@ -43,6 +43,7 @@ namespace TPC_Ferrante_Gonzalez
                 dlServicio.DataValueField = "Id";
                 dlServicio.DataBind();
 
+                
                 //imgJuego.ImageUrl = listjuegos.Find(x => x.Id == Convert.ToInt32(dlJuego.SelectedValue)).Imagen;
             }
 

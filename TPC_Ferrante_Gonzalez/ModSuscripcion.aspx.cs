@@ -14,6 +14,8 @@ namespace TPC_Ferrante_Gonzalez
     public partial class ModSuscripcion : Page
     {
         public ServicioContratado servicio;
+        public ServicioContratado backServ;
+        public ServicioContratado elServ;
 
         List<Servicio> listaServicios = new List<Servicio>();
         
@@ -171,22 +173,29 @@ namespace TPC_Ferrante_Gonzalez
         {
             NegocioServContratado servicioAModificar = new NegocioServContratado();
 
-            servicio = (ServicioContratado)Session["ServicioAModificar"];
+        
 
-            servicio.Servicio.Id = ((uint)lstModSub.SelectedIndex+1);
-                servicio.Usuario.Id = ((uint)lstModUsuario.SelectedIndex+1);
-                servicio.Delegado1.Id = ((uint)lstModDelUno.SelectedIndex+1);
-                servicio.Delegado2.Id = ((uint)lstModDelDos.SelectedIndex+1);
+                servicio = (ServicioContratado)Session["ServicioAModificar"];
+                backServ = (ServicioContratado)Session["ServicioAModificar"];
+                elServ = (ServicioContratado)Session["ServicioAModificar"];
+
+                servicio.Servicio.Id = ((uint)lstModSub.SelectedIndex + 1);
+                servicio.Usuario.Id = ((uint)lstModUsuario.SelectedIndex + 1);
+                servicio.Delegado1.Id = ((uint)lstModDelUno.SelectedIndex + 1);
+                servicio.Delegado2.Id = ((uint)lstModDelDos.SelectedIndex + 1);
                 servicio.FechaCompra = dateInicio.SelectedDate;
                 servicio.FechaCancelacion = dateFin.SelectedDate;
                 servicio.GrupoSoporte = txtAlias.Text;
                 servicio.Estado = cbxEstado.Checked;
 
-                Session.Add("ServicioAModificar", servicio);
+            elServ = backServ + elServ;
+
+            
+                Session.Add("ServicioAModificar", elServ);
 
                 try
                 {
-                    servicioAModificar.modificar(servicio);
+                    servicioAModificar.modificar(elServ);
                 }
                 catch (Exception ex)
                 {

@@ -64,13 +64,13 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Nuestros Servicios
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="background-color: rgba(12, 232, 210,0.9) !important;">
-                            <li><a class="dropdown-item" href="Servicios.aspx">Game Server</a></li>
-                            <li><a class="dropdown-item" href="#">Web Hostinng</a></li>
-                            <li><a class="dropdown-item" href="#">VPS - Cloud Server</a></li>
+                            <li><a class="dropdown-item" href="GameServers.aspx">Game Server</a></li>
+                            <li><a class="dropdown-item" href="EnConstruccion.aspx">Web Hostinng</a></li>
+                            <li><a class="dropdown-item" href="EnConstruccion.aspx">VPS - Cloud Server</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Por que elegirnos?</a></li>
+                            <li><a class="dropdown-item" href="EnConstruccion.aspx">Por que elegirnos?</a></li>
                         </ul>
                     </li>
                     <%if (tpUsuario.Equals("C"))
@@ -176,7 +176,7 @@
                                             <a href="TicketeraUsuarios.aspx">Problemas Tecnicos</a>
                                         </li>
                                         <li>
-                                            <a href="#">Tienes Dudas?</a>
+                                            <a href="EnConstruccion.aspx">Tienes Dudas?</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -190,19 +190,19 @@
                                 <div class="sidebar-submenu">
                                     <ul>
                                         <li>
-                                            <a href="#">Game Servers</a>
+                                            <a href="GameServers.aspx">Game Servers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Web Hosting</a>
+                                            <a href="EnConstruccion.aspx">Web Hosting</a>
                                         </li>
                                         <li>
-                                            <a href="#">VPS</a>
+                                            <a href="EnConstruccion.aspx">VPS</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="sidebar-dropdown">
-                                <a href="#">
+                                <a href="EnConstruccion.aspx">
                                     <i class="fas fa-gamepad"></i>
                                     <span>Juegos Compatibles</span>
                                 </a>
@@ -234,14 +234,14 @@
                                 <span>Extra</span>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="EnConstruccion.aspx">
                                     <i class="fa fa-book"></i>
                                     <span>Documentation</span>
                                     <span class="badge badge-pill badge-primary">Beta</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="EnConstruccion.aspx">
                                     <i class="far fa-calendar-check"></i>
                                     <span>Vencimientos</span>
                                 </a>
@@ -249,30 +249,12 @@
                             <li>
                                 <a href="usuarioMod.aspx?id=<%= user.Id %>">
                                     <i class="fa fa-folder"></i>
-                                    <span>Mis datos</span>
+                                    <span>Modificar mis datos</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <!-- sidebar-menu  -->
-                    <div class="sidebar-footer" style="margin-top: 70%">
-                        <a href="#">
-                            <i class="fa fa-bell"></i>
-                            <span class="badge badge-pill badge-warning notification">3</span>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-envelope"></i>
-                            <span class="badge badge-pill badge-success notification">7</span>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-cog"></i>
-                            <span class="badge-sonar"></span>
-                        </a>
-                        <a href="#">
-                            <i class="fa fa-power-off"></i>
-                        </a>
-                    </div>
-                </div>
                 <!-- sidebar-content  -->
             </nav>
             <!-- sidebar-wrapper  -->
