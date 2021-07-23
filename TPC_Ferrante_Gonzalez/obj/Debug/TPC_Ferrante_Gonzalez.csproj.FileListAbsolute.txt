@@ -83,6 +83,8 @@ F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzal
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\MercadoPago.dll
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\MercadoPago.pdb
 F:\Git\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\MercadoPago.xml
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.AssemblyReference.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\TPC_Ferrante_Gonzalez.dll.config
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\TPC_Ferrante_Gonzalez.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\TPC_Ferrante_Gonzalez.pdb
@@ -163,8 +165,6 @@ C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Micr
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\es\System.Web.Optimization.resources.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.AssemblyReference.cache
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.csproj.CopyComplete
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\TPC_Ferrante_Gonzalez\obj\Debug\TPC_Ferrante_Gonzalez.pdb

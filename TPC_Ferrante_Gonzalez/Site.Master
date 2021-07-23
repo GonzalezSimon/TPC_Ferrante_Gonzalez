@@ -50,7 +50,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a href="Home.aspx">
-                <img src="Imgs/LogoLogin.png" style="max-height: 50px" />
+                <img src="Imgs/LogoLogin.png" style="max-height: 50px;" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -113,7 +113,7 @@
         <asp:ContentPlaceHolder ID="Header" runat="server">
         </asp:ContentPlaceHolder>
 
-        <div class="container body-content">
+        <div class="container body-content col-12">
 
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

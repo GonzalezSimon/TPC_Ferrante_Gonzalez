@@ -44,9 +44,9 @@
     </asp:Content>
 <asp:Content ID="Servicios" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="container login col-12" style="align-items: center; height: 45rem">
+    <div class="container login " style="align-items: center; height: 45rem; min-width:150vh">
                 <div class="d-flex justify-content-center h-100 login" style="align-items: center">
-                    <div class="card login" style="min-height: 95%; min-width: 60%; margin: 3rem">
+                    <div class="card login" style="min-height: 95%; min-width: 85%; margin: 2rem">
                         <div class="card-header login">
                             <div class="row justify-content-center">
                                 <img src="Imgs/LogoLogin.png" style="max-width: 15rem;" />
@@ -55,16 +55,9 @@
                         <div class="card-body login">
                             <div class="col">
                                 <div class="row">
-                                </div>
-                                <div class="row">
                                     <div class="card text-white bg-dark mb-3" style="min-width: 100%;">
                                         <div class="row justify-content-center align-items-center minh-100">
-                                            <div class="col-2">
-                                                
-                                                    <asp:Image class="img-fluid rounded mx-auto d-block" ID="imgJuego" runat="server" Style="max-width: 100%" ImageUrl="~/ImgJuegos/ark.png" />
-                                                
-                                            </div>
-                                            <div class="col-md-10 ">
+                                            <div class="col-md-12 ">
                                                 <div class="card-body">
 
                                                     <p class="card-text">

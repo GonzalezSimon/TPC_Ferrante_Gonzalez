@@ -5,7 +5,6 @@
         .carousel-item{
             min-height:400px;
             background-size:cover;
-            
         }
     </style>
 
@@ -26,7 +25,7 @@
         </div>
       
     </div>
-    <div class="card-img-overlay">
+    <div class="card-img-overlay" style="margin-top: 2rem">
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <div class="container login" style="align-items: center; ">
