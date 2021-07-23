@@ -11,22 +11,22 @@
                 <div class="carousel-item active" >
                     <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-20200407144605-2-2-1586272081.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5></h5>
+                        <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.1920x1080_1-1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h5></h5>
+                        <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.1920x1080_1-1.png" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <h5></h5>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -43,4 +43,48 @@
         
     </asp:Content>
 <asp:Content ID="Servicios" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class="container login col-12" style="align-items: center; height: 45rem">
+                <div class="d-flex justify-content-center h-100 login" style="align-items: center">
+                    <div class="card login" style="min-height: 95%; min-width: 60%; margin: 3rem">
+                        <div class="card-header login">
+                            <div class="row justify-content-center">
+                                <img src="Imgs/LogoLogin.png" style="max-width: 15rem;" />
+                            </div>
+                        </div>
+                        <div class="card-body login">
+                            <div class="col">
+                                <div class="row">
+                                </div>
+                                <div class="row">
+                                    <div class="card text-white bg-dark mb-3" style="min-width: 100%;">
+                                        <div class="row justify-content-center align-items-center minh-100">
+                                            <div class="col-2">
+                                                
+                                                    <asp:Image class="img-fluid rounded mx-auto d-block" ID="imgJuego" runat="server" Style="max-width: 100%" ImageUrl="~/ImgJuegos/ark.png" />
+                                                
+                                            </div>
+                                            <div class="col-md-10 ">
+                                                <div class="card-body">
+
+                                                    <p class="card-text">
+                                                         <h2>Somos ese hosting que estabas buscando</h2>
+                                                    </p>
+                                                    <p class="card-text">
+                                                        <h4>En ROTA HOST, brindamos un servicio de excelencia sin elevar tus costos, es por eso que contamos con todos los recursos para que tengas una experiencia única.
+Contamos con atención personalizada, para poder obtener el mejor soporte sin importar el juego que elijas.
+Nuestro Data Center esta úbicado en Argentina, de esa manera la experiencia será lo mas fluido posible, y así podrás explotar el 100% de tus habilidades.</h4>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 </asp:Content>

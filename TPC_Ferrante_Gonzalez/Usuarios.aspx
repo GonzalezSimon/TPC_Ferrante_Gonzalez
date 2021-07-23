@@ -15,7 +15,7 @@
                         <p>Fecha Inicio: <%=item.FechaCompra %></p>
                         <p>Fecha Fin:<%=item.FechaCancelacion %></p>
                         <p>Administrador:  <% =item.Usuario.Nombre%></p>
-                        <p>Grupo Soporte: <% =item.GrupoSoporte%>></p>
+                        <p>Grupo Soporte: <% =item.GrupoSoporte%></p>
                         <hr />
                         <div class="row" style="width: 100%">
                             <asp:Button ID="Button5" runat="server" Text="Ticket Soporte" class="btn btn-outline-success my-2 my-sm-0 btnNavbar" Style="width: 100%; margin-left: 2rem;" />

@@ -29,8 +29,6 @@ namespace TPC_Ferrante_Gonzalez
                 imgJuego.ImageUrl = servicioAContratar.URLServicio;//ACA ES CUANDO LA COMPOSICION ES DIOS: servicioAContratar.IDJuego.URLImagen.....
                 lblSlots.Text = servicioAContratar.Slots.ToString();
                 lblPrecio.Text = servicioAContratar.Precio.ToString("c", CultureInfo.GetCultureInfo("es-AR"));
-
-
             }
 
         }
@@ -47,7 +45,7 @@ namespace TPC_Ferrante_Gonzalez
         {
             if (loggeado == null)
             {
-                Response.Write("<script> alert(" + "Usted debe de estar loggeado para poder efectuar la compra" + ") </script>");
+                Response.Write("<script> alert(" + "'¡Debe de estar loggiado para acceder al servicio!'" + ") </script>");
             }
         }
     }

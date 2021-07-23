@@ -65,8 +65,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="background-color: rgba(12, 232, 210,0.9) !important;">
                             <li><a class="dropdown-item" href="GameServers.aspx">Game Server</a></li>
-                            <li><a class="dropdown-item" href="#">Web Hostinng</a></li>
-                            <li><a class="dropdown-item" href="#">VPS - Cloud Server</a></li>
+                            <li><a class="dropdown-item" href="EnConstruccion.aspx">Web Hostinng</a></li>
+                            <li><a class="dropdown-item" href="EnConstruccion.aspx">VPS - Cloud Server</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

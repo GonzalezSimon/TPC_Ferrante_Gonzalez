@@ -29,22 +29,18 @@
                 </SelectParameters>
             </asp:ObjectDataSource>
 
-        </div>
-            <div class="row">
-                <div class="card" style="text-align: center;">
+            <div class="card" style="text-align: center;">
 
-                    <asp:Label ID="lblSolucion" runat="server" Text="Solucionar Ticket: " CssClass="custom-control-label col-sm-2"></asp:Label>
+                <asp:Label ID="lblSolucion" runat="server" Text="Solucionar Ticket: " CssClass="custom-control-label col-sm-2"></asp:Label>
 
-                    <div class="col-sm-10">
-                        <asp:TextBox ID="txtSolucion" runat="server" TextMode="MultiLine" CssClass="form-control text-ticket"></asp:TextBox>
-                    </div>
-                    <div style="text-align: center">
-                        <asp:Button ID="Solucionar" runat="server" CssClass="btn btn-primary form-control" OnClick="btnSolucionar_Click" Text="Solucionar" />
-                    </div>
+                <div class="col-sm-10">
+                    <asp:TextBox ID="txtSolucion" runat="server" TextMode="MultiLine" CssClass="form-control text-ticket"></asp:TextBox>
                 </div>
-
-
+                <div style="text-align: center">
+                    <asp:Button ID="Solucionar" runat="server" CssClass="btn btn-primary form-control" OnClick="btnSolucionar_Click" Text="Solucionar" />
+                </div>
             </div>
         </div>
-    </div>
+        </div>
+        </div>
 </asp:Content>

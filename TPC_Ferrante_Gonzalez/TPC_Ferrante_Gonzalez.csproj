@@ -113,7 +113,6 @@
   <ItemGroup>
     <Content Include="ABMSuscripciones.aspx" />
     <Content Include="ABMUsuarios.aspx" />
-    <Content Include="About.aspx" />
     <Content Include="CargaJuegos.aspx" />
     <Content Include="checkout-payment-sample-master\client\css\index.css" />
     <Content Include="checkout-payment-sample-master\client\img\horizontal_logo.png" />
@@ -123,7 +122,6 @@
     <Content Include="checkout-payment-sample-master\server\node\server.js" />
     <Content Include="checkout-payment-sample-master\server\php\server.php" />
     <Content Include="CheckOutMP.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -131,7 +129,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
     <Content Include="EnConstruccion.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="GameServers.aspx" />
@@ -181,7 +178,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="ClassDiagram1.cd" />
     <Content Include="checkout-payment-sample-master\README.md" />
     <Content Include="checkout-payment-sample-master\server\node\.gitignore" />
     <Content Include="checkout-payment-sample-master\server\node\package-lock.json" />
@@ -323,13 +319,6 @@
       <DependentUpon>ABMUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CargaJuegos.aspx.cs">
       <DependentUpon>CargaJuegos.aspx</DependentUpon>
@@ -344,20 +333,6 @@
     </Compile>
     <Compile Include="CheckOutMP.aspx.designer.cs">
       <DependentUpon>CheckOutMP.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="EnConstruccion.aspx.cs">
       <DependentUpon>EnConstruccion.aspx</DependentUpon>

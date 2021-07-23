@@ -18,7 +18,7 @@
                             <p>Fecha Inicio: <%=item.FechaCompra %></p>
                             <p>Fecha Fin:<%=item.FechaCancelacion %></p>
                             <p>Administrador:  <% =item.Usuario.Nombre%></p>
-                            <p>Grupo Soporte: <% =item.GrupoSoporte%></p>
+                            <p>Alias servicio: <% =item.GrupoSoporte%></p>
 
                         </div>
                     </div>
