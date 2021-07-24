@@ -1,0 +1,44 @@
+﻿.opcoines {
+    color: red;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.bg-primary.sidebar-usuarios {
+    background-color: #222222 !important;
+    min-height: 25vh;
+    width: 18rem;
+}
+.d-flex.contenedor-sidebar {
+}
+.imglogo {
+    max-width: 150px;
+    min-width: 120px;
+    max-height: 150px;
+    min-height: 120px;
+    border-radius: 60%;
+}
+
+.table.tickets {
+    display: block;
+    width: 100%;
+    min-width: max-content;
+    overflow-x:scroll;
+    margin-right: 0;
+    margin-bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    min-height: 25vh;
+    padding-left:0rem;
+}
+
+.text-ticket {
+    max-width: 200vh;
+    min-width: 100vh;
+    overflow: auto;
+    resize: both;
+    margin:0!important;
+}

@@ -1,0 +1,121 @@
+﻿body {
+    padding: 0;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(75,107,105,1) 50%, rgba(0,0,0,1) 100%);
+    /* background: url(../Imgs/LogoLogin.png); /* Nuestra imagen de fondo */
+    background-repeat: no-repeat; /* Indicamos que no se repetira */
+    background-size: cover; /* Encajamos la imagen al 100% del ancho */
+    background-attachment: fixed; /* Establecemos una posicion fija para la imagen */
+    font-family: helvetica, arial, sans-serif;
+    line-height: 20px;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0.7) !important;
+}
+
+.btn.btnNavbar {
+    color: #0ce8d3;
+    border-color: #0ce8d3;
+}
+
+    .btn.btnNavbar:hover {
+        color: black;
+        background-color: #0ce8d3;
+        border-color: #0ce8d3;
+    }
+
+.rombo {
+    width: 80px;
+    z-index: -2000;
+    height: 80px;
+    /*border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid gray;
+    background: aqua;*/
+    background: url(../Imgs/animacion.png);
+    background-repeat: no-repeat;
+    opacity: .3;
+    position: absolute;
+    overflow: hidden;
+    bottom: -150vh;
+    animation: rombos 3s linear infinite;
+}
+
+    .rombo:nth-child(1) {
+        width: 80px;
+        height: 80px;
+        left: 5%;
+        animation-duration: 6s;
+        /*animation-delay: 3s;*/
+    }
+
+    .rombo:nth-child(2) {
+        width: 100px;
+        height: 100px;
+        left: 35%;
+        animation-duration: 6s;
+        animation-delay: 1s;
+    }
+
+    .rombo:nth-child(3) {
+        width: 100px;
+        height: 100px;
+        left: 55%;
+        animation-duration: 6s;
+        animation-delay: 3s;
+    }
+
+    .rombo:nth-child(4) {
+        width: 100px;
+        height: 100px;
+        left: 65%;
+        animation-duration: 6s;
+        animation-delay: 1.8s;
+    }
+
+    .rombo:nth-child(5) {
+        width: 100px;
+        height: 100px;
+        left: 82%;
+        animation-duration: 6s;
+        animation-delay: 2.8s;
+    }
+
+    .rombo:nth-child(6) {
+        width: 100px;
+        height: 100px;
+        left: 15%;
+        animation-duration: 6s;
+        animation-delay: 1.5s;
+    }
+
+    .rombo:nth-child(7) {
+        width: 100px;
+        height: 100px;
+        left: 45%;
+        animation-duration: 6s;
+        animation-delay: 2.3s;
+    }
+
+@keyframes rombos {
+    0% {
+        visibility:hidden;
+        bottom: 0;
+        opacity: 0;
+    }
+
+    30% {
+        visibility:visible;
+        transform: translate(20px);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
