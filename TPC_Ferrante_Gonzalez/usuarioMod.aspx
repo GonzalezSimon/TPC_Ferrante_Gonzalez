@@ -14,24 +14,16 @@
                         </div>
 
                         <div class="row" style="padding-top: 3vh">
-                            <h6 style="color: antiquewhite;">Contraseña de usuario:</h6>
-                        </div>
-                        <div class="row" style="padding-top: 1vh">
-
-                            <asp:TextBox ID="txtPasswrd" runat="server" type="password" AutoComplete="off" placeholder="Nueva contraseña" Style=" margin-left: 1.5vh"></asp:TextBox>
-                             <asp:RequiredFieldValidator ID="rfvPass" runat="server" ErrorMessage="Ingrese y confirme su contraeña" ControlToValidate="txtPasswrd" EnableTheming="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txtPasswrdConf" runat="server" type="password" AutoComplete="off" placeholder="Confirmar contraseña" Style=" margin-left: 1.5vh"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvPassConf" runat="server" ErrorMessage="Ingrese y confirme su contraeña" ControlToValidate="txtPasswrdConf" EnableTheming="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
-                        </div>
-
-                        <div class="row" style="padding-top: 3vh">
                             <h6 style="color: antiquewhite;">Nombre del usuario:</h6>
                             <asp:Label ID="lblNombre" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
                         </div>
                         <div class="row" style="padding-top: 1vh">
 
+                            <div class="input-group-prepend login">
+                                <span class="input-group-text login"><i class="fas fa-id-card"></i></span>
+                            </div>
 
-                            <asp:TextBox ID="txtNombre" runat="server" placeholder="Nuevo nombre" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <asp:TextBox ID="txtNombre" runat="server" placeholder="Nuevo nombre" Style=" margin-left: 0vh"></asp:TextBox>
                              <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="Ingrese su Nombre" ControlToValidate="txtNombre" EnableTheming="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </div>
 
@@ -41,8 +33,10 @@
                         </div>
                         <div class="row" style="padding-top: 1vh">
 
-
-                            <asp:TextBox ID="txtApellido" runat="server" placeholder="Nuevo apellido" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <div class="input-group-prepend login">
+                                <span class="input-group-text login"><i class="fas fa-id-card-alt"></i></span>
+                            </div>
+                            <asp:TextBox ID="txtApellido" runat="server" placeholder="Nuevo apellido" Style=" margin-left: 0vh"></asp:TextBox>
                              <asp:RequiredFieldValidator ID="rfvApe" runat="server" ErrorMessage="Ingrese su Apellido" ControlToValidate="txtApellido" EnableTheming="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </div>
 
@@ -53,27 +47,41 @@
                         </div>
                         <div class="row" style="padding-top: 1vh">
 
-
-                            <asp:TextBox ID="txtTelefono" runat="server" placeholder="Nuevo telefono" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <div class="input-group-prepend login">
+                                <span class="input-group-text login"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <asp:TextBox ID="txtTelefono" runat="server" placeholder="Nuevo telefono" Style=" margin-left: 0vh"></asp:TextBox>
                              <asp:RequiredFieldValidator ID="rfvTel" runat="server" ErrorMessage="Ingrese un Telefono" ControlToValidate="txtTelefono" EnableTheming="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="row" style="padding-top: 3vh">
+
+                            
+
                             <h6 style="color: antiquewhite;">Mail de usuario:</h6>
                             <asp:Label ID="lblMail" runat="server" Text="desc" Style="padding-bottom: 0rem; justify-content: center; color: antiquewhite; padding-left: 1.5vh;"></asp:Label>
                         </div>
                         <div class="row" style="padding-top: 1vh">
 
-
-                            <asp:TextBox ID="txtMail" runat="server" placeholder="Nuevo mail" Style=" margin-left: 1.5vh"></asp:TextBox>
+                            <div class="input-group-prepend login">
+                                <span class="input-group-text login"><i class="fas fa-mail-bulk"></i></span>
+                            </div>
+                            <asp:TextBox ID="txtMail" runat="server" placeholder="Nuevo mail" Style=" margin-left: 0vh"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="rfvMail" runat="server" ErrorMessage="Ingrese un Mail Valido" ControlToValidate="txtMail" EnableTheming="True" ForeColor="#CC0000"></asp:RequiredFieldValidator>
                         </div>
+
+
+                        <div class="row" style="padding-top: 3vh; justify-content:center;">
+                            <img class="img-responsive img-rounded" style="max-width: 12rem; max-height: 12rem;" src="<%=usuario.URLimagen %>" alt="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg">
+                        </div>
+                        <div class="row" style="padding-top:1vh;"></div>
+
 
                         <div class="input-group form-group login" style="justify-content: center; margin-bottom: 1.5rem; padding-top: 3vh">
                             <div class="input-group-prepend login">
                                 <span class="input-group-text login"><i class="fas fa-camera-retro"></i></span>
                             </div>
-                            <asp:FileUpload ID="fuImagenUsuario" runat="server" text="Elija su Imagen" class="form-control login col-10" />
+                            <asp:FileUpload ID="fuImagenUsuario" runat="server" text="Elija su Imagen" class="form-control login col-10"/>
 
                         </div>
 

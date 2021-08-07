@@ -9,21 +9,21 @@
             </ol>
             <div class="carousel-inner" javascript=".carousel('cycle')">
                 <div class="carousel-item active" >
-                    <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-20200407144605-2-2-1586272081.png" class="d-block w-100" alt="...">
+                    <img src="Imgs/BackGround/Valheim-Carousel-full-Screen.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5></h5>
                         <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.1920x1080_1-1.png" class="d-block w-100" alt="...">
+                    <img src="Imgs/BackGround/ARK-Carousel-full-Screen.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5></h5>
                         <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="http://rotahost.com.ar/wp-content/uploads/2020/10/cropped-ss_ccc4ce6edd4c454b6ce7b0757e633b63aa93921d.1920x1080_1-1.png" class="d-block w-100" alt="...">
+                    <img src="Imgs/BackGround/7Dtd-Carousel-full-Screen.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5></h5>
                         <p></p>

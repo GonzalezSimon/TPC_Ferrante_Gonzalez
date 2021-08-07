@@ -69,15 +69,13 @@ namespace TPC_Ferrante_Gonzalez
 
         protected void btnEnviarUsuario_Click(object sender, EventArgs e)
         {
-            if (rfvApe.IsValid && rfvMail.IsValid && rfvNombre.IsValid && rfvPass.IsValid && rfvPassConf.IsValid && rfvTel.IsValid)
+            if (rfvApe.IsValid && rfvNombre.IsValid && rfvMail.IsValid && rfvTel.IsValid)
             {
-
+                
                 NegUsuario usuarioAModificar = new NegUsuario();
                 usuario = (Usuario)Session["usuarioAModificar"];
 
-                if (txtPasswrd.Text == txtPasswrdConf.Text)
-                    usuario.Password = txtPasswrd.Text;
-
+                usuario.Password = usuario.Password;
                 usuario.Nombre = txtNombre.Text;
                 usuario.Apellido = txtApellido.Text;
                 usuario.Telefono = txtTelefono.Text;

@@ -1,0 +1,12 @@
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\Servicios.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\Servicios.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\MercadoPago.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\MercadoPago.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\MercadoPago.xml
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\x86\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\x86\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\x86\Debug\Servicios.csproj.CopyComplete
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\x86\Debug\Servicios.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Servicios\obj\x86\Debug\Servicios.pdb

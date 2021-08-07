@@ -54,6 +54,26 @@
                     </div>
                 </div>
             </div>
+
+            <form id="form-checkout" >
+   <input type="text" name="cardNumber" id="form-checkout__cardNumber" />
+   <input type="text" name="cardExpirationMonth" id="form-checkout__cardExpirationMonth" />
+   <input type="text" name="cardExpirationYear" id="form-checkout__cardExpirationYear" />
+   <input type="text" name="cardholderName" id="form-checkout__cardholderName"/>
+   <input type="email" name="cardholderEmail" id="form-checkout__cardholderEmail"/>
+   <input type="text" name="securityCode" id="form-checkout__securityCode" />
+   <select name="issuer" id="form-checkout__issuer"></select>
+   <select name="identificationType" id="form-checkout__identificationType"></select>
+   <input type="text" name="identificationNumber" id="form-checkout__identificationNumber"/>
+   <select name="installments" id="form-checkout__installments"></select>
+   <button type="submit" id="form-checkout__submit">Pagar</button>
+   <progress value="0" class="progress-bar">Cargando...</progress>
+</form>
         </ContentTemplate>
+        <script src="https://sdk.mercadopago.com/js/v2"></script>
+        <script>
+            const mp = new MercadoPago('APP_USR-976bdc42-32f3-4147-bd6c-4d8d58b1bd21');
+       // Add step #3
+        </script>
     </asp:UpdatePanel>
 </asp:Content>

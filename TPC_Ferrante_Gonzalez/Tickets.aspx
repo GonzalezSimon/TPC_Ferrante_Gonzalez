@@ -10,7 +10,7 @@
                 <AlternatingRowStyle BackColor="#B5B5B5"></AlternatingRowStyle>
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
-                    <asp:BoundField DataField="GrupoSoporte" HeaderText="GrupoSoporte" SortExpression="GrupoSoporte" />
+                    <asp:BoundField DataField="GrupoSoporte" HeaderText="Alias" SortExpression="GrupoSoporte" />
                     <asp:BoundField DataField="Usuario.Id" HeaderText="Usuario" SortExpression="Usuario" />
                     <asp:BoundField DataField="FechaApertura" HeaderText="FechaApertura" SortExpression="FechaApertura" />
                     <asp:BoundField DataField="FechaCierre" HeaderText="FechaCierre" SortExpression="FechaCierre" />

@@ -75,17 +75,21 @@
                             <asp:FileUpload ID="fuImagenUsuario" runat="server" text="Elija su Imagen" class="form-control login col-10" />
                             <asp:RequiredFieldValidator ID="rfvImgUser" runat="server" ErrorMessage="*" ControlToValidate="fuImagenUsuario" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
+
                         <div class="form-group login " style="margin-bottom: 1.5rem">
                             <div class="row justify-content-center">
                                 <asp:Button ID="btnIngresar" runat="server" Text="Enviar" class="btn login_btn login" OnClick="btnIngresar_Click" />
+                            <div class="g-recaptcha" data-sitekey="6Lfk0uYbAAAAACs2JluYLhI0jqwqpwOX68Z6ziXK"></div>
                             </div>
+
+
+
 
                         </div>
                     </div>
                 </div>
-
+               </div>
             </div>
         </div>
-    </div>
 </asp:Content>
 

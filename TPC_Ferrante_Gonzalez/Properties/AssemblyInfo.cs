@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie los valores de estos atributos para modificar la información
 // asociada a un ensamblado.
 [assembly: AssemblyTitle("TPC_Ferrante_Gonzalez")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Hosting de videojuegos")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("ROTAHOST")]
 [assembly: AssemblyProduct("TPC_Ferrante_Gonzalez")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
