@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>D:\rotaweb</_PublishTargetUrl>
-    <History>True|2021-08-05T05:02:50.5144085Z;True|2021-07-24T05:39:51.1627021-03:00;</History>
+    <_PublishTargetUrl>D:\rotaweb2</_PublishTargetUrl>
+    <History>True|2021-08-07T19:51:24.3139628Z;False|2021-08-07T16:50:59.1979077-03:00;False|2021-08-07T16:50:22.9503928-03:00;False|2021-08-07T16:48:38.9642487-03:00;False|2021-08-07T16:48:24.8069998-03:00;True|2021-08-05T02:02:50.5144085-03:00;True|2021-07-24T05:39:51.1627021-03:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include=".vs/TPC_Ferrante_Gonzalez/config/applicationhost.config">
@@ -17,62 +17,65 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="ABMUsuarios.aspx">
       <publishTime>07/21/2021 20:35:23</publishTime>
     </File>
+    <File Include="animacion2.ico">
+      <publishTime>08/07/2021 14:16:02</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.bootstrap.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.jQuery.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Dominio.dll">
-      <publishTime>08/05/2021 01:59:47</publishTime>
+      <publishTime>08/07/2021 16:48:09</publishTime>
     </File>
     <File Include="bin/Dominio.pdb">
-      <publishTime>08/05/2021 01:59:47</publishTime>
+      <publishTime>08/07/2021 16:48:09</publishTime>
     </File>
     <File Include="bin/es/Microsoft.AspNet.FriendlyUrls.resources.dll">
-      <publishTime>07/30/2013 14:01:46</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/es/System.Web.Optimization.resources.dll">
-      <publishTime>11/02/2014 12:28:40</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/MercadoPago.dll">
-      <publishTime>03/24/2021 09:32:46</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/MercadoPago.pdb">
-      <publishTime>03/24/2021 09:32:46</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Web.Optimization.WebForms.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Microsoft.ScriptManager.MSAjax.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Microsoft.ScriptManager.WebForms.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/Negocio.dll">
-      <publishTime>08/05/2021 01:59:47</publishTime>
+      <publishTime>08/07/2021 16:48:09</publishTime>
     </File>
     <File Include="bin/Negocio.pdb">
-      <publishTime>08/05/2021 01:59:47</publishTime>
+      <publishTime>08/07/2021 16:48:09</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>07/21/2021 20:31:52</publishTime>
@@ -222,25 +225,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:52</publishTime>
     </File>
     <File Include="bin/Servicios.dll">
-      <publishTime>08/05/2021 01:59:47</publishTime>
+      <publishTime>08/07/2021 16:48:09</publishTime>
     </File>
     <File Include="bin/Servicios.pdb">
-      <publishTime>08/05/2021 01:59:47</publishTime>
+      <publishTime>08/07/2021 16:48:09</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="bin/TPC_Ferrante_Gonzalez.dll">
-      <publishTime>08/05/2021 02:01:55</publishTime>
+      <publishTime>08/07/2021 16:51:12</publishTime>
     </File>
     <File Include="bin/TPC_Ferrante_Gonzalez.dll.config">
-      <publishTime>07/22/2021 04:34:07</publishTime>
+      <publishTime>08/07/2021 15:23:29</publishTime>
     </File>
     <File Include="bin/TPC_Ferrante_Gonzalez.pdb">
-      <publishTime>08/05/2021 02:01:55</publishTime>
+      <publishTime>08/07/2021 16:51:12</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>07/21/2021 20:31:52</publishTime>
+      <publishTime>08/04/2021 22:11:14</publishTime>
     </File>
     <File Include="Bundle.config">
       <publishTime>07/21/2021 20:31:51</publishTime>
@@ -351,9 +354,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="Home.aspx">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>08/07/2021 12:31:21</publishTime>
     </File>
     <File Include="ImgJuegos/ark.png">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/2000px-Rfactor-logo.svg %28122222%29.psd">
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="Imgs/7daystoday.jpg">
@@ -363,6 +369,12 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="Imgs/ARKSurvival.jpg">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/assettoc.png">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/assettoc.psd">
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="Imgs/BackGround/7Dtd-Carousel-full-Screen.jpg">
@@ -383,16 +395,37 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Imgs/Guía-Valheim-todo-lo-que-debes-saber-e1614335184644.jpg">
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
+    <File Include="Imgs/Guía-Valheim-todo-lo-que-debes-saber-e1614335184644.psd">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
     <File Include="Imgs/LogoLogin.png">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/rflite.png">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/rflog.png">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/rfprem.png">
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="Imgs/Servicios/R.png">
       <publishTime>07/22/2021 18:22:10</publishTime>
     </File>
+    <File Include="Imgs/Valheim.jpg">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
     <File Include="Imgs/Valheim2.jpg">
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="Imgs/Valheim3.jpg">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/Valheim4.jpg">
+      <publishTime>07/21/2021 20:31:51</publishTime>
+    </File>
+    <File Include="Imgs/Valheim5.jpg">
       <publishTime>07/21/2021 20:31:51</publishTime>
     </File>
     <File Include="JavaScript/functions.js">
@@ -1554,10 +1587,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:52</publishTime>
     </File>
     <File Include="Registro.aspx">
-      <publishTime>07/22/2021 23:26:47</publishTime>
+      <publishTime>08/07/2021 15:27:47</publishTime>
     </File>
     <File Include="ResumenServicio.aspx">
-      <publishTime>07/22/2021 23:30:27</publishTime>
+      <publishTime>08/07/2021 14:21:19</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>07/21/2021 20:31:52</publishTime>
@@ -1941,13 +1974,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:52</publishTime>
     </File>
     <File Include="SideBar.Master">
-      <publishTime>07/22/2021 22:23:35</publishTime>
+      <publishTime>08/07/2021 15:25:37</publishTime>
     </File>
     <File Include="SideBarAdmins.Master">
-      <publishTime>07/22/2021 22:18:41</publishTime>
+      <publishTime>08/07/2021 14:55:14</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>08/05/2021 02:00:37</publishTime>
+      <publishTime>08/07/2021 15:25:37</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>07/21/2021 20:31:52</publishTime>
@@ -1977,13 +2010,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:52</publishTime>
     </File>
     <File Include="Tickets.aspx">
-      <publishTime>07/22/2021 22:31:49</publishTime>
+      <publishTime>08/07/2021 01:32:49</publishTime>
     </File>
     <File Include="TicketsPendientes.aspx">
-      <publishTime>07/22/2021 22:31:49</publishTime>
+      <publishTime>08/07/2021 01:32:49</publishTime>
     </File>
     <File Include="usuarioMod.aspx">
-      <publishTime>07/21/2021 21:32:05</publishTime>
+      <publishTime>08/07/2021 02:46:44</publishTime>
+    </File>
+    <File Include="usuarioModPasswd.aspx">
+      <publishTime>08/07/2021 14:40:47</publishTime>
     </File>
     <File Include="Usuarios.aspx">
       <publishTime>07/22/2021 22:33:02</publishTime>
@@ -1992,7 +2028,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/21/2021 20:31:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/05/2021 02:02:36</publishTime>
+      <publishTime>08/07/2021 16:51:13</publishTime>
     </File>
   </ItemGroup>
 </Project>

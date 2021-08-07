@@ -1,0 +1,5 @@
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\x86\Debug\Dominio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\x86\Debug\Dominio.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\x86\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\x86\Debug\Dominio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\x86\Debug\Dominio.pdb

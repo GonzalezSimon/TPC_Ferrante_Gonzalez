@@ -1,6 +1,6 @@
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\Release\Dominio.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\bin\Release\Dominio.pdb
-C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Release\Dominio.csproj.AssemblyReference.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Release\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Release\Dominio.dll
 C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Release\Dominio.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Dominio\obj\Release\Dominio.csproj.AssemblyReference.cache

@@ -1,0 +1,9 @@
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\bin\x86\Debug\Negocio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\bin\x86\Debug\Negocio.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\bin\x86\Debug\Dominio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\bin\x86\Debug\Dominio.pdb
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\obj\x86\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\obj\x86\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\obj\x86\Debug\Negocio.csproj.CopyComplete
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\obj\x86\Debug\Negocio.dll
+C:\Users\darkz\source\repos\TPC_Ferrante_Gonzalez\Negocio\obj\x86\Debug\Negocio.pdb
