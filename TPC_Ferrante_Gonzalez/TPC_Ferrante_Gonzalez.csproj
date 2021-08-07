@@ -230,13 +230,7 @@
     <Content Include="LogIn.aspx" />
     <Content Include="ModSuscripcion.aspx" />
     <Content Include="ModUsuario.aspx" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.AssemblyReference.cache" />
-    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.CopyComplete" />
-    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csprojAssemblyReference.cache" />
     <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.dll" />
     <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.pdb" />
     <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
@@ -267,6 +261,12 @@
     <Content Include="packages\bootstrap.4.6.0\content\Scripts\bootstrap.js" />
     <Content Include="packages\bootstrap.4.6.0\content\Scripts\bootstrap.min.js" />
     <Content Include="packages\bootstrap.4.6.0\LICENSE.txt" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.CopyComplete" />
+    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\TPC_Ferrante_Gonzalez.csprojAssemblyReference.cache" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
     <Content Include="bin\roslyn\csi.exe.config" />
@@ -282,7 +282,6 @@
     <Content Include="Imgs\assettoc.psd" />
     <Content Include="Imgs\Guía-Valheim-todo-lo-que-debes-saber-e1614335184644.psd" />
     <Content Include="Imgs\2000px-Rfactor-logo.svg %28122222%29.psd" />
-    <Content Include="obj\Debug\Tsc.out" />
     <None Include="packages\jQuery.3.6.0\Content\Scripts\jquery-3.6.0-vsdoc.js" />
     <Content Include="packages\jQuery.3.6.0\Content\Scripts\jquery-3.6.0.js" />
     <Content Include="packages\jQuery.3.6.0\Content\Scripts\jquery-3.6.0.min.js" />
